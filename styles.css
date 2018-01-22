@@ -21,45 +21,38 @@
 	border-bottom:1px solid #eee;
 	position:relative;
 }
-.contact_form label {
+.contact_form #titulo {
     color: #555555;
     display: inline-block;
-    float: left;
+    /*float: left;*/
     font-family: sans-serif;
-    font-size: 30px;
+    font-size: 300%;
     font-weight: bold;
     margin-top: 3px;
+    margin-left: 4%;
     padding: 3px;
     width: 100%;
 }
-.contact_form input , .contact_form select{
-	height:60px;
-	width:250px;
+.contact_form select{
+	height:70px;
+	width:300px;
 	padding:5px 8px;
+  margin: 10px;
+  margin-left: 0;
+  font-size: 20px;
+}
+.contact_form input[type="text"] {
+  height:100px;
+	width:290px;
+	padding:5px 8px;
+  margin: 10px;
+  margin-left: 0;
+  font-size: 30px;
 }
 .contact_form option{
   font-size: 20px;
   padding: 4px;
   margin-top: 4px;
-}
-.contact_form input[type=checkbox] {
-	height:20px;
-	width:50px;
-	padding:5px 8px;
-}
-.contact_form input[type=radio] {
-	height:20px;
-	width:50px;
-	padding:5px 8px;
-}
-.radio{
-  display: inline-block;
-  width: 83%;
-  font-size: 25px;
-}
-.contact_form textarea {
-	padding:8px;
-	width:250px;
 }
 .botones button {
 	margin:1%;
@@ -81,70 +74,25 @@
 
 /*----- estilos visuales de los elementos --------*/
 
-.contact_form input, .contact_form textarea, .contact_form select {
-	border:1px solid #aaa;
-	box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
-	border-radius:2px;
-	color: #888;
-	font-size: 12px;
+.contact_form input, .contact_form select {
+  border: 2px solid rgb(9, 1, 163);
+  box-shadow: 0 3px rgb(0, 1, 128);
+	border-radius:20px;
+	color: black;
+	font-size: 20px;
 	padding-right:30px;
 	-moz-transition: padding .25s;
 	-webkit-transition: padding .25s;
 	-o-transition: padding .25s;
 	transition: padding .25s;
 }
-.contact_form input:focus, .contact_form textarea:focus {
-	background: #fff;
-	border:1px solid #555;
-	box-shadow: 0 0 3px #aaa;
-	padding-right:30px;
-}
-
-/* === Estilos de Validacion === */
-
-.contact_form input:required:valid, .contact_form textarea:required:valid, .contact_form select:required:valid {
-	box-shadow: 0 0 5px #5cd053;
-	border-color: #28921f;
-}
-.contact_form input:focus:invalid, .contact_form textarea:focus:invalid, .contact_form select:focus:invalid {
-	box-shadow: 0 0 5px #d45252;
-	border-color: #b03535
-}
-
-/* === Estilos del boton de Envio === */
-.submit {
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  line-height: 1;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#bbb));
-  background-image: -moz-linear-gradient(0% 100% 90deg, #BBBBBB, #FFFFFF);
-  background-color: #fff;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-  padding: 15px;
-  background: #1F523F;
-  color: #E1E9FA;
-  font-size: 1em;
-  border-radius: 2px;
-  border: none;
-  cursor: pointer;
-}
-
-form input[type"submit:hover"]{
-	opacity:.55;
-	color: #00a60b;
-}
-form input[type"submit:active"]{
-	border: 1px solid #222;
-	box-shadow: 0 0 10px 5px #444 inset;
-}
-
 .two-columns {
       -webkit-column-count: 1; /* Chrome, Safari, Opera */
       -moz-column-count: 1; /* Firefox */
       column-count: 1;
 }
 @media (min-width: 850px) {
-  .contact_form label {
+  .contact_form #titulo {
       font-size: 20px;
       margin-top: 8px;
       padding: 13px;
@@ -168,7 +116,7 @@ form input[type"submit:active"]{
       width:250px;
       padding:5px 8px;
     }
-    .contact_form input:focus, .contact_form textarea:focus, .contact_form select:focus {
+    .contact_form input:focus, .contact_form select:focus {
       background: #fff;
       border:1px solid #555;
       box-shadow: 0 0 3px #aaa;
@@ -210,4 +158,57 @@ header h2 { text-align: center; color: #663366; padding: 0.5em; font-size: 1.2em
 }
 .alert.success{
   background: #4CAF50;
+}
+
+
+#lab {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn:hover {
+    cursor: pointer !important;
+}
+
+.btn:active {
+    box-shadow: 0 1px #666 !important;
+    transform: translateY(2px) !important;
+}
+.btn {
+    font-size: 25px;
+    height: 70px;
+    width: 300px;
+    margin: 15px;
+    margin-left: 1px;
+    box-shadow: 0 3px #999;
+    text-align: center;
+}
+.btn-sık {
+    transition: all 0.2s ease;
+    background-color: white ;
+    border: 2px solid rgb(9, 1, 163) !important;
+    box-shadow: 0 3px rgb(0, 1, 128) !important;
+    min-width: 150px;
+    border-radius: 20px;
+}
+
+input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+}
+input[type="radio"] + div {
+    position: relative;
+}
+input[type="radio"]:checked + div {
+  background-color: rgb(3, 119, 25);
+  border: 2px solid black !important;
+  box-shadow: 0 3px black !important;
+}
+input[type="radio"]:checked + div>span {
+  color: white;
+}
+input[type="radio"] + div>span {
+  position: relative;
+  top: 25%;
 }

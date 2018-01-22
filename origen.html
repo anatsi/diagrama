@@ -23,10 +23,21 @@
     <form class="contact_form" action="" method="post" enctype="multipart/form-data">
       <ul>
         <li>
-          <label for="origen">ORIGEN</label>
-          <p class="radio"><input type="radio" name="origen" value="CANOPY" onclick="comprobar();">CANOPY</p>
-          <p class="radio"><input type="radio" name="origen" value="P12" onclick="comprobar();">P12</p>
-          <p class="radio"><input type="radio" name="origen" value="MALVINAS" onclick="comprobar();">MALVINAS</p>
+          <label for="origen" id="titulo">ORIGEN</label>
+          <div class="wrap">
+            <label id="lab">
+              <input type="radio" name="origen" value="CANOPY" onclick="comprobar();">
+               <div  class="btn btn-sık"><span>CANOPY</span></div>
+            </label>
+            <label id="lab">
+              <input  type="radio"  name="origen" value="P12" onclick="comprobar();">
+             <div class="btn btn-sık"><span>P12</span></div>
+           </label>
+           <label id="lab">
+             <input  type="radio"  name="origen" value="MALVINAS" onclick="comprobar();">
+            <div class="btn btn-sık"><span>MALVINAS</span></div>
+          </label>
+          </div>
           <select class="" name="otrosOrigenes" id="otro">
              <option value="" selected disabled>OTRAS OPCIONES</option>
              <option value="YARD">YARD</option>
@@ -39,10 +50,6 @@
              <option value="RAVA">RAVA</option>
              <option value="SP9VA">SP9VA</option>
            </select>
-        </li>
-        <li>
-          <label for="Bastidor">BASTIDOR</label>
-          <input type="text" name="Bastidor" />
         </li>
       </ul>
   </div>
