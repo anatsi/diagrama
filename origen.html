@@ -6,9 +6,12 @@
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css" type="text/css" media="all">
-  <script src="/pace/pace.js"></script>
-  <link href="/pace/themes/pace-theme-center-radar.css" rel="stylesheet">
-  <link rel="shortcut icon" href="./imagenes/favicon.ico">
+  <script src="./pace/pace.js"></script>
+  <link href="./pace/themes/pace-theme-center-radar.css" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <script type="text/javascript" src="comprobar.js">
+
+  </script>
 
 </head>
 
@@ -21,10 +24,10 @@
       <ul>
         <li>
           <label for="origen">ORIGEN</label>
-          <p class="radio"><input type="radio" name="origen" value="CANOPY">CANOPY</p>
-          <p class="radio"><input type="radio" name="origen" value="P12">P12</p>
-          <p class="radio"><input type="radio" name="origen" value="MALVINAS">MALVINAS</p>
-          <select class="" name="origen">
+          <p class="radio"><input type="radio" name="origen" value="CANOPY" onclick="comprobar();">CANOPY</p>
+          <p class="radio"><input type="radio" name="origen" value="P12" onclick="comprobar();">P12</p>
+          <p class="radio"><input type="radio" name="origen" value="MALVINAS" onclick="comprobar();">MALVINAS</p>
+          <select class="" name="otrosOrigenes" id="otro">
              <option value="" selected disabled>OTRAS OPCIONES</option>
              <option value="YARD">YARD</option>
              <option value="P9">P9</option>
@@ -39,7 +42,7 @@
         </li>
         <li>
           <label for="Bastidor">BASTIDOR</label>
-          <input type="text" name="Bastidor"/>
+          <input type="text" name="Bastidor" />
         </li>
       </ul>
   </div>
