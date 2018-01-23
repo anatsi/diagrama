@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>ELEGIR ORIGEN</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css" type="text/css" media="all">
   <script src="./pace/pace.js"></script>
@@ -22,7 +22,7 @@
     <h2>JOCKEYS</h2>
   </header>
   <div class="two-columns">
-    <form class="contact_form" action="" method="post" enctype="multipart/form-data">
+    <form class="contact_form" action="bastidor.php" method="post" enctype="multipart/form-data">
       <ul>
         <li>
           <label for="origen" id="titulo">ORIGEN</label>
@@ -54,9 +54,16 @@
            </select>
         </li>
       </ul>
+      <input type='hidden' name='hora' value="">
   </div>
+  <?php
+    $diao = date('Y-m-d');
+    $horao = date('H:i:s');
+    echo "<input type='hidden' name='horao' value='".$horao."'>";
+    echo "<input type='hidden' name='diao' value='".$diao."'>";
+   ?>
   <div class="botones">
-    <button type="button" name="button" id="siguiente"><a href="#">SIGUIENTE</a></button>
+    <button type="submit" name="button" id="siguiente"><b>SIGUIENTE</b></button>
   </div>
   </form>
 
