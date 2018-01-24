@@ -20,7 +20,7 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
 
 <body>
   <header>
-    <span class="derecha"><a href="#">SALIR</a></span>
+    <span class="derecha"><a href="./bbdd/logout.php">SALIR</a></span>
     <br>
     <h2>JOCKEYS</h2>
   </header>
