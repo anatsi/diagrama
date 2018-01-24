@@ -32,11 +32,22 @@ class Empleados extends db
     }
   }
 
-  //funcion para actualizar actividad de la tabla general
+  //funcion para actualizar la contraseña del usuario la primera vez que entra
   function cambiarContra($contra, $user){
     $sql="UPDATE empleados SET password = '".$contra."', primera_vez = 1 WHERE id = ".$user;
-    $finalizarAct=$this->realizarConsulta($sql);
-    if ($finalizarAct=!false) {
+    $consulta=$this->realizarConsulta($sql);
+    if ($consulta=!false) {
+         return true;
+    }else {
+         return false;
+    }
+  }
+
+
+  function guardarrContra($contra, $user){
+    $sql="UPDATE empleados SET password = '".$contra."' WHERE user = '".$user."'";
+    $consulta=$this->realizarConsulta($sql);
+    if ($consulta=!false) {
          return true;
     }else {
          return false;

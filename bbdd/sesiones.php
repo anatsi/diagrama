@@ -9,7 +9,8 @@ class Sesiones
   //En el construct hacemos el session start para no tener que hacerlo cada vez.
   function __construct()
   {
-    session_start();
+    if(session_status()!=PHP_SESSION_ACTIVE) session_start();
+    //session_start();
     if (isset($_SESSION['usuario'])) $this->usuario=$_SESSION['usuario'];
   }
 

@@ -1,4 +1,10 @@
 <?php
+
+require_once './bbdd/sesiones.php';
+$sesiones = new Sesiones();
+
+if (isset($_SESSION['usuario'])) {
+
 if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
  ?>
 <!DOCTYPE html>
@@ -29,7 +35,7 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
       <ul>
         <li>
           <label for="Bastidor" id="titulo">BASTIDOR</label>
-          <input type="text" name="bastidor" autofocus/>
+          <input type="text" name="bastidor" autofocus required/>
         </li>
       </ul>
       <?php
@@ -44,6 +50,7 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
   </div>
   <div class="botones">
     <button type="submit" name="button" id="siguiente"><b>SIGUIENTE</b></button>
+    <button type="reset" name="button" id="reset"><b>LIMPIAR</b></button>
   </div>
   </form>
 
@@ -60,3 +67,12 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
   <?php
 }
  ?>
+ <?php
+ }else {
+   ?>
+     <script type="text/javascript">
+       window.location = "index.html";
+     </script>
+   <?php
+ }
+  ?>

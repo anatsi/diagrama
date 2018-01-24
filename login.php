@@ -31,7 +31,7 @@
           }else {
             ?>
               <script type="text/javascript">
-                window.location="cambiarContra.html";
+                window.location="cambiarContraFormulario.php";
               </script>
             <?php
           }

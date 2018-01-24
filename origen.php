@@ -1,3 +1,9 @@
+<?php
+require_once './bbdd/sesiones.php';
+$sesion = new Sesiones();
+if (isset($_SESSION['usuario'])) {
+
+ ?>
 <!DOCTYPE html>
 <html>
 
@@ -64,9 +70,19 @@
    ?>
   <div class="botones">
     <button type="submit" name="button" id="siguiente"><b>SIGUIENTE</b></button>
+    <button type="reset" name="button" id="reset"><b>LIMPIAR</b></button>
   </div>
   </form>
 
 </body>
 
 </html>
+<?php
+}else {
+  ?>
+    <script type="text/javascript">
+      window.location = "index.html";
+    </script>
+  <?php
+}
+ ?>

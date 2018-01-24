@@ -11,7 +11,7 @@
       $contraC = sha1(md5($salt . $_POST['form-username']));
       $nuevaContra = $empleados -> cambiarContra($contraC, $_SESSION['usuario']);
 
-      if ($nuevaContra == null) {
+      if ($nuevaContra == false) {
         ?>
           <script type="text/javascript">
             alert('Algo salio mal. Intentelo mas tarde');
@@ -21,7 +21,7 @@
       }else {
         ?>
           <script type="text/javascript">
-            alert('Comtraseña actualizada con exito.');
+            alert('Contraseña actualizada con exito.');
             window.location = "origen.php";
           </script>
         <?php

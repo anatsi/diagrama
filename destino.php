@@ -1,4 +1,9 @@
 <?php
+require_once './bbdd/sesiones.php';
+$sesiones = new Sesiones();
+
+if (isset($_SESSION['usuario'])) {
+
 if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
  ?>
 <!DOCTYPE html>
@@ -72,6 +77,7 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
   </div>
   <div class="botones">
     <button type="submit" name="button" id="siguiente"><b>FINALIZAR</b></button>
+    <button type="reset" name="button" id="reset"><b>LIMPIAR</b></button>
   </div>
   </form>
 </body>
@@ -87,3 +93,12 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
   <?php
 }
  ?>
+ <?php
+ }else {
+   ?>
+     <script type="text/javascript">
+       window.location = "index.html";
+     </script>
+   <?php
+ }
+  ?>
