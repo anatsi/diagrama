@@ -79,7 +79,7 @@
   background-color: rgb(228, 238, 27);
 }
 
-.botones b{
+.botones b, .botones a{
   color: BLACK;
   font-size: 30px;
   font-weight: bold;
@@ -173,13 +173,19 @@ header h2 {
 
 .derecha {
   float: right;
+  background-color: red;
+  padding: 4px;
+  border-radius: 15px;
+  margin: 4px;
 }
 
 .derecha a {
-  color: red;
-  font-size: 25px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
   text-decoration: none;
-  margin-right: 10px;
+  margin: 5px;
 }
 
 .izquierda {

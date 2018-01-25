@@ -37,29 +37,28 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
           <label for="destino" id="titulo">DESTINO</label>
           <div class="wrap">
             <label id="lab">
-              <input type="radio" name="destino" value="P12" onclick="comprobar();">
+              <input type="radio" id="opcion1" name="origen" value="P12" onclick="comprobar();">
                <div  class="btn btn-sık"><span>P12</span></div>
             </label>
             <label id="lab">
-              <input  type="radio"  name="destino" value="P9" onclick="comprobar();">
+              <input  type="radio" id="opcion2" name="origen" value="P9" onclick="comprobar();">
              <div class="btn btn-sık"><span>P9</span></div>
            </label>
            <label id="lab">
-             <input  type="radio"  name="destino" value="MALVINAS" onclick="comprobar();">
+             <input  type="radio" id="opcion3" name="origen" value="MALVINAS" onclick="comprobar();">
             <div class="btn btn-sık"><span>MALVINAS</span></div>
           </label>
           </div>
-          <select class="" name="otrosDestinos" id="otro">
-             <option value="" selected disabled>OTRAS OPCIONES</option>
-             <option value="CANOPY">CANOPY</option>
-             <option value="YARD">YARD</option>
-             <option value="ZENDER">ZENDER</option>
-             <option value="RAI">RAI</option>
-             <option value="MOLINO">MOLINO</option>
-             <option value="MOVA">MOVA</option>
-             <option value="PUVA">PUVA</option>
-             <option value="RAVA">RAVA</option>
-             <option value="SP9VA">SP9VA</option>
+          <select class="" name="otrosOrigenes" id="otro" onchange="bloquear();">
+             <option value="" selected disabled onchange="bloquear();">OTRAS OPCIONES</option>
+             <option value="YARD" onchange="bloquear();">YARD</option>
+             <option value="ZENDER" onchange="bloquear();">ZENDER</option>
+             <option value="RAI" onchange="bloquear();">RAI</option>
+             <option value="MOLINO" onchange="bloquear();">MOLINO</option>
+             <option value="MOVA" onchange="bloquear();">MOVA</option>
+             <option value="PUVA" onchange="bloquear();">PUVA</option>
+             <option value="RAVA" onchange="bloquear();">RAVA</option>
+             <option value="SP9VA" onchange="bloquear();">SP9VA</option>
            </select>
         </li>
       </ul>
@@ -77,7 +76,8 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
   </div>
   <div class="botones">
     <button type="submit" name="button" id="siguiente"><b>FINALIZAR</b></button>
-    <button type="reset" name="button" id="reset"><b>LIMPIAR</b></button>
+    <button type="reset" name="button" id="reset" onclick="devolver();"><b>LIMPIAR</b></button>
+    <button type="button" name="button" id="atras" onclick="window.location = 'origen.php';"><b>ATRAS</b></button>
   </div>
   </form>
 </body>

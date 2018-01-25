@@ -50,7 +50,8 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
   </div>
   <div class="botones">
     <button type="submit" name="button" id="siguiente"><b>SIGUIENTE</b></button>
-    <button type="reset" name="button" id="reset"><b>LIMPIAR</b></button>
+    <button type="reset" name="button" id="reset" onclick="devolver();"><b>LIMPIAR</b></button>
+    <button type="button" name="button" id="atras" onclick="window.location = 'origen.php';"><b>ATRAS</b></button>
   </div>
   </form>
 

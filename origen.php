@@ -34,29 +34,29 @@ if (isset($_SESSION['usuario'])) {
           <label for="origen" id="titulo">ORIGEN</label>
           <div class="wrap">
             <label id="lab">
-              <input type="radio" name="origen" value="CANOPY" onclick="comprobar();">
+              <input type="radio" id="opcion1" name="origen" value="CANOPY" onclick="comprobar();">
                <div  class="btn btn-sık"><span>CANOPY</span></div>
             </label>
             <label id="lab">
-              <input  type="radio"  name="origen" value="P12" onclick="comprobar();">
+              <input  type="radio" id="opcion2" name="origen" value="P12" onclick="comprobar();">
              <div class="btn btn-sık"><span>P12</span></div>
            </label>
            <label id="lab">
-             <input  type="radio"  name="origen" value="MALVINAS" onclick="comprobar();">
+             <input  type="radio" id="opcion3" name="origen" value="MALVINAS" onclick="comprobar();">
             <div class="btn btn-sık"><span>MALVINAS</span></div>
           </label>
           </div>
-          <select class="" name="otrosOrigenes" id="otro">
-             <option value="" selected disabled>OTRAS OPCIONES</option>
-             <option value="YARD">YARD</option>
-             <option value="P9">P9</option>
-             <option value="ZENDER">ZENDER</option>
-             <option value="RAI">RAI</option>
-             <option value="MOLINO">MOLINO</option>
-             <option value="MOVA">MOVA</option>
-             <option value="PUVA">PUVA</option>
-             <option value="RAVA">RAVA</option>
-             <option value="SP9VA">SP9VA</option>
+          <select class="" name="otrosOrigenes" id="otro" onchange="bloquear();">
+             <option value="primera" selected disabled>OTRAS OPCIONES</option>
+             <option value="YARD" onchange="bloquear();">YARD</option>
+             <option value="P9" onchange="bloquear();">P9</option>
+             <option value="ZENDER" onchange="bloquear();">ZENDER</option>
+             <option value="RAI" onchange="bloquear();">RAI</option>
+             <option value="MOLINO" onchange="bloquear();">MOLINO</option>
+             <option value="MOVA" onchange="bloquear();">MOVA</option>
+             <option value="PUVA" onchange="bloquear();">PUVA</option>
+             <option value="RAVA" onchange="bloquear();">RAVA</option>
+             <option value="SP9VA" onchange="bloquear();">SP9VA</option>
            </select>
         </li>
       </ul>
@@ -70,7 +70,7 @@ if (isset($_SESSION['usuario'])) {
    ?>
   <div class="botones">
     <button type="submit" name="button" id="siguiente"><b>SIGUIENTE</b></button>
-    <button type="reset" name="button" id="reset"><b>LIMPIAR</b></button>
+    <button type="reset" name="button" id="reset" onclick="devolver();"><b>LIMPIAR</b></button>
   </div>
   </form>
 
