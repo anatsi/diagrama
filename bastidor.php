@@ -32,6 +32,12 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
   </header>
   <div class="two-columns">
     <form class="contact_form" action="destino.php" method="post" enctype="multipart/form-data">
+      <?php
+        $diao = date('Y-m-d');
+        $horao = date('H:i:s');
+        echo "<input type='hidden' name='horao' value='".$horao."'>";
+        echo "<input type='hidden' name='diao' value='".$diao."'>";
+       ?>
       <ul>
         <li>
           <label for="Bastidor" id="titulo">BASTIDOR</label>
@@ -39,8 +45,6 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
         </li>
       </ul>
       <?php
-        echo "<input type='hidden' name='horao' value='".$_POST['horao']."'>";
-        echo "<input type='hidden' name='diao' value='".$_POST['diao']."'>";
         if ($_POST['origen']) {
           echo "<input type='hidden' name='origen' value='".$_POST['origen']."'>";
         }else {

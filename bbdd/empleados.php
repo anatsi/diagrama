@@ -6,7 +6,7 @@
  //Llamamos a la clase db, encargada de la conexion.
  require_once 'dbOperativa.php';
 
-class Empleados extends db
+class Empleados extends dbOperativa
 {
   //la funcion construct llama al construct de db, encargada de la conexión.
   function __construct()
@@ -52,6 +52,22 @@ class Empleados extends db
     }else {
          return false;
     }
+  }
+
+  function EmpleadoUser($id){
+  //Construimos la consulta
+  $sql="SELECT * from empleados WHERE id=".$id;
+  //Realizamos la consulta
+  $resultado=$this->realizarConsulta($sql);
+  if($resultado!=false){
+    if($resultado!=false){
+      return $resultado->fetch_assoc();
+    }else{
+      return null;
+    }
+  }else{
+    return null;
+  }
   }
 }
 

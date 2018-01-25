@@ -2,7 +2,7 @@
 /**
  * Permitir la conexion contra la base de datos de acceso
  */
-class db
+class dbOperativa
 {
   //Atributos necesarios para la conexion
   private $host="localhost";

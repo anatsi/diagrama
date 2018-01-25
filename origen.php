@@ -62,12 +62,7 @@ if (isset($_SESSION['usuario'])) {
       </ul>
       <input type='hidden' name='hora' value="">
   </div>
-  <?php
-    $diao = date('Y-m-d');
-    $horao = date('H:i:s');
-    echo "<input type='hidden' name='horao' value='".$horao."'>";
-    echo "<input type='hidden' name='diao' value='".$diao."'>";
-   ?>
+
   <div class="botones">
     <button type="submit" name="button" id="siguiente"><b>SIGUIENTE</b></button>
     <button type="reset" name="button" id="reset" onclick="devolver();"><b>LIMPIAR</b></button>

@@ -37,19 +37,19 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
           <label for="destino" id="titulo">DESTINO</label>
           <div class="wrap">
             <label id="lab">
-              <input type="radio" id="opcion1" name="origen" value="P12" onclick="comprobar();">
+              <input type="radio" id="opcion1" name="destino" value="P12" onclick="comprobar2();">
                <div  class="btn btn-sık"><span>P12</span></div>
             </label>
             <label id="lab">
-              <input  type="radio" id="opcion2" name="origen" value="P9" onclick="comprobar();">
+              <input  type="radio" id="opcion2" name="destino" value="P9" onclick="comprobar2();">
              <div class="btn btn-sık"><span>P9</span></div>
            </label>
            <label id="lab">
-             <input  type="radio" id="opcion3" name="origen" value="MALVINAS" onclick="comprobar();">
+             <input  type="radio" id="opcion3" name="destino" value="MALVINAS" onclick="comprobar2();">
             <div class="btn btn-sık"><span>MALVINAS</span></div>
           </label>
           </div>
-          <select class="" name="otrosOrigenes" id="otro" onchange="bloquear();">
+          <select class="" name="otrosDestinos" id="otro" onchange="bloquear();">
              <option value="" selected disabled onchange="bloquear();">OTRAS OPCIONES</option>
              <option value="YARD" onchange="bloquear();">YARD</option>
              <option value="ZENDER" onchange="bloquear();">ZENDER</option>
@@ -63,10 +63,6 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
         </li>
       </ul>
       <?php
-        $diad = date('Y-m-d');
-        $horad = date('H:i:s');
-        echo "<input type='hidden' name='horad' value='".$horad."'>";
-        echo "<input type='hidden' name='diad' value='".$diad."'>";
         echo "<input type='hidden' name='horao' value='".$_POST['horao']."'>";
         echo "<input type='hidden' name='diao' value='".$_POST['diao']."'>";
         echo "<input type='hidden' name='origen' value='".$_POST['origen']."'>";

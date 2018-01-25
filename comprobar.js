@@ -7,6 +7,15 @@ function comprobar() {
   }
 }
 
+function comprobar2() {
+  var opciones = document.getElementsByName('destino');
+  for (var i = 0; i < opciones.length; i++) {
+    if (opciones[i].checked) {
+      document.getElementById('otro').disabled = true;
+    }
+  }
+}
+
 function bloquear() {
   var elegido = document.getElementById('otro').value;
   if (elegido != 'primera') {
