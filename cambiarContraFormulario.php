@@ -11,7 +11,7 @@ if (isset($_SESSION['usuario'])) {
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Area trabajadores</title>
+  <title>CAMBIAR CONTRASEÑA</title>
 
   <!-- CSS-->
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -32,7 +32,7 @@ if (isset($_SESSION['usuario'])) {
             <div class="form-top">
               <div class="form-top-left">
                 <p><img src="assets/files/logo.png" alt="logo TSI" title="Logo TSI" width="100" height="75" /></p>
-                <h3>Area empleados</h3>
+                <h3>CAMBIAR CONTRASEÑA</h3>
                 <p>Introducir la nueva contraseña para cambiarla:</p>
               </div>
             </div>
@@ -43,8 +43,8 @@ if (isset($_SESSION['usuario'])) {
                   <input type="password" name="form-username" placeholder="Nueva contraseña" class="form-username form-control" id="form-username">
                 </div>
                 <div class="form-group">
-                  <label class="sr-only" for="form-password">Repetir Contraseña</label>
-                  <input type="password" name="form-password" placeholder="Repetir Contraseña" class="form-password form-control" id="form-password">
+                  <label class="sr-only" for="form-password">Repetir nueva contraseña</label>
+                  <input type="password" name="form-password" placeholder="Repetir nueva contraseña" class="form-password form-control" id="form-password">
                 </div>
                 <button type="submit" class="btn">Enviar</button>
               </form>
@@ -58,7 +58,6 @@ if (isset($_SESSION['usuario'])) {
   <script src="assets/js/jquery-1.11.1.min.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/js/jquery.backstretch.min.js"></script>
-  <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>

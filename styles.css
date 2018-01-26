@@ -40,7 +40,7 @@
 
 .contact_form select {
   height: 70px;
-  width: 300px;
+  width: 325px;
   padding: 5px 8px;
   margin: 10px;
   margin-left: 0;
@@ -159,11 +159,11 @@ header h1 {
   font-size: 1.5em;
 }
 
-header h2 {
+header h3 {
   text-align: center;
   color: #663366;
   padding: 0.5em;
-  font-size: 22px;
+  font-size: 18px;
   background: none repeat scroll 0 0 #F3F3F3;
   border-radius: 5px;
   color: #663366;
@@ -234,9 +234,9 @@ header h2 {
 .btn {
   font-size: 25px;
   height: 70px;
-  width: 300px;
+  width: 45%;
   margin: 15px;
-  margin-left: 1px;
+  margin-left: 0;
   box-shadow: 0 3px #999;
   text-align: center;
 }

@@ -25,6 +25,7 @@ function bloquear() {
     document.getElementById('opcion1').disabled = true;
     document.getElementById('opcion2').disabled = true;
     document.getElementById('opcion3').disabled = true;
+    document.getElementById('opcion4').disabled = true;
   }
 }
 
@@ -36,4 +37,5 @@ function devolver() {
   document.getElementById('opcion1').disabled = false;
   document.getElementById('opcion2').disabled = false;
   document.getElementById('opcion3').disabled = false;
+  document.getElementById('opcion4').disabled = false;
 }

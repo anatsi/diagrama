@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Login</title>
+    <style media="screen">
+      body{
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <?php

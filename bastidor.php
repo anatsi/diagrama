@@ -2,10 +2,18 @@
 
 require_once './bbdd/sesiones.php';
 $sesiones = new Sesiones();
+require_once './bbdd/empleados.php';
+$empleado = new Empleados();
 
 if (isset($_SESSION['usuario'])) {
 
 if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
+  $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
+  if ($_POST['origen']) {
+    $origen = $_POST['origen'];
+  }else {
+    $origen = $_POST['otrosOrigenes'];
+  }
  ?>
 <!DOCTYPE html>
 <html>
@@ -26,9 +34,13 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
 
 <body>
   <header>
+    <span class="izquierda">
+    	<a  href= "#"><img src="assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
+    </span>
     <span class="derecha"><a href="./bbdd/logout.php">SALIR</a></span>
     <br>
-    <h2>JOCKEYS</h2>
+    <br>
+    <h3><?php echo $usuario['user']; ?>    -    <?php echo $origen; ?></h3>
   </header>
   <div class="two-columns">
     <form class="contact_form" action="destino.php" method="post" enctype="multipart/form-data">
@@ -41,15 +53,11 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
       <ul>
         <li>
           <label for="Bastidor" id="titulo">BASTIDOR</label>
-          <input type="text" name="bastidor" autofocus required/>
+          <input type="text" name="bastidor" autofocus required pattern="[a-zA-Z0-9-]{17}"/>
         </li>
       </ul>
       <?php
-        if ($_POST['origen']) {
-          echo "<input type='hidden' name='origen' value='".$_POST['origen']."'>";
-        }else {
-          echo "<input type='hidden' name='origen' value='".$_POST['otrosOrigenes']."'>";
-        }
+          echo "<input type='hidden' name='origen' value='".$origen."'>";
        ?>
   </div>
   <div class="botones">

@@ -1,10 +1,13 @@
 <?php
 require_once './bbdd/sesiones.php';
 $sesiones = new Sesiones();
+require_once './bbdd/empleados.php';
+$empleado = new Empleados();
 
 if (isset($_SESSION['usuario'])) {
 
 if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
+  $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
  ?>
 <!DOCTYPE html>
 <html>
@@ -25,9 +28,17 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
 
 <body>
   <header>
+    <span class="izquierda">
+    	<a  href= "#"><img src="assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
+    </span>
     <span class="derecha"><a href="./bbdd/logout.php">SALIR</a></span>
     <br>
-    <h2>JOCKEYS</h2>
+    <br>
+    <h3><?php echo $usuario['user']; ?>    -    <?php echo $_POST['origen']; ?>
+      <br>
+      <?php echo $_POST['bastidor']; ?>
+    </h3>
+
   </header>
   <div class="two-columns">
     <form class="contact_form" action="guardarMovimientos.php" method="post" enctype="multipart/form-data">
@@ -48,11 +59,13 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
              <input  type="radio" id="opcion3" name="destino" value="MALVINAS" onclick="comprobar2();">
             <div class="btn btn-sık"><span>MALVINAS</span></div>
           </label>
+          <label id="lab">
+            <input  type="radio" id="opcion4" name="destino" value="ZENDER" onclick="comprobar2();">
+           <div class="btn btn-sık"><span>ZENDER</span></div>
+         </label>
           </div>
           <select class="" name="otrosDestinos" id="otro" onchange="bloquear();">
              <option value="" selected disabled onchange="bloquear();">OTRAS OPCIONES</option>
-             <option value="YARD" onchange="bloquear();">YARD</option>
-             <option value="ZENDER" onchange="bloquear();">ZENDER</option>
              <option value="RAI" onchange="bloquear();">RAI</option>
              <option value="MOLINO" onchange="bloquear();">MOLINO</option>
              <option value="MOVA" onchange="bloquear();">MOVA</option>

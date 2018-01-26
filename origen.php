@@ -1,8 +1,10 @@
 <?php
 require_once './bbdd/sesiones.php';
 $sesion = new Sesiones();
+require_once './bbdd/empleados.php';
+$empleado = new Empleados();
 if (isset($_SESSION['usuario'])) {
-
+  $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
  ?>
 <!DOCTYPE html>
 <html>
@@ -23,9 +25,13 @@ if (isset($_SESSION['usuario'])) {
 
 <body>
   <header>
+    <span class="izquierda">
+    	<a  href= "#"><img src="assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
+    </span>
     <span class="derecha"><a href="./bbdd/logout.php">SALIR</a></span>
     <br>
-    <h2>JOCKEYS</h2>
+    <br>
+    <h3><?php echo $usuario['user']; ?></h3>
   </header>
   <div class="two-columns">
     <form class="contact_form" action="bastidor.php" method="post" enctype="multipart/form-data">
@@ -45,10 +51,13 @@ if (isset($_SESSION['usuario'])) {
              <input  type="radio" id="opcion3" name="origen" value="MALVINAS" onclick="comprobar();">
             <div class="btn btn-sık"><span>MALVINAS</span></div>
           </label>
+          <label id="lab">
+            <input  type="radio" id="opcion4" name="origen" value="CAMPA" onclick="comprobar();">
+           <div class="btn btn-sık"><span>CAMPA</span></div>
+         </label>
           </div>
-          <select class="" name="otrosOrigenes" id="otro" onchange="bloquear();">
+          <select class="btn" name="otrosOrigenes" id="otro" onchange="bloquear();">
              <option value="primera" selected disabled>OTRAS OPCIONES</option>
-             <option value="YARD" onchange="bloquear();">YARD</option>
              <option value="P9" onchange="bloquear();">P9</option>
              <option value="ZENDER" onchange="bloquear();">ZENDER</option>
              <option value="RAI" onchange="bloquear();">RAI</option>
