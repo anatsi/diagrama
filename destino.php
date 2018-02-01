@@ -65,7 +65,7 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
          </label>
           </div>
           <select class="" name="otrosDestinos" id="otro" onchange="bloquear();">
-             <option value="" selected disabled onchange="bloquear();">OTROR DESTINOS</option>
+             <option value="" selected disabled onchange="bloquear();">OTRAS ZONAS</option>
              <option value="RAI" onchange="bloquear();">RAI</option>
              <option value="MOLINO" onchange="bloquear();">MOLINO</option>
              <option value="MOVA" onchange="bloquear();">MOVA</option>
