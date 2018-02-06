@@ -39,3 +39,11 @@ function devolver() {
   document.getElementById('opcion3').disabled = false;
   document.getElementById('opcion4').disabled = false;
 }
+
+function tiempo() {
+  myVar = setTimeout(boton, 15000);
+}
+
+function boton() {
+  document.getElementById('siguiente').disabled = false;
+}

@@ -26,7 +26,7 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
 
 </head>
 
-<body>
+<body onload="tiempo();">
   <header>
     <span class="izquierda">
     	<a  href= "#"><img src="assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
@@ -84,7 +84,7 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
        ?>
   </div>
   <div class="botones">
-    <button type="submit" name="button" id="siguiente"><b>FINALIZAR</b></button>
+    <button type="submit" name="button" id="siguiente" disabled=true><b>FINALIZAR</b></button>
     <button type="reset" name="button" id="reset" onclick="devolver();"><b>LIMPIAR</b></button>
     <button type="button" name="button" id="atras" onclick="window.location = 'origen.php';"><b>ATRAS</b></button>
   </div>
