@@ -132,10 +132,14 @@ $usuarios = array (
 "VVM",
 "MPZ",
 "prueba",
+"acosinga",
 );
 $salt='$tsi$/';
 foreach ($usuarios as $usuario) {
   $contra = sha1(md5($salt . $usuario));
+  echo $usuario ."    -->   " .$contra;
+  echo "<br><br>";
+  /*$contra = sha1(md5($salt . $usuario));
   $nuevaContra = $empleados -> guardarrContra($contra, $usuario);
   if ($nuevaContra == false) {
     echo "MERDA: " .$usuario;
@@ -143,7 +147,7 @@ foreach ($usuarios as $usuario) {
   }else {
     echo $usuario ."    -->   " .$contra;
     echo "<br><br>";
-  }
+  }*/
 
 }
 
