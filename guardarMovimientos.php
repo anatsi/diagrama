@@ -20,8 +20,15 @@
 
     if ($_POST['destino']) {
       $destino = $_POST['destino'];
-    }else {
+    }elseif ($_POST['otrosDestinos']) {
       $destino = $_POST['otrosDestinos'];
+    }else {
+      ?>
+        <script type="text/javascript">
+          alert('Elegir un destino antes de continuar.');
+          window.location = 'destino.php';
+        </script>
+      <?php
     }
 
       if (isset($_POST['origen']) && isset($destino)) {
