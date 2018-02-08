@@ -68,19 +68,10 @@ body{
 
 .botones button {
   margin: 1%;
-  padding: 3px;
+  padding: 5px;
   width: 98%;
   border-radius: 10px;
   background-color: #CCCCCC;
-}
-
-.botones #salir {
-  background-color: rgb(226, 99, 99);
-  margin-top: 5%;
-}
-
-.botones #reset {
-  background-color: rgb(228, 238, 27);
 }
 
 .botones b, .botones a {
@@ -88,6 +79,28 @@ body{
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
+}
+.botones #salir {
+  background-color: rgb(226, 99, 99);
+  margin-top: 5%;
+}
+
+.botones #reset {
+  background-color: rgb(228, 238, 27);
+  width: 47%;
+  height: auto;
+}
+
+.botones #atras {
+  background-color: rgb(226, 99, 99);
+  width: 47%;
+  height: auto;
+}
+
+.botones #siguiente {
+  background-color: rgb(3, 119, 25);
+  height: auto;
+  padding: 14px;
 }
 
 /*----- estilos visuales de los elementos --------*/

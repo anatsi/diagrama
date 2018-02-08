@@ -11,7 +11,7 @@ if (isset($_SESSION['usuario'])) {
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CAMBIAR CONTRASEÑA</title>
+  <title>Cambiar contraseña</title>
 
   <!-- CSS-->
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -32,8 +32,7 @@ if (isset($_SESSION['usuario'])) {
             <div class="form-top">
               <div class="form-top-left">
                 <p><img src="assets/files/logo.png" alt="logo TSI" title="Logo TSI" width="100" height="75" /></p>
-                <h3>CAMBIAR CONTRASEÑA</h3>
-                <p>Introducir la nueva contraseña para cambiarla:</p>
+                <h3>Cambiar contraseña</h3>
               </div>
             </div>
             <div class="form-bottom">
