@@ -53,7 +53,7 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
       <ul>
         <li>
           <label for="Bastidor" id="titulo">BASTIDOR</label>
-          <input type="text" name="bastidor" autofocus required pattern="([W][F][a-zA-Z0-9]{8}[A-Z]{2}[0-9]{5})"/>
+          <input type="text" name="bastidor" autofocus required/>
         </li>
       </ul>
       <?php
