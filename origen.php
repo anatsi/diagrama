@@ -34,6 +34,7 @@ if (isset($_SESSION['usuario'])) {
     <h3><?php echo $usuario['user']; ?></h3>
   </header>
   <div class="two-columns">
+    <div style="font-weight: bold;">TOTAL: <script>document.write(localStorage.contador);</script></div>
     <form class="contact_form" action="bastidor.php" method="post" enctype="multipart/form-data">
       <ul>
         <li>

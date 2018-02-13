@@ -1,5 +1,4 @@
 <?php
-
 require_once './bbdd/sesiones.php';
 $sesiones = new Sesiones();
 require_once './bbdd/empleados.php';

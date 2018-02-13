@@ -30,12 +30,14 @@
           if ($registrado['primera_vez'] == 1) {
             ?>
               <script type="text/javascript">
+                localStorage.setItem('contador', 0);
                 window.location="origen.php";
               </script>
             <?php
           }else {
             ?>
               <script type="text/javascript">
+                localStorage.setItem('contador', 0);
                 window.location="cambiarContraFormulario.php";
               </script>
             <?php
