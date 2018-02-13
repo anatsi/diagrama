@@ -25,6 +25,24 @@
         //comprobamos que la contraseña que ha puesto es correcta.
         $contraC = sha1(md5($salt . $_POST['form-password']));
         if ($registrado['password']==$contraC) {
+          ?>
+            <script type="text/javascript">
+              var fecha = new Date();
+              var dia = fecha.getDate();
+              var mes = fecha.getMonth();
+              var year = fecha.getFullYear();
+
+              var fechaInicio = year + '-' + mes + '-' + dia;
+              localStorage.setItem('fechaInicio', fechaInicio);
+
+              var hora = fecha.getHours();
+              var minutos = fecha.getMinutes();
+              var segundos = fecha.getSeconds();
+
+              var horaInicio = hora + ':' + minutos + ':' + segundos;
+              localStorage.setItem('horaInicio', horaInicio);
+            </script>
+          <?php
           //si el usuario existe y la contraseña es correcta, iniciamos la sesion.
           $sesion->addUsuario($registrado['id']);
           if ($registrado['primera_vez'] == 1) {

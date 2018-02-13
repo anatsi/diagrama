@@ -28,13 +28,13 @@ if (isset($_SESSION['usuario'])) {
     <span class="izquierda">
     	<a  href= "#"><img src="assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
     </span>
-    <span class="derecha"><a href="./bbdd/logout.php">SALIR</a></span>
+    <span class="derecha"><a href="salir.php">SALIR</a></span>
     <br>
     <br>
     <h3><?php echo $usuario['user']; ?></h3>
   </header>
   <div class="two-columns">
-    <div style="font-weight: bold;">TOTAL: <script>document.write(localStorage.contador);</script></div>
+    <div style="font-weight: bold; font-size:16px;">TOTAL: <script>document.write(localStorage.contador);</script></div>
     <form class="contact_form" action="bastidor.php" method="post" enctype="multipart/form-data">
       <ul>
         <li>
