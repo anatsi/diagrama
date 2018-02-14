@@ -55,19 +55,19 @@ class Empleados extends dbOperativa
   }
 
   function EmpleadoUser($id){
-  //Construimos la consulta
-  $sql="SELECT * from empleados WHERE id=".$id;
-  //Realizamos la consulta
-  $resultado=$this->realizarConsulta($sql);
-  if($resultado!=false){
+    //Construimos la consulta
+    $sql="SELECT * from empleados WHERE id=".$id;
+    //Realizamos la consulta
+    $resultado=$this->realizarConsulta($sql);
     if($resultado!=false){
-      return $resultado->fetch_assoc();
+      if($resultado!=false){
+        return $resultado->fetch_assoc();
+      }else{
+        return null;
+      }
     }else{
       return null;
     }
-  }else{
-    return null;
-  }
   }
 }
 

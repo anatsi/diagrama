@@ -41,5 +41,31 @@ class Movimientos extends dbJockeys
       return null;
     }
   }
+
+  function UltimoMovimiento($usuario){
+    //Construimos la consulta
+    $sql="SELECT * from movimientos WHERE usuario='".$usuario."' AND error = 0 ORDER BY id DESC LIMIT 1";
+    //Realizamos la consulta
+    $resultado=$this->realizarConsulta($sql);
+    if($resultado!=false){
+      if($resultado!=false){
+        return $resultado->fetch_assoc();
+      }else{
+        return null;
+      }
+    }else{
+      return null;
+    }
+  }
+
+  function marcarError($id){
+    $sql="UPDATE movimientos SET error = 1 WHERE id = ".$id;
+    $consulta=$this->realizarConsulta($sql);
+    if ($consulta=!false) {
+         return true;
+    }else {
+         return false;
+    }
+  }
 }
  ?>
