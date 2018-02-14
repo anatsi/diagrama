@@ -21,22 +21,6 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
   <script type="text/javascript" src="comprobar.js">
 
   </script>
-  <script type="text/javascript">
-    var fecha = new Date();
-    var dia = fecha.getDate();
-    var mes = fecha.getMonth();
-    var year = fecha.getFullYear();
-
-    var fechaFin = year + '-' + mes + '-' + dia;
-    localStorage.setItem('fechaFin', fechaFin);
-
-    var hora = fecha.getHours();
-    var minutos = fecha.getMinutes();
-    var segundos = fecha.getSeconds();
-
-    var horaFin = hora + ':' + minutos + ':' + segundos;
-    localStorage.setItem('horaFin', horaFin);
-  </script>
 </head>
 
 <body>
@@ -57,10 +41,10 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
 </body>
 </html>
 <?php
-  $movimientos= "<script> document.write(localStorage.contador) </script>";
-  $fechaInicio = "<script> document.write(localStorage.fechaInicio) </script>";
-  $horaInicio = "<script> document.write(localStorage.horaInicio) </script>";
-  $fechaFin = "<script> document.write(localStorage.fechaFin) </script>";
-  $horaFin = "<script> document.write(localStorage.horaFin) </script>";
-  $nuevoRegistro = $movimientos -> movimientosDia($usuario['user'], $fechaInicio, $horaInicio, $movimientos, $fechaFin, $horaFin);
+  $movimientosVar= $_GET['m'];
+  $fechaInicio = $_GET['fi'];
+  $horaInicio = $_GET['hi'];
+  $fechaFin = date('Y-m-d');
+  $horaFin = date('H:i:s');
+  $nuevoRegistro = $movimientos -> movimientosDia($usuario['user'], $fechaInicio, $horaInicio, $movimientosVar, $fechaFin, $horaFin);
  ?>

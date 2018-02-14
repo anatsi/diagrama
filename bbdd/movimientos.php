@@ -28,12 +28,11 @@ class Movimientos extends dbJockeys
     }
   }
 
-  //funcion encargada de insertar los recuros para un servicio en la ddbb
+  //funcion encargada de insertar los movimientos diarios de cada jockey
   function movimientosDia($usuario, $fechao, $horao, $movimientos, $fechaf, $horaf){
     //realizamos la consuta y la guardamos en $sql
-    $sql="INSERT INTO usuarios_movimientos(id, usuario, fecha_inicio, hora_inicio, movimientos, fecha_fin, hora_fin)
-    VALUES(NULL, '".$usuario."', '".$fechao."', '".$horao."', ".$movimientos.", '".$fechaf."', '".$horaf."')";
-    echo $sql;
+    $sql="INSERT INTO usuarios_movimientos(usuario, fecha_inicio, hora_inicio, movimientos_numero, fecha_fin, hora_fin)
+    VALUES('".$usuario."', '".$fechao."', '".$horao."', ".$movimientos.", '".$fechaf."', '".$horaf."')";
     //Realizamos la consulta utilizando la funcion creada en db.php
     $resultado=$this->realizarConsulta($sql);
     if($resultado!=false){
