@@ -75,7 +75,8 @@ if (isset($_SESSION['usuario'])) {
 
   <div class="botones">
     <button type="submit" name="button" id="siguiente"><b>SIGUIENTE</b></button>
-    <button type="reset" name="button" id="reset" onclick="devolver();" style="width: 100%;"><b>LIMPIAR</b></button>
+    <button type="reset" name="button" id="reset" onclick="devolver();"><b>LIMPIAR</b></button>
+    <button type="button" name="button" id="atras"><b>BORRAR</b></button>
   </div>
   </form>
 
