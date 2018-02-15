@@ -47,8 +47,7 @@
           ?>
             <script type="text/javascript">
               localStorage.setItem("contador", Number(localStorage.contador) + 1);
-              alert('Movimiento registrado.');
-              window.location = 'origen.php';
+              window.location = 'finalizado.php';
             </script>
           <?php
         }

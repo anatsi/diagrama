@@ -1,3 +1,10 @@
+function volverAtras() {
+  var confirmacion = confirm('¿Confirmar atras?');
+  if (confirmacion == true) {
+    window.location = 'origen.php';
+  }
+}
+
 function comprobar() {
   var opciones = document.getElementsByName('origen');
   for (var i = 0; i < opciones.length; i++) {

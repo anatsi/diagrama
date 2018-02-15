@@ -25,9 +25,7 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
   <script src="./pace/pace.js"></script>
   <link href="./pace/themes/pace-theme-center-radar.css" rel="stylesheet">
   <link rel="shortcut icon" href="assets/ico/favicon.ico">
-  <script type="text/javascript" src="comprobar.js">
-
-  </script>
+  <script type="text/javascript" src="comprobar.js"></script>
 
 </head>
 
@@ -62,7 +60,7 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
   <div class="botones">
     <button type="submit" name="button" id="siguiente"><b>SIGUIENTE</b></button>
     <button type="reset" name="button" id="reset" onclick="devolver();"><b>LIMPIAR</b></button>
-    <button type="button" name="button" id="atras" onclick="window.location = 'origen.php';"><b>ATRAS</b></button>
+    <button type="button" name="button" id="atras" onclick="volverAtras();"><b>ATRAS</b></button>
   </div>
   </form>
 
