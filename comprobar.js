@@ -54,3 +54,9 @@ function tiempo() {
 function boton() {
   document.getElementById('siguiente').disabled = false;
 }
+
+function borrar() {
+  if (localStorage.contador == 0) {
+    document.getElementById('atras').disabled = true;
+  }
+}

@@ -20,7 +20,7 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
   <script src="../pace/pace.js"></script>
   <link href="../pace/themes/pace-theme-center-radar.css" rel="stylesheet">
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-  <script type="text/javascript" src="comprobar.js">
+  <script type="text/javascript" src="../comprobar.js">
 
   </script>
 
