@@ -27,7 +27,7 @@ class Sesiones
   }
 
   //logout para cerrar la sesion.
-  public function logOut($value='')
+  public function logOut()
   {
     $_SESSION=[];
     session_destroy();
