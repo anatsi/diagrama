@@ -83,7 +83,7 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
  }else {
    ?>
      <script type="text/javascript">
-       window.location = "index.html";
+       window.location = "../index.html";
      </script>
    <?php
  }
