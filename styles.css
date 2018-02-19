@@ -197,7 +197,7 @@ header h3 {
   margin: 4px;
 }
 
-.derecha a {
+.derecha a, #roles {
   background-color: red;
   color: white;
   font-weight: bold;
@@ -206,8 +206,19 @@ header h3 {
   margin: 5px;
 }
 
+#roles{
+  padding: 5px;
+  margin: 4px;
+  border-radius: 15px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
 .izquierda {
   float: left;
+}
+.izquierda img{
+  margin-left: 43px;
 }
 
 .footer {

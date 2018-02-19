@@ -26,8 +26,10 @@ if (isset($_SESSION['usuario'])) {
 <body>
   <header>
     <span class="izquierda">
-    	<a  href= "#"><img src="../assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
+      <a href="../roles.php" id='roles'>ROLES</a>
+      <a  href= "#"><img src="../assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
     </span>
+    <br>
     <span class="derecha" onclick = "window.location= 'salir.php?m='+localStorage.contador+'&fi='+localStorage.fechaInicio+'&hi='+localStorage.horaInicio"><a>SALIR</a></span>
     <br>
     <br>
