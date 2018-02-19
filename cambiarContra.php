@@ -44,7 +44,7 @@
               ?>
                 <script type="text/javascript">
                   alert('Contraseña actualizada con exito.');
-                  window.location = "origen.php";
+                  window.location = "roles.php";
                 </script>
               <?php
             }

@@ -1,7 +1,7 @@
 <?php
-require_once './bbdd/sesiones.php';
+require_once '../bbdd/sesiones.php';
 $sesion = new Sesiones();
-require_once './bbdd/empleados.php';
+require_once '../bbdd/empleados.php';
 $empleado = new Empleados();
 if (isset($_SESSION['usuario'])) {
   $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
@@ -13,10 +13,10 @@ if (isset($_SESSION['usuario'])) {
   <meta charset="utf-8">
   <title>ELEGIR ORIGEN</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css" type="text/css" media="all">
-  <script src="./pace/pace.js"></script>
-  <link href="./pace/themes/pace-theme-center-radar.css" rel="stylesheet">
-  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <link rel="stylesheet" href="../styles.css" type="text/css" media="all">
+  <script src="../pace/pace.js"></script>
+  <link href="../pace/themes/pace-theme-center-radar.css" rel="stylesheet">
+  <link rel="shortcut icon" href="../assets/ico/favicon.ico">
   <script type="text/javascript" src="comprobar.js">
 
   </script>
@@ -26,7 +26,7 @@ if (isset($_SESSION['usuario'])) {
 <body>
   <header>
     <span class="izquierda">
-    	<a  href= "#"><img src="assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
+    	<a  href= "#"><img src="../assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
     </span>
     <span class="derecha" onclick = "window.location= 'salir.php?m='+localStorage.contador+'&fi='+localStorage.fechaInicio+'&hi='+localStorage.horaInicio"><a>SALIR</a></span>
     <br>

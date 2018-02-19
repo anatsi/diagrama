@@ -11,11 +11,11 @@
   </head>
   <body>
     <?php
-    require_once './bbdd/movimientos.php';
+    require_once '../bbdd/movimientos.php';
     $movimiento = new Movimientos();
-    require_once './bbdd/sesiones.php';
+    require_once '../bbdd/sesiones.php';
     $sesion = new Sesiones();
-    require_once './bbdd/empleados.php';
+    require_once '../bbdd/empleados.php';
     $empleado = new Empleados();
 
     if ($_POST['destino']) {

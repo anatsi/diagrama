@@ -49,7 +49,7 @@
             ?>
               <script type="text/javascript">
                 localStorage.setItem('contador', 0);
-                window.location="origen.php";
+                window.location="roles.php";
               </script>
             <?php
           }else {

@@ -1,5 +1,5 @@
 <?php
-  require_once './bbdd/movimientos.php';
+  require_once '../bbdd/movimientos.php';
   $movimientos = new Movimientos();
 
   $error = $movimientos -> marcarError($_GET['id']);
