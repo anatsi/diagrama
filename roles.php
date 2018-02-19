@@ -3,6 +3,7 @@
   $sesion= new Sesiones();
   require_once './bbdd/empleados.php';
   $empleado = new Empleados();
+  if (isset($_SESSION['usuario'])) {
   $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
  ?>
 <!DOCTYPE html>
@@ -59,7 +60,15 @@
   </div>
 
   </form>
-
+<?php
+}else {
+  ?>
+    <script type="text/javascript">
+      window.location = 'index.html';
+    </script>
+  <?php
+}
+ ?>
 </body>
 
 </html>

@@ -11,14 +11,18 @@
 
       $error = $movimientos -> marcarError($_GET['id']);
       if ($error == false) {
-        header("Location: origen.php");
+        ?>
+          <script type="text/javascript">
+            window.location = 'origen.php';
+          </script>
+        <?php
       }else {
         ?>
         <script type="text/javascript">
           localStorage.setItem("contador", Number(localStorage.contador) - 1);
+          window.location = 'origen.php';
         </script>
         <?php
-        header("Location: origen.php");
       }
      ?>
   </body>
