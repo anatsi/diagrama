@@ -43,7 +43,7 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
 
   </header>
   <div class="two-columns">
-    <form class="contact_form" action="guardarMovimientos.php" method="post" enctype="multipart/form-data" onsubmit="return destino();">
+    <form class="contact_form" action="guardarMovimientos.php" method="post" enctype="multipart/form-data">
 
       <ul>
         <li>

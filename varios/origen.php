@@ -23,7 +23,7 @@ if (isset($_SESSION['usuario'])) {
 
 </head>
 
-<body>
+<body onload="borrar();">
   <header>
     <span class="izquierda">
       <a href="../roles.php" id='roles'>ROLES</a>
