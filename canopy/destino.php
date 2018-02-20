@@ -18,7 +18,7 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles.css" type="text/css" media="all">
   <script src="../pace/pace.js"></script>
-  <link href="../pace/themes/pace-theme-center-radar.css" rel="stylesheet">
+<!--  <link href="../pace/themes/pace-theme-center-radar.css" rel="stylesheet">-->
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
   <script type="text/javascript" src="../comprobar.js">
 
