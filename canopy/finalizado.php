@@ -16,17 +16,17 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
   <script src="../pace/pace.js"></script>
   <!--  <link href="../pace/themes/pace-theme-center-radar.css" rel="stylesheet">-->
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-  <script type="text/javascript">
+  <!--<script type="text/javascript">
     function movimientoFinalizado() {
       myVar = setTimeout(fuera, 2000);
     }
     function fuera() {
       window.location = 'origen.php';
     }
-  </script>
+  </script>-->
 </head>
 
-<body onload="movimientoFinalizado();">
+<body>
   <header>
     <span class="izquierda">
     	<a  href= "#"><img src="../assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
@@ -37,6 +37,9 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
   </header>
     <div class="two-columns">
       <h3>MOVIMIENTO REALIZADO CON EXITO</script></h3>
+    </div>
+    <div class="botones">
+      <button type="button" name="button" id="siguiente" onclick="window.location = 'origen.php'"><b>ACEPTAR</b></button>
     </div>
 </body>
 </html>
