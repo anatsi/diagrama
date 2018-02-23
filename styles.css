@@ -270,6 +270,10 @@ header h3 {
   text-align: center;
 }
 
+.btn5{
+  font-size: 22px;
+}
+
 .btn-sık {
   transition: all 0.2s ease;
   background-color: white;
