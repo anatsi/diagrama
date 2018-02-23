@@ -72,7 +72,6 @@ if (isset($_SESSION['usuario'])) {
            </select>
         </li>
       </ul>
-      <input type='hidden' name='hora' value="">
   </div>
 
   <div class="botones">

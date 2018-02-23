@@ -58,6 +58,22 @@ class Movimientos extends dbJockeys
     }
   }
 
+  function MovimientoID($id){
+    //Construimos la consulta
+    $sql="SELECT * from movimientos WHERE id=".$id;
+    //Realizamos la consulta
+    $resultado=$this->realizarConsulta($sql);
+    if($resultado!=false){
+      if($resultado!=false){
+        return $resultado->fetch_assoc();
+      }else{
+        return null;
+      }
+    }else{
+      return null;
+    }
+  }
+
   function marcarError($id){
     $sql="UPDATE movimientos SET error = 1 WHERE id = ".$id;
     $consulta=$this->realizarConsulta($sql);

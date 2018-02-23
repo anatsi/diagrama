@@ -12,7 +12,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
 
 <head>
   <meta charset="utf-8">
-  <title>ELEGIR ORIGEN</title>
+  <title>BORRAR MOVIMIENTO</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles.css" type="text/css" media="all">
   <script src="../pace/pace.js"></script>
@@ -24,23 +24,64 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
 </head>
 
 <body>
+  <?php
+    $ultimoMovimiento = $movimientos ->UltimoMovimiento($usuario['user']);
+   ?>
   <header>
     <span class="izquierda">
     	<a  href= "#"><img src="../assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
     </span>
     <br>
     <br>
-    <h3><?php echo $usuario['user']; ?></h3>
+    <h3>
+      <?php echo $usuario['user']; ?>
+      <br>
+      <?php echo $ultimoMovimiento['bastidor']; ?>
+    </h3>
   </header>
     <div class="two-columns">
-      <?php
-        $ultimoMovimiento = $movimientos ->UltimoMovimiento($usuario['user']);
-        echo "<h3>EL ULTIMO MOVIMIENTO, CON VIN:".$ultimoMovimiento['bastidor']." SE BORRARÁ.</h3>";
-       ?>
+
+      <form class="contact_form" action="borrarddbb.php?id=<?php echo $ultimoMovimiento['id']; ?>" method="post" enctype="multipart/form-data">
+        <ul>
+          <li>
+            <select class="btn" name="origen" id="otro">
+               <option value="primera" selected disabled>NUEVO ORIGEN</option>
+               <option value="CANOPY">CANOPY</option>
+               <option value="P12">P12</option>
+               <option value="MALVINAS">MALVINAS</option>
+               <option value="CAMPA">CAMPA</option>
+               <option value="P9">P9</option>
+               <option value="ZENDER">ZENDER</option>
+               <option value="RAI">RAI</option>
+               <option value="MOLINO">MOLINO</option>
+               <option value="MOVA">MOVA</option>
+               <option value="PUVA">PUVA</option>
+               <option value="RAVA">RAVA</option>
+               <option value="SP9VA">SP9VA</option>
+             </select>
+          </li>
+          <li>
+            <select class="btn" name="destino" id="otro">
+               <option value="primera" selected disabled>NUEVO DESTINO</option>
+               <option value="P12">P12</option>
+               <option value="P9">P9</option>
+               <option value="MALVINAS">MALVINAS</option>
+               <option value="ZENDER">ZENDER</option>
+               <option value="RAI">RAI</option>
+               <option value="MOLINO">MOLINO</option>
+               <option value="MOVA">MOVA</option>
+               <option value="PUVA">PUVA</option>
+               <option value="RAVA">RAVA</option>
+               <option value="SP9VA">SP9VA</option>
+             </select>
+          </li>
+        </ul>
+
     </div>
   <div class="botones">
-    <button type="button" name="button" id="siguiente" onclick="window.location = 'borrarddbb.php?id=<?php echo $ultimoMovimiento['id']; ?>';"><b>ACEPTAR</b></button>
-    <button type="button" name="button" id="atras" style="width: 100%;" onclick="window.location = 'origen.php';"><b>ATRÁS</b></button>
+    <button type="submit" name="button" id="siguiente"><b>ACEPTAR</b></button>
+    <button type="button" name="button" id="atras" style="width: 98%;" onclick="window.location = 'origen.php';"><b>ATRÁS</b></button>
   </div>
+</form>
 </body>
 </html>
