@@ -35,7 +35,7 @@
         $diad = date('Y-m-d');
         $horad = date('H:i:s');
         $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
-        $nuevoMovimiento=$movimiento->nuevoMovimiento($_POST['diao'], $_POST['horao'], $_POST['origen'], $_POST['bastidor'], $diad, $horad, $destino, $usuario['user']);
+        $nuevoMovimiento=$movimiento->nuevoMovimiento($_POST['diao'], $_POST['horao'], $_POST['origen'], $_POST['bastidor'], $diad, $horad, $destino, $usuario['user'], 'CANOPY');
         if ($nuevoMovimiento == null) {
           ?>
             <script type="text/javascript">

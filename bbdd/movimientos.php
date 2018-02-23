@@ -15,10 +15,10 @@ class Movimientos extends dbJockeys
   }
 
   //funcion encargada de insertar los recuros para un servicio en la ddbb
-  function nuevoMovimiento($fechao, $horao, $origen, $bastidor, $fechad, $horad, $destino, $usuario){
+  function nuevoMovimiento($fechao, $horao, $origen, $bastidor, $fechad, $horad, $destino, $usuario, $rol){
     //realizamos la consuta y la guardamos en $sql
-    $sql="INSERT INTO movimientos(id, fecha_origen, hora_origen, origen, bastidor, fecha_destino, hora_destino, destino, usuario)
-    VALUES(NULL, '".$fechao."', '".$horao."', '".$origen."', '".$bastidor."', '".$fechad."', '".$horad."', '".$destino."', '".$usuario."')";
+    $sql="INSERT INTO movimientos(id, fecha_origen, hora_origen, origen, bastidor, fecha_destino, hora_destino, destino, usuario, error, rol)
+    VALUES(NULL, '".$fechao."', '".$horao."', '".$origen."', '".$bastidor."', '".$fechad."', '".$horad."', '".$destino."', '".$usuario."', 0, '".$rol."')";
     //Realizamos la consulta utilizando la funcion creada en db.php
     $resultado=$this->realizarConsulta($sql);
     if($resultado!=false){
