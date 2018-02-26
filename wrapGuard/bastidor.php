@@ -5,14 +5,7 @@ require_once '../bbdd/empleados.php';
 $empleado = new Empleados();
 
 if (isset($_SESSION['usuario'])) {
-
-if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
   $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
-  if ($_POST['origen']) {
-    $origen = $_POST['origen'];
-  }else {
-    $origen = $_POST['otrosOrigenes'];
-  }
  ?>
 <!DOCTYPE html>
 <html>
@@ -70,16 +63,6 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
 
 </html>
 <?php
-}else {
-  ?>
-    <script type="text/javascript">
-      alert('Elegir un origen antes de continuar.');
-      window.location = 'origen.php';
-    </script>
-  <?php
-}
- ?>
- <?php
  }else {
    ?>
      <script type="text/javascript">

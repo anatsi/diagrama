@@ -38,24 +38,24 @@
         <li>
           <label for="origen" id="titulo">ROLES</label>
           <div class="wrap">
-            <label id="lab">
-              <input type="radio" id="opcion1" name="origen" value="CANOPY" onclick="window.location = './chequer/index.php';">
+            <label id="lab" style="display: none;">
+              <input type="radio" name="CHEQUER" value="CHEQUER" onclick="window.location = './chequer/index.php';">
                <div  class="btn btn-sık"><span>CHEQUER</span></div>
             </label>
             <label id="lab">
-              <input  type="radio" id="opcion2" name="origen" value="P12" onclick="window.location = './canopy/origen.php';">
+              <input  type="radio" name="CANOPY" value="CANOPY" onclick="window.location = './canopy/origen.php';">
              <div class="btn btn-sık"><span>CANOPY</span></div>
            </label>
-           <label id="lab">
-             <input  type="radio" id="opcion3" name="origen" value="MALVINAS" onclick="window.location = './campa/index.php';">
+           <label id="lab" style="display: none;">
+             <input  type="radio" name="CAMPA" value="CAMPA" onclick="window.location = './campa/index.php';">
             <div class="btn btn-sık"><span>CAMPA</span></div>
           </label>
           <label id="lab">
-            <input  type="radio" id="opcion4" name="origen" value="CAMPA" onclick="window.location = './varios/origen.php';">
+            <input  type="radio" name="VARIOS" value="VARIOS" onclick="window.location = './varios/origen.php';">
            <div class="btn btn-sık"><span>VARIOS</span></div>
          </label>
-         <label id="lab">
-           <input  type="radio" id="opcion5" name="origen" value="CAMPA" onclick="window.location = './wrapGuard/index.php';">
+         <label id="lab" style="display: none;">
+           <input  type="radio" name="WRAP" value="WRAP" onclick="window.location = './wrapGuard/index.php';">
           <div class="btn btn-sık btn5"><span>WRAP GUARD</span></div>
         </label>
           </div>

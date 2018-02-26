@@ -14,7 +14,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles.css" type="text/css" media="all">
   <script src="../pace/pace.js"></script>
-  <link href="../pace/themes/pace-theme-center-radar.css" rel="stylesheet">
+  <!--<link href="../pace/themes/pace-theme-center-radar.css" rel="stylesheet">-->
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
   <script type="text/javascript" src="../comprobar.js">
 
@@ -34,7 +34,22 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
     <h3><?php echo $usuario['user']; ?></h3>
   </header>
     <div class="two-columns">
-      <h3>HAS ENTRADO EN MODO WRAP GUARD</h3>
+      <form class="contact_form" action="bastidor.php" method="post" enctype="multipart/form-data">
+        <ul>
+          <li>
+            <label for="origen" id="titulo">SEGUNDO USUARIO: </label>
+            <div class="wrap">
+              <input type="text" name="usuario2" value="">
+            </div>
+          </li>
+        </ul>
     </div>
+
+    <div class="botones">
+      <button type="submit" name="button" id="siguiente"><b>SIGUIENTE</b></button>
+      <button type="reset" name="button" id="reset" style="width: 98%;"><b>LIMPIAR</b></button>
+    </div>
+      </form>
+  </div>
 </body>
 </html>
