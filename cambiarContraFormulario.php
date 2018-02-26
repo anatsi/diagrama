@@ -45,7 +45,7 @@ if (isset($_SESSION['usuario'])) {
                   <label class="sr-only" for="form-password">Repetir nueva contraseña</label>
                   <input type="password" name="form-password" placeholder="Repetir nueva contraseña" class="form-password form-control" id="form-password">
                 </div>
-                <button type="submit" class="btn">Enviar</button>
+                <button type="submit" class="btn">Cambiar contraseña</button>
               </form>
             </div>
           </div>

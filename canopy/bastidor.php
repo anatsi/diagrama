@@ -55,6 +55,9 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
           <input type="text" name="bastidor" autofocus required pattern="([W][F][a-zA-Z0-9]{8}[A-Z]{2}[0-9]{5})"/>
         </li>
       </ul>
+      <?php
+        echo "<input type='hidden' name='origen' value='".$origen."'>";
+       ?>
   </div>
   <div class="botones">
     <button type="submit" name="button" id="siguiente"><b>SIGUIENTE</b></button>

@@ -132,12 +132,10 @@ $usuarios = array (
 "VVM",
 "MPZ",
 "prueba",
-"acosinga",
 "MAV",
 "TBG",
 "JAE",
 "VPA",
-"prueba",
 "MV"
 );
 $salt='$tsi$/';

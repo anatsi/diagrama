@@ -32,25 +32,16 @@ if (isset($_SESSION['usuario'])) {
     <span class="derecha" onclick = "window.location= '../salir.php?m='+localStorage.contador+'&fi='+localStorage.fechaInicio+'&hi='+localStorage.horaInicio"><a>SALIR</a></span>
     <br>
     <br>
-    <h3><?php echo $usuario['user']; ?>    -    <?php echo $origen; ?></h3>
+    <h3><?php echo $usuario['user']; ?></h3>
   </header>
   <div class="two-columns">
-    <form class="contact_form" action="destino.php" method="post" enctype="multipart/form-data">
-      <?php
-        $diao = date('Y-m-d');
-        $horao = date('H:i:s');
-        echo "<input type='hidden' name='horao' value='".$horao."'>";
-        echo "<input type='hidden' name='diao' value='".$diao."'>";
-       ?>
+    <form class="contact_form" action="" method="post" enctype="multipart/form-data">
       <ul>
         <li>
           <label for="Bastidor" id="titulo">BASTIDOR</label>
           <input type="text" name="bastidor" autofocus required pattern="([W][F][a-zA-Z0-9]{8}[A-Z]{2}[0-9]{5})"/>
         </li>
       </ul>
-      <?php
-          echo "<input type='hidden' name='origen' value='".$origen."'>";
-       ?>
   </div>
   <div class="botones">
     <button type="submit" name="button" id="siguiente"><b>SIGUIENTE</b></button>

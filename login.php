@@ -1,3 +1,8 @@
+<?php
+//incluimos el archivo encargado de las sesiones y creamos el objeto.
+  include './bbdd/sesiones.php';
+  $sesion= new Sesiones();
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,9 +19,7 @@
     //incluimos el archivo encargado de la tabla de usuarios de la db y creamos el objeto.
       include './bbdd/empleados.php';
       $user= new Empleados();
-    //incluimos el archivo encargado de las sesiones y creamos el objeto.
-      include './bbdd/sesiones.php';
-      $sesion= new Sesiones();
+
       //llamamos a la funcion de loguear el usuario creada en users.php
       $registrado=$user->LoginUser($_POST['form-username']);
       //comprobamos que el usuario existe
