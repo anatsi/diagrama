@@ -18,16 +18,26 @@
           </script>
         <?php
       }else {
-        $nuevoMov = $movimientos -> nuevoMovimiento($ultimoMovimiento['fecha_origen'], $ultimoMovimiento['hora_origen'], $_POST['origen'], $ultimoMovimiento['bastidor'], $ultimoMovimiento['fecha_destino'], $ultimoMovimiento['hora_destino'], $_POST['destino'], $ultimoMovimiento['usuario'], $ultimoMovimiento['rol']);
-        echo $nuevoMov;
-        if ($nuevoMov == true) {
-          echo "bien";
+        if (isset($_POST['origen']) && isset($_POST['destino'])) {
+          $nuevoMov = $movimientos -> nuevoMovimiento($ultimoMovimiento['fecha_origen'], $ultimoMovimiento['hora_origen'], $_POST['origen'], $ultimoMovimiento['bastidor'], $ultimoMovimiento['fecha_destino'], $ultimoMovimiento['hora_destino'], $_POST['destino'], $ultimoMovimiento['usuario'], $ultimoMovimiento['rol']);
+          echo $nuevoMov;
+          if ($nuevoMov == true) {
+            echo "bien";
+            ?>
+            <script type="text/javascript">
+              window.location = 'origen.php';
+            </script>
+            <?php
+          }
+        }else {
           ?>
           <script type="text/javascript">
+            localStorage.setItem("contador", Number(localStorage.contador) - 1);
             window.location = 'origen.php';
           </script>
           <?php
         }
+
       }
      ?>
   </body>
