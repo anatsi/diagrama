@@ -9,6 +9,8 @@ function comprobar() {
   var opciones = document.getElementsByName('origen');
   for (var i = 0; i < opciones.length; i++) {
     if (opciones[i].checked) {
+      var elegido = opciones[i].value;
+      localStorage.setItem('origen', elegido);
       document.getElementById('otro').disabled = true;
     }
   }
@@ -26,6 +28,7 @@ function comprobar2() {
 function bloquear() {
   var elegido = document.getElementById('otro').value;
   if (elegido != 'primera') {
+    localStorage.setItem('origen', elegido);
     var select = document.getElementById('otro');
     select.style.backgroundColor = 'rgb(3, 119, 25)';
     select.style.color = 'white';
@@ -37,6 +40,7 @@ function bloquear() {
 }
 
 function devolver() {
+  localStorage.removeItem('origen');
   var select = document.getElementById('otro');
   select.style.backgroundColor = 'white';
   select.style.color = 'black';
@@ -47,13 +51,13 @@ function devolver() {
   document.getElementById('opcion4').disabled = false;
 }
 
-function tiempo() {
+/*function tiempo() {
   myVar = setTimeout(boton, 15000);
-}
+}*/
 
-function boton() {
+/*function boton() {
   document.getElementById('siguiente').disabled = false;
-}
+}*/
 
 function borrar() {
   if (localStorage.contador == 0) {

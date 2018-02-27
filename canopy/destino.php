@@ -20,13 +20,12 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
   <script src="../pace/pace.js"></script>
 <!--  <link href="../pace/themes/pace-theme-center-radar.css" rel="stylesheet">-->
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-  <script type="text/javascript" src="../comprobar.js">
-
-  </script>
+  <script type="text/javascript" src="../comprobar.js"></script>
+  <script type="text/javascript" src="tiempo.js"></script>
 
 </head>
 
-<body onload="tiempo();">
+<body onload="inicio();">
   <header>
     <span class="izquierda">
       <a href="../roles.php" id='roles'>ROLES</a>
