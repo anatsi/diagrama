@@ -2,16 +2,6 @@ var esteNo = 0;
 var contador = 0;
 var tiempoFinal = 0;
 
-/*function origen() {
-  var origenes = document.getElementsByName('origen');
-  for (var i = 0; i < origenes.length; i++) {
-    if (origenes[i].checked) {
-      var origenElegido = origenes[i].value;
-      localStorage.setItem('origen', origenElegido);
-    }
-  }
-}*/
-
 function inicio() {
   esteNo = 0;
   myVar = setTimeout(elegido, 10000);
