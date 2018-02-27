@@ -63,16 +63,19 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
           <li>
             <select class="btn" name="destino" id="otro">
                <option value="primera" selected disabled>NUEVO DESTINO</option>
-               <option value="P12">P12</option>
                <option value="P9">P9</option>
-               <option value="MALVINAS">MALVINAS</option>
-               <option value="ZENDER">ZENDER</option>
-               <option value="RAI">RAI</option>
-               <option value="MOLINO">MOLINO</option>
+               <option value="SP9">SP9</option>
+               <option value="P12">P12</option>
+               <option value="FCPA">FCPA</option>
+               <option value="VQC">VQC</option>
+               <option value="P.COLORES">P.COLORES</option>
+               <option value="CIRCUITO">CIRCUITO</option>
                <option value="MOVA">MOVA</option>
                <option value="PUVA">PUVA</option>
                <option value="RAVA">RAVA</option>
                <option value="SP9VA">SP9VA</option>
+               <option value="RAI">RAI</option>
+               <option value="MOLINO">MOLINO</option>
              </select>
           </li>
         </ul>
