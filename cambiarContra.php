@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>CAMBIAR CONTRASEÑA</title>
     <style media="screen">
       body{
         color: white;

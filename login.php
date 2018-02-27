@@ -7,7 +7,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Login</title>
+    <title>LOGIN</title>
     <style media="screen">
       body{
         color: white;

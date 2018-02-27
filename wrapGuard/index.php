@@ -10,7 +10,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
 
 <head>
   <meta charset="utf-8">
-  <title>CHEQUER</title>
+  <title>MODO WRAP GUARD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles.css" type="text/css" media="all">
   <script src="../pace/pace.js"></script>
