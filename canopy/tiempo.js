@@ -25,14 +25,14 @@ function elegido() {
   for (var i = 0; i < elegido.length; i++) {
     if (elegido[i].checked) {
       var esEste = elegido[i].value;
-      if (esEste == 'ZENDER') {
-        zender();
+      if (esEste == 'SP9') {
+        sp9();
       } else if (esEste == 'P9') {
         p9();
       } else if (esEste == 'P12') {
         p12();
-      } else if (esEste == 'MALVINAS') {
-        malvinas();
+      } else if (esEste == 'FCPA') {
+        fcpa();
       }
     } else {
       esteNo++;
@@ -54,7 +54,7 @@ function elegidoSelect() {
   }
 }
 
-function zender() {
+function sp9() {
   tiempoFinal = 20000 - contador;
   console.log(tiempoFinal);
   if (tiempoFinal > 0) {
@@ -68,7 +68,7 @@ function zender() {
       console.log('origen:p12');
     }
     setTimeout(fin, tiempoFinal);
-    console.log('zender');
+    console.log('sp9');
   }else {
     fin();
   }
@@ -113,7 +113,7 @@ function p12() {
   }
 }
 
-function malvinas() {
+function fcpa() {
   tiempoFinal = 40000 - contador;
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'MALVINAS') {
@@ -126,7 +126,7 @@ function malvinas() {
       console.log('origen:p12');
     }
     setTimeout(fin, tiempoFinal);
-    console.log('malvinas');
+    console.log('fcpa');
   }else {
     fin();
   }
