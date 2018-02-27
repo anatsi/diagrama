@@ -51,14 +51,18 @@
           if ($registrado['primera_vez'] == 1) {
             ?>
               <script type="text/javascript">
+              if (!localStorage.contador) {
                 localStorage.setItem('contador', 0);
+              }
                 window.location="roles.php";
               </script>
             <?php
           }else {
             ?>
               <script type="text/javascript">
+              if (!localStorage.contador) {
                 localStorage.setItem('contador', 0);
+              }
                 window.location="cambiarContraFormulario.php";
               </script>
             <?php

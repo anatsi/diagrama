@@ -48,3 +48,6 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
   $horaFin = date('H:i:s');
   $nuevoRegistro = $movimientos -> movimientosDia($usuario['user'], $fechaInicio, $horaInicio, $movimientosVar, $fechaFin, $horaFin);
  ?>
+<script type="text/javascript">
+  localStorage.setItem('contador', 0);
+</script>
