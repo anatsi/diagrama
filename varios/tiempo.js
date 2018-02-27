@@ -14,8 +14,8 @@ var tiempoFinal = 0;
 
 function inicio() {
   esteNo = 0;
-  myVar = setTimeout(elegido, 15000);
-  contador += 15000;
+  myVar = setTimeout(elegido, 10000);
+  contador += 10000;
   console.log('inicio');
   console.log(localStorage.origen);
 }
@@ -25,8 +25,8 @@ function elegido() {
   for (var i = 0; i < elegido.length; i++) {
     if (elegido[i].checked) {
       var esEste = elegido[i].value;
-      if (esEste == 'ZENDER') {
-        zender();
+      if (esEste == 'SP9') {
+        sp9();
       } else if (esEste == 'P9') {
         p9();
       } else if (esEste == 'P12') {
@@ -54,21 +54,21 @@ function elegidoSelect() {
   }
 }
 
-function zender() {
+function sp9() {
   tiempoFinal = 20000 - contador;
   console.log(tiempoFinal);
   if (tiempoFinal > 0) {
-    if (localStorage.origen == 'MALVINAS') {
-      console.log('origen:malvinas');
-    } else if (localStorage.origen == 'CANOPY') {
-      console.log('origen:canopy');
-    } else if (localStorage.origen == 'CAMPA') {
-      console.log('origen:campa');
+    if (localStorage.origen == 'FCPA') {
+      console.log('origen:fcpa');
+    } else if (localStorage.origen == 'VQC') {
+      console.log('origen:vqc');
+    } else if (localStorage.origen == 'P.COLORES') {
+      console.log('origen:p.colores');
     } else if (localStorage.origen == 'P12') {
       console.log('origen:p12');
     }
     setTimeout(fin, tiempoFinal);
-    console.log('zender');
+    console.log('sp9');
   }else {
     fin();
   }
@@ -78,12 +78,12 @@ function p9() {
   tiempoFinal = 20000 - contador;
   console.log(tiempoFinal);
   if (tiempoFinal > 0) {
-    if (localStorage.origen == 'MALVINAS') {
-      console.log('origen:malvinas');
-    } else if (localStorage.origen == 'CANOPY') {
-      console.log('origen:canopy');
-    } else if (localStorage.origen == 'CAMPA') {
-      console.log('origen:campa');
+    if (localStorage.origen == 'FCPA') {
+      console.log('origen:fcpa');
+    } else if (localStorage.origen == 'VQC') {
+      console.log('origen:vqc');
+    } else if (localStorage.origen == 'P.COLORES') {
+      console.log('origen:p.colores');
     } else if (localStorage.origen == 'P12') {
       console.log('origen:p12');
     }
@@ -97,12 +97,12 @@ function p9() {
 function p12() {
   tiempoFinal = 30000 - contador;
   if (tiempoFinal > 0) {
-    if (localStorage.origen == 'MALVINAS') {
-      console.log('origen:malvinas');
-    } else if (localStorage.origen == 'CANOPY') {
-      console.log('origen:canopy');
-    } else if (localStorage.origen == 'CAMPA') {
-      console.log('origen:campa');
+    if (localStorage.origen == 'FCPA') {
+      console.log('origen:fcpa');
+    } else if (localStorage.origen == 'VQC') {
+      console.log('origen:vqc');
+    } else if (localStorage.origen == 'P.COLORES') {
+      console.log('origen:p.colores');
     } else if (localStorage.origen == 'P12') {
       console.log('origen:p12');
     }
@@ -116,12 +116,12 @@ function p12() {
 function malvinas() {
   tiempoFinal = 40000 - contador;
   if (tiempoFinal > 0) {
-    if (localStorage.origen == 'MALVINAS') {
-      console.log('origen:malvinas');
-    } else if (localStorage.origen == 'CANOPY') {
-      console.log('origen:canopy');
-    } else if (localStorage.origen == 'CAMPA') {
-      console.log('origen:campa');
+    if (localStorage.origen == 'FCPA') {
+      console.log('origen:fcpa');
+    } else if (localStorage.origen == 'VQC') {
+      console.log('origen:vqc');
+    } else if (localStorage.origen == 'P.COLORES') {
+      console.log('origen:p.colores');
     } else if (localStorage.origen == 'P12') {
       console.log('origen:p12');
     }
@@ -135,12 +135,12 @@ function malvinas() {
 function puva() {
   tiempoFinal = 40000 - contador;
   if (tiempoFinal > 0) {
-    if (localStorage.origen == 'MALVINAS') {
-      console.log('origen:malvinas');
-    } else if (localStorage.origen == 'CANOPY') {
-      console.log('origen:canopy');
-    } else if (localStorage.origen == 'CAMPA') {
-      console.log('origen:campa');
+    if (localStorage.origen == 'FCPA') {
+      console.log('origen:fcpa');
+    } else if (localStorage.origen == 'VQC') {
+      console.log('origen:vqc');
+    } else if (localStorage.origen == 'P.COLORES') {
+      console.log('origen:p.colores');
     } else if (localStorage.origen == 'P12') {
       console.log('origen:p12');
     }
@@ -154,12 +154,12 @@ function puva() {
 function rai() {
   tiempoFinal = 40000 - contador;
   if (tiempoFinal > 0) {
-    if (localStorage.origen == 'MALVINAS') {
-      console.log('origen:malvinas');
-    } else if (localStorage.origen == 'CANOPY') {
-      console.log('origen:canopy');
-    } else if (localStorage.origen == 'CAMPA') {
-      console.log('origen:campa');
+    if (localStorage.origen == 'FCPA') {
+      console.log('origen:fcpa');
+    } else if (localStorage.origen == 'VQC') {
+      console.log('origen:vqc');
+    } else if (localStorage.origen == 'P.COLORES') {
+      console.log('origen:p.colores');
     } else if (localStorage.origen == 'P12') {
       console.log('origen:p12');
     }

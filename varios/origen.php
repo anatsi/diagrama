@@ -42,32 +42,28 @@ if (isset($_SESSION['usuario'])) {
           <label for="origen" id="titulo">ORIGEN</label>
           <div class="wrap">
             <label id="lab">
-              <input type="radio" id="opcion1" name="origen" value="CANOPY" onclick="comprobar();">
-               <div  class="btn btn-sık"><span>CANOPY</span></div>
+              <input type="radio" id="opcion1" name="origen" value="P12" onclick="comprobar();">
+               <div  class="btn btn-sık"><span>P12</span></div>
             </label>
             <label id="lab">
-              <input  type="radio" id="opcion2" name="origen" value="P12" onclick="comprobar();">
-             <div class="btn btn-sık"><span>P12</span></div>
+              <input  type="radio" id="opcion2" name="origen" value="FCPA" onclick="comprobar();">
+             <div class="btn btn-sık"><span>FCPA</span></div>
            </label>
            <label id="lab">
-             <input  type="radio" id="opcion3" name="origen" value="MALVINAS" onclick="comprobar();">
-            <div class="btn btn-sık"><span>MALVINAS</span></div>
+             <input  type="radio" id="opcion3" name="origen" value="VQC" onclick="comprobar();">
+            <div class="btn btn-sık"><span>VQC</span></div>
           </label>
           <label id="lab">
-            <input  type="radio" id="opcion4" name="origen" value="CAMPA" onclick="comprobar();">
-           <div class="btn btn-sık"><span>CAMPA</span></div>
+            <input  type="radio" id="opcion4" name="origen" value="P.COLORES" onclick="comprobar();">
+           <div class="btn btn-sık"><span>P.COLORES</span></div>
          </label>
           </div>
           <select class="btn" name="otrosOrigenes" id="otro" onchange="bloquear();">
              <option value="primera" selected disabled>OTRAS ZONAS</option>
+             <option value="CANOPY" onchange="bloquear();">CANOPY</option>
              <option value="P9" onchange="bloquear();">P9</option>
-             <option value="ZENDER" onchange="bloquear();">ZENDER</option>
-             <option value="RAI" onchange="bloquear();">RAI</option>
-             <option value="MOLINO" onchange="bloquear();">MOLINO</option>
-             <option value="MOVA" onchange="bloquear();">MOVA</option>
-             <option value="PUVA" onchange="bloquear();">PUVA</option>
-             <option value="RAVA" onchange="bloquear();">RAVA</option>
-             <option value="SP9VA" onchange="bloquear();">SP9VA</option>
+             <option value="MALVINAS" onchange="bloquear();">MALVINAS</option>
+             <option value="CIRCUITO" onchange="bloquear();">CIRCUITO</option>
            </select>
         </li>
       </ul>
