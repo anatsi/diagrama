@@ -65,17 +65,17 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
            <div class="btn btn-sık"><span>FCPA</span></div>
          </label>
           </div>
-          <select class="" name="otrosDestinos" id="otro" onchange="bloquear();">
-             <option value="" selected disabled onchange="bloquear();">OTRAS ZONAS</option>
-             <option value="VQC" onchange="bloquear();">VQC</option>
-             <option value="P.COLORES" onchange="bloquear();">P.COLORES</option>
-             <option value="CIRCUITO" onchange="bloquear();">CIRCUITO</option>
-             <option value="MOVA" onchange="bloquear();">MOVA</option>
-             <option value="PUVA" onchange="bloquear();">PUVA</option>
-             <option value="RAVA" onchange="bloquear();">RAVA</option>
-             <option value="SP9VA" onchange="bloquear();">SP9VA</option>
-             <option value="RAI" onchange="bloquear();">RAI</option>
-             <option value="MOLINO" onchange="bloquear();">MOLINO</option>
+          <select class="" name="otrosDestinos" id="otro" onchange="bloquear2();">
+             <option value="" selected disabled onchange="bloquear2();">OTRAS ZONAS</option>
+             <option value="VQC" onchange="bloquear2();">VQC</option>
+             <option value="P.COLORES" onchange="bloquear2();">P.COLORES</option>
+             <option value="CIRCUITO" onchange="bloquear2();">CIRCUITO</option>
+             <option value="MOVA" onchange="bloquear2();">MOVA</option>
+             <option value="PUVA" onchange="bloquear2();">PUVA</option>
+             <option value="RAVA" onchange="bloquear2();">RAVA</option>
+             <option value="SP9VA" onchange="bloquear2();">SP9VA</option>
+             <option value="RAI" onchange="bloquear2();">RAI</option>
+             <option value="MOLINO" onchange="bloquear2();">MOLINO</option>
            </select>
         </li>
       </ul>

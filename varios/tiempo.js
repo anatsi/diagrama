@@ -51,11 +51,13 @@ function elegidoSelect() {
     puva();
   }else if (elegidoSel == 'RAI') {
     rai();
+  }else {
+    fin();
   }
 }
 
 function sp9() {
-  tiempoFinal = 20000 - contador;
+  tiempoFinal = 10000 - contador;
   console.log(tiempoFinal);
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'FCPA') {
@@ -75,7 +77,7 @@ function sp9() {
 }
 
 function p9() {
-  tiempoFinal = 20000 - contador;
+  tiempoFinal = 10000 - contador;
   console.log(tiempoFinal);
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'FCPA') {
@@ -95,7 +97,7 @@ function p9() {
 }
 
 function p12() {
-  tiempoFinal = 30000 - contador;
+  tiempoFinal = 10000 - contador;
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'FCPA') {
       console.log('origen:fcpa');
@@ -114,7 +116,7 @@ function p12() {
 }
 
 function malvinas() {
-  tiempoFinal = 40000 - contador;
+  tiempoFinal = 10000 - contador;
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'FCPA') {
       console.log('origen:fcpa');
@@ -133,7 +135,7 @@ function malvinas() {
 }
 
 function puva() {
-  tiempoFinal = 40000 - contador;
+  tiempoFinal = 10000 - contador;
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'FCPA') {
       console.log('origen:fcpa');
@@ -152,7 +154,7 @@ function puva() {
 }
 
 function rai() {
-  tiempoFinal = 40000 - contador;
+  tiempoFinal = 10000 - contador;
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'FCPA') {
       console.log('origen:fcpa');

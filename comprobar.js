@@ -39,6 +39,19 @@ function bloquear() {
   }
 }
 
+function bloquear2() {
+  var elegido = document.getElementById('otro').value;
+  if (elegido != 'primera') {
+    var select = document.getElementById('otro');
+    select.style.backgroundColor = 'rgb(3, 119, 25)';
+    select.style.color = 'white';
+    document.getElementById('opcion1').disabled = true;
+    document.getElementById('opcion2').disabled = true;
+    document.getElementById('opcion3').disabled = true;
+    document.getElementById('opcion4').disabled = true;
+  }
+}
+
 function devolver() {
   localStorage.removeItem('origen');
   var select = document.getElementById('otro');

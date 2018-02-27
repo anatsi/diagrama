@@ -65,15 +65,15 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
            <div class="btn btn-sık"><span>P12</span></div>
          </label>
           </div>
-          <select class="" name="otrosDestinos" id="otro" onchange="bloquear();">
-             <option value="" selected disabled onchange="bloquear();">OTRAS ZONAS</option>
-             <option value="ZENDER" onchange="bloquear();">ZENDER</option>
-             <option value="MOVA" onchange="bloquear();">MOVA</option>
-             <option value="PUVA" onchange="bloquear();">PUVA</option>
-             <option value="RAVA" onchange="bloquear();">RAVA</option>
-             <option value="SP9VA" onchange="bloquear();">SP9VA</option>
-             <option value="RAI" onchange="bloquear();">RAI</option>
-             <option value="MOLINO" onchange="bloquear();">MOLINO</option>
+          <select class="" name="otrosDestinos" id="otro" onchange="bloquear2();">
+             <option value="" selected disabled onchange="bloquear2();">OTRAS ZONAS</option>
+             <option value="ZENDER" onchange="bloquear2();">ZENDER</option>
+             <option value="MOVA" onchange="bloquear2();">MOVA</option>
+             <option value="PUVA" onchange="bloquear2();">PUVA</option>
+             <option value="RAVA" onchange="bloquear2();">RAVA</option>
+             <option value="SP9VA" onchange="bloquear2();">SP9VA</option>
+             <option value="RAI" onchange="bloquear2();">RAI</option>
+             <option value="MOLINO" onchange="bloquear2();">MOLINO</option>
            </select>
         </li>
       </ul>
