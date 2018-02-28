@@ -1,7 +1,8 @@
-body{
+body {
   margin: 0;
   padding: 0;
 }
+
 .contact_form h1 {
   background: none repeat scroll 0 0 #F3F3F3;
   border-radius: 5px;
@@ -80,6 +81,7 @@ body{
   font-weight: bold;
   text-decoration: none;
 }
+
 .botones #salir {
   background-color: rgb(226, 99, 99);
   margin-top: 5%;
@@ -206,7 +208,7 @@ header h3 {
   margin: 5px;
 }
 
-#roles{
+#roles {
   padding: 5px;
   margin: 4px;
   border-radius: 15px;
@@ -217,7 +219,8 @@ header h3 {
 .izquierda {
   float: left;
 }
-.izquierda img{
+
+.izquierda img {
   margin-left: 43px;
 }
 
@@ -270,7 +273,7 @@ header h3 {
   text-align: center;
 }
 
-.btn5{
+.btn5 {
   font-size: 22px;
 }
 

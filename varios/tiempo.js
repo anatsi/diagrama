@@ -35,13 +35,13 @@ function elegido() {
 
 function elegidoSelect() {
   var elegidoSel = document.getElementById('otro').value;
-  if (elegidoSel == ""){
+  if (elegidoSel == "") {
     inicio();
-  }else if (elegidoSel == 'PUVA') {
+  } else if (elegidoSel == 'PUVA') {
     puva();
-  }else if (elegidoSel == 'RAI') {
+  } else if (elegidoSel == 'RAI') {
     rai();
-  }else {
+  } else {
     fin();
   }
 }
@@ -61,7 +61,7 @@ function sp9() {
     }
     setTimeout(fin, tiempoFinal);
     console.log('sp9');
-  }else {
+  } else {
     fin();
   }
 }
@@ -81,7 +81,7 @@ function p9() {
     }
     setTimeout(fin, tiempoFinal);
     console.log('p9');
-  }else {
+  } else {
     fin();
   }
 }
@@ -100,7 +100,7 @@ function p12() {
     }
     setTimeout(fin, tiempoFinal);
     console.log('p12');
-  }else {
+  } else {
     fin();
   }
 }
@@ -119,7 +119,7 @@ function malvinas() {
     }
     setTimeout(fin, tiempoFinal);
     console.log('malvinas');
-  }else {
+  } else {
     fin();
   }
 }
@@ -138,7 +138,7 @@ function puva() {
     }
     setTimeout(fin, tiempoFinal);
     console.log('puva');
-  }else {
+  } else {
     fin();
   }
 }
@@ -157,7 +157,7 @@ function rai() {
     }
     setTimeout(fin, tiempoFinal);
     console.log('rai');
-  }else {
+  } else {
     fin();
   }
 }
