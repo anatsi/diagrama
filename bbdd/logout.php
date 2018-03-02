@@ -8,5 +8,5 @@
   //una vez cerrada la sesion, te devuelve al formulario de inicio.
   ?>
   <script type="text/javascript">
-  	window.location="../index.html";
+  	window.location="../index.php";
   </script>
