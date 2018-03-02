@@ -37,7 +37,7 @@
               ?>
                 <script type="text/javascript">
                   alert('Algo salio mal. Intentelo mas tarde');
-                  window.location = "index.html";
+                  window.location = "index.php";
                 </script>
               <?php
             }else {

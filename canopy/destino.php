@@ -110,7 +110,7 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
  }else {
    ?>
      <script type="text/javascript">
-       window.location = "../index.html";
+       window.location = "../index.php";
      </script>
    <?php
  }

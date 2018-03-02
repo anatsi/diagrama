@@ -1,3 +1,17 @@
+<?php
+$headers = apache_request_headers();
+
+ $mystring = $headers['User-Agent'];
+ $findme = 'Android';
+ $pos1 = strpos($mystring, $findme);
+ if ($pos1 != true) {
+   ?>
+    <script type="text/javascript">
+      window.location = 'nodisponible.html';
+    </script>
+   <?php
+ }
+ ?>
 <!DOCTYPE html>
 <html lang="es">
 

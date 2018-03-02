@@ -35,7 +35,8 @@ if (isset($_SESSION['usuario'])) {
     <h3><?php echo $usuario['user']; ?></h3>
   </header>
   <div class="two-columns">
-    <div style="font-weight: bold; font-size:16px;">TOTAL: <script>document.write(localStorage.contador);</script></div>
+    <p style="font-weight: bold; font-size:16px; float: left;">TOTAL: <script>document.write(localStorage.contador);</script></p>
+    <p style="font-weight: bold; font-size:16px; float: right;">VARIOS</p>
     <form class="contact_form" action="bastidor.php" method="post" enctype="multipart/form-data">
       <ul>
         <li>
@@ -83,7 +84,7 @@ if (isset($_SESSION['usuario'])) {
 }else {
   ?>
     <script type="text/javascript">
-      window.location = "../index.html";
+      window.location = "../index.php";
     </script>
   <?php
 }

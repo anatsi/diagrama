@@ -71,7 +71,7 @@ if (isset($_SESSION['usuario'])) {
  }else {
    ?>
      <script type="text/javascript">
-       window.location = "../index.html";
+       window.location = "../index.php";
      </script>
    <?php
  }

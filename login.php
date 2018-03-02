@@ -72,7 +72,7 @@
           ?>
             <script type="text/javascript">
             alert('Contraseña incorrecta.');
-            window.location="index.html";
+            window.location="index.php";
             </script>
           <?php
         }
@@ -81,7 +81,7 @@
         ?>
           <script type="text/javascript">
             alert('Usuario incorrecto.');
-            window.location="index.html";
+            window.location="index.php";
           </script>
         <?php
       }
