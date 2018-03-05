@@ -1,5 +1,5 @@
 <?php
-$headers = apache_request_headers();
+/*$headers = apache_request_headers();
 
  $mystring = $headers['User-Agent'];
  $findme = 'Android';
@@ -10,7 +10,7 @@ $headers = apache_request_headers();
       window.location = 'nodisponible.html';
     </script>
    <?php
- }
+ }*/
  ?>
 <!DOCTYPE html>
 <html lang="es">

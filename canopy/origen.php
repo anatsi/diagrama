@@ -37,7 +37,7 @@ if (isset($_SESSION['usuario'])) {
   </header>
   <div class="two-columns">
     <p style="font-weight: bold; font-size:16px; float: left;">TOTAL: <script>document.write(localStorage.contador);</script></p>
-    <p style="font-weight: bold; font-size:16px; float: right;">CANOPY-P9</p>
+    <p style="font-weight: bold; font-size:16px; float: right;">CANOPY</p>
     <form class="contact_form" action="bastidor.php" method="post" enctype="multipart/form-data">
       <ul>
         <li>
