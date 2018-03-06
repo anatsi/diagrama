@@ -37,6 +37,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
     </div>
   <div class="botones">
     <button type="submit" name="button" id="siguiente" onclick="window.location = './bbdd/logout.php'"><b>SALIR</b></button>
+    <button type="button" name="button" id="atras" style="width: 98%;" onclick="window.history.back();"><b>ATRAS</b></button>
   </div>
 </body>
 </html>
