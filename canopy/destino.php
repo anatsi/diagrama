@@ -75,12 +75,20 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
              <option value="VQC" onchange="bloquear2();">VQC</option>
              <option value="P.COLORES" onchange="bloquear2();">P.COLORES</option>
              <option value="CIRCUITO" onchange="bloquear2();">CIRCUITO</option>
-             <option value="MOVA" onchange="bloquear2();">MOVA</option>
+             <option value="MOVA1" onchange="bloquear2();">MOVA1</option>
+             <option value="MOVA2" onchange="bloquear2();">MOVA2</option>
              <option value="PUVA" onchange="bloquear2();">PUVA</option>
              <option value="RAVA" onchange="bloquear2();">RAVA</option>
+             <option value="RAVA2" onchange="bloquear2();">RAVA2</option>
              <option value="SP9VA" onchange="bloquear2();">SP9VA</option>
              <option value="RAI" onchange="bloquear2();">RAI</option>
              <option value="MOLINO" onchange="bloquear2();">MOLINO</option>
+
+             <option value="MALVINAS" onchange="bloquear2();">MALVINAS</option>
+             <option value="ZENDER" onchange="bloquear2();">ZENDER</option>
+             <option value="PRPB" onchange="bloquear2();">PRPB</option>
+             <option value="CANOPY" onchange="bloquear2();">CANOPY</option>
+             <option value="CAMPA" onchange="bloquear2();">CAMPA</option>
            </select>
         </li>
       </ul>

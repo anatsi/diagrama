@@ -65,6 +65,20 @@ if (isset($_SESSION['usuario'])) {
              <option value="P9" onchange="bloquear();">P9</option>
              <option value="MALVINAS" onchange="bloquear();">MALVINAS</option>
              <option value="CIRCUITO" onchange="bloquear();">CIRCUITO</option>
+
+             <option value="SP9" onchange="bloquear();">SP9</option>
+             <option value="RAI" onchange="bloquear();">RAI</option>
+             <option value="MOLINO" onchange="bloquear();">MOLINO</option>
+             <option value="ZENDER" onchange="bloquear();">ZENDER</option>
+             <option value="MOVA1" onchange="bloquear();">MOVA1</option>
+             <option value="MOVA2" onchange="bloquear();">MOVA2</option>
+             <option value="PUVA" onchange="bloquear();">PUVA</option>
+             <option value="RAVA" onchange="bloquear();">RAVA</option>
+             <option value="RAVA2" onchange="bloquear();">RAVA2</option>
+             <option value="SP9VA" onchange="bloquear();">SP9VA</option>
+             <option value="PRPB" onchange="bloquear();">PRPB</option>
+             <option value="CAMPA" onchange="bloquear();">CAMPA</option>
+
            </select>
         </li>
       </ul>
