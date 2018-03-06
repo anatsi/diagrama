@@ -12,7 +12,16 @@
       body{
         color: white;
       }
+      .titul{
+        color: black;
+      }
     </style>
+
+  <!-- Links para alerts y confirms -->
+    <script src="./jquery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="./jquery/jquery-confirm.css">
+    <script src="./jquery/jquery-confirm.js"></script>
+    <script type="text/javascript" src="comprobar.js"></script>
   </head>
   <body>
     <?php
@@ -71,8 +80,16 @@
           //si la contraseña no coincide, sacamos un mensaje y lo reenviamos al formulario.
           ?>
             <script type="text/javascript">
-            alert('Contraseña incorrecta.');
-            window.location="index.php";
+            $.confirm({
+              title: 'CONTRASEÑA INCORRECTA.',
+              titleClass: 'titul',
+              type: 'red',
+              buttons: {
+                OK: function () {
+                  window.location = 'index.php';
+                },
+              },
+            });
             </script>
           <?php
         }
@@ -80,8 +97,16 @@
         //si el usuario no esta registrado, se lo indicamos y le volvemos a enviar al formulario.
         ?>
           <script type="text/javascript">
-            alert('Usuario incorrecto.');
-            window.location="index.php";
+          $.confirm({
+            title: 'USUARIO INCORRECTO.',
+            titleClass: 'titul',
+            type: 'red',
+            buttons: {
+              OK: function () {
+                window.location = 'index.php';
+              },
+            },
+          });
           </script>
         <?php
       }

@@ -27,6 +27,11 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
   <script type="text/javascript" src="../comprobar.js"></script>
 
+<!-- Links para alerts y confirms -->
+  <script src="../jquery/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="../jquery/jquery-confirm.css">
+  <script src="../jquery/jquery-confirm.js"></script>
+
 </head>
 
 <body>

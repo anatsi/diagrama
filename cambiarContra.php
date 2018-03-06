@@ -7,7 +7,15 @@
       body{
         color: white;
       }
+      .titul{
+        color: black;
+      }
     </style>
+  <!-- Links para alerts y confirms -->
+    <script src="./jquery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="./jquery/jquery-confirm.css">
+    <script src="./jquery/jquery-confirm.js"></script>
+    <script type="text/javascript" src="comprobar.js"></script>
   </head>
   <body>
     <?php
@@ -24,8 +32,16 @@
           if ($usuario['password'] == sha1(md5($salt . $_POST['form-username']))) {
             ?>
               <script type="text/javascript">
-                alert('La contraseña debe de ser diferente a la que tenias.');
-                window.location = "cambiarContraFormulario.php";
+              $.confirm({
+                title: 'La contraseña debe ser diferente a la que tenias.',
+                titleClass: 'titul',
+                type: 'red',
+                buttons: {
+                  OK: function () {
+                    window.location = 'cambiarContraFormulario.php';
+                  },
+                },
+              });
               </script>
             <?php
           }else {
@@ -36,15 +52,30 @@
             if ($nuevaContra == false) {
               ?>
                 <script type="text/javascript">
-                  alert('Algo salio mal. Intentelo mas tarde');
-                  window.location = "index.php";
+                $.confirm({
+                  title: 'Algo salio mal.',
+                  titleClass: 'titul',
+                  type: 'red',
+                  buttons: {
+                    OK: function () {
+                      window.location = 'index.php';
+                    },
+                  },
+                });
                 </script>
               <?php
             }else {
               ?>
                 <script type="text/javascript">
-                  alert('Contraseña actualizada con exito.');
-                  window.location = "roles.php";
+                $.confirm({
+                  title: 'Contraseña actualizada con exito!',
+                  titleClass: 'titul',
+                  buttons: {
+                    OK: function () {
+                      window.location = 'roles.php';
+                    },
+                  },
+                });
                 </script>
               <?php
             }
@@ -53,8 +84,16 @@
         }else {
           ?>
             <script type="text/javascript">
-              alert('Las contraseñas no coinciden.');
-              window.location = "cambiarContra.html";
+            $.confirm({
+              title: 'Las contraseñas no coinciden',
+              titleClass: 'titul',
+              type: 'red',
+              buttons: {
+                OK: function () {
+                  window.location = 'cambiarContraFormulario.php';
+                },
+              },
+            });
             </script>
           <?php
         }

@@ -1,8 +1,21 @@
 function volverAtras() {
-  var confirmacion = confirm('¿Confirmar atras?');
+  /*var confirmacion = confirm('¿Confirmar atras?');
   if (confirmacion == true) {
     window.location = 'origen.php';
-  }
+  }*/
+  $.confirm({
+    title: 'ATRÁS',
+    content: '¿Confirmar atrás?',
+    buttons: {
+      Aceptar: function () {
+        window.location = 'origen.php';
+      },
+
+      Cancelar: function () {
+        console.log('cancelado');
+      },
+    },
+  });
 }
 
 function comprobar() {
@@ -76,4 +89,36 @@ function borrar() {
   if (localStorage.contador == 0) {
     document.getElementById('atras').disabled = true;
   }
+}
+
+function contraOK() {
+  $.alert({
+    title: 'Contra actualizada',
+    content: 'Contra actualizada con exito',
+  });
+  window.location = 'roles.php';
+}
+
+function contraDiferente() {
+  $.alert({
+    title: 'Error',
+    content: 'La contraseña debe ser diferente a la que tenias.',
+  });
+  window.location = 'cambiarContraFormulario.php';
+}
+
+function contraMal() {
+  $.alert({
+    title: 'Error',
+    content: 'Algo salio mal.',
+  });
+  window.location = 'index.php';
+}
+
+function contraNoCoinciden() {
+  $.alert({
+    title: 'Error',
+    content: 'Las contraseñas no coinciden.',
+  });
+  window.location = 'cambiarContraFormulario.php';
 }
