@@ -90,35 +90,3 @@ function borrar() {
     document.getElementById('atras').disabled = true;
   }
 }
-
-function contraOK() {
-  $.alert({
-    title: 'Contra actualizada',
-    content: 'Contra actualizada con exito',
-  });
-  window.location = 'roles.php';
-}
-
-function contraDiferente() {
-  $.alert({
-    title: 'Error',
-    content: 'La contraseña debe ser diferente a la que tenias.',
-  });
-  window.location = 'cambiarContraFormulario.php';
-}
-
-function contraMal() {
-  $.alert({
-    title: 'Error',
-    content: 'Algo salio mal.',
-  });
-  window.location = 'index.php';
-}
-
-function contraNoCoinciden() {
-  $.alert({
-    title: 'Error',
-    content: 'Las contraseñas no coinciden.',
-  });
-  window.location = 'cambiarContraFormulario.php';
-}
