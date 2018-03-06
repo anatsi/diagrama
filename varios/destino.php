@@ -6,8 +6,7 @@ $empleado = new Empleados();
 
 if (isset($_SESSION['usuario'])) {
 
-if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
-  $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
+
  ?>
 <!DOCTYPE html>
 <html>
@@ -29,7 +28,10 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
   <script src="../jquery/jquery-confirm.js"></script>
 
 </head>
-
+<?php
+  if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
+    $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
+ ?>
 <body onload="inicio();">
   <header>
     <span class="izquierda">
@@ -104,7 +106,8 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
   ?>
     <script type="text/javascript">
       $.confirm({
-        title: 'Escanear el bastidor antes de continuar.',
+        title: 'ERROR',
+        content: 'Escanear el bastidor antes de continuar.',
         type: 'red',
         buttons: {
           OK: function () {

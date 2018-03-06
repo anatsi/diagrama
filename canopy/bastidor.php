@@ -5,14 +5,6 @@ require_once '../bbdd/empleados.php';
 $empleado = new Empleados();
 
 if (isset($_SESSION['usuario'])) {
-
-if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
-  $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
-  if ($_POST['origen']) {
-    $origen = $_POST['origen'];
-  }else {
-    $origen = $_POST['otrosOrigenes'];
-  }
  ?>
 <!DOCTYPE html>
 <html>
@@ -33,7 +25,15 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
   <script src="../jquery/jquery-confirm.js"></script>
 
 </head>
-
+<?php
+if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
+  $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
+  if ($_POST['origen']) {
+    $origen = $_POST['origen'];
+  }else {
+    $origen = $_POST['otrosOrigenes'];
+  }
+ ?>
 <body>
   <header>
     <span class="izquierda">
@@ -79,7 +79,8 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
   ?>
     <script type="text/javascript">
       $.confirm({
-        title: 'Elegir un origen antes de continuar.',
+        title: 'ERROR.',
+        content: 'Elegir un origen antes de continuar.',
         type: 'red',
         buttons: {
           OK: function () {
