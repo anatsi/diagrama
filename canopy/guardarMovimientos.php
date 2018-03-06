@@ -7,7 +7,14 @@
       body{
         color: white;
       }
+      .titul{
+        color: black;
+      }
     </style>
+    <!-- Links para alerts y confirms -->
+      <script src="../jquery/jquery-3.3.1.min.js"></script>
+      <link rel="stylesheet" href="../jquery/jquery-confirm.css">
+      <script src="../jquery/jquery-confirm.js"></script>
   </head>
   <body>
     <?php
@@ -25,8 +32,16 @@
     }else {
       ?>
         <script type="text/javascript">
-          alert('Elegir un destino antes de continuar.');
-          window.location = 'destino.php';
+          $.confirm({
+            title: 'Elegir un destino antes de continuar.',
+            titleClass: 'titul',
+            type: 'red',
+            buttons: {
+              OK: function () {
+                window.location = 'destino.php';
+              },
+            },
+          });
         </script>
       <?php
     }
@@ -39,8 +54,16 @@
         if ($nuevoMovimiento == null) {
           ?>
             <script type="text/javascript">
-              alert("Error al registrar el movimiento.");
-              window.location = 'origen.php';
+              $.confirm({
+                title: 'Error al registrar el movimiento.',
+                titleClass: 'titul',
+                type: 'red',
+                buttons: {
+                  OK: function () {
+                    window.location = 'origen.php';
+                  },
+                },
+              });
             </script>
           <?php
         }else {

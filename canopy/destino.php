@@ -105,8 +105,15 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
 }else {
   ?>
     <script type="text/javascript">
-      alert('Escanear el bastidor antes de continuar.');
-      window.location = 'origen.php';
+    $.confirm({
+      title: 'Escanear el bastidor antes de continuar.',
+      type: 'red',
+      buttons: {
+        OK: function () {
+          window.location = 'origen.php';
+        },
+      },
+    });
     </script>
   <?php
 }

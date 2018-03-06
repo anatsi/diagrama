@@ -78,8 +78,15 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
 }else {
   ?>
     <script type="text/javascript">
-      alert('Elegir un origen antes de continuar.');
-      window.location = 'origen.php';
+      $.confirm({
+        title: 'Elegir un origen antes de continuar.',
+        type: 'red',
+        buttons: {
+          OK: function () {
+            window.location = 'origen.php';
+          },
+        },
+      });
     </script>
   <?php
 }
