@@ -4,8 +4,8 @@ var tiempoFinal = 0;
 
 function inicio() {
   esteNo = 0;
-  myVar = setTimeout(elegido, 10000);
-  contador += 10000;
+  myVar = setTimeout(elegido, 3000);
+  contador += 3000;
   console.log('inicio');
   console.log(localStorage.origen);
 }

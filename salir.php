@@ -5,6 +5,8 @@ require_once './bbdd/empleados.php';
 $empleado = new Empleados();
 require_once './bbdd/movimientos.php';
 $movimientos = new Movimientos();
+require_once './bbdd/roles.php';
+$rol = new Roles();
 $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
  ?>
 <!DOCTYPE html>
@@ -37,7 +39,6 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
     </div>
   <div class="botones">
     <button type="submit" name="button" id="siguiente" onclick="window.location = './bbdd/logout.php'"><b>SALIR</b></button>
-    <button type="button" name="button" id="atras" style="width: 98%;" onclick="window.history.back();"><b>ATRAS</b></button>
   </div>
 </body>
 </html>
@@ -48,6 +49,10 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
   $fechaFin = date('Y-m-d');
   $horaFin = date('H:i:s');
   $nuevoRegistro = $movimientos -> movimientosDia($usuario['user'], $fechaInicio, $horaInicio, $movimientosVar, $fechaFin, $horaFin);
+  $ultimoRol = $rol -> ultimoRol($usuario['user']);
+  if ($ultimoRol['fecha_fin'] == null && $ultimoRol['hora_fin'] == null || $ultimoRol['fecha_fin'] == '0000-00-00' && $ultimoRol['hora_fin'] == '00:00:00') {
+    $finalizarRol = $rol -> finalizarRol($ultimoRol['id'], $fechaFin, $horaFin);
+  }
  ?>
 <script type="text/javascript">
   localStorage.setItem('contador', 0);

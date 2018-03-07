@@ -17,9 +17,12 @@ if (isset($_SESSION['usuario'])) {
   <script src="../pace/pace.js"></script>
   <!--  <link href="../pace/themes/pace-theme-center-radar.css" rel="stylesheet">-->
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-  <script type="text/javascript" src="../comprobar.js">
+  <script type="text/javascript" src="../comprobar.js"></script>
 
-  </script>
+  <!-- Links para alerts y confirms -->
+    <script src="../jquery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="../jquery/jquery-confirm.css">
+    <script src="../jquery/jquery-confirm.js"></script>
 
 </head>
 
@@ -30,7 +33,7 @@ if (isset($_SESSION['usuario'])) {
       <a  href= "#"><img src="../assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
     </span>
     <br>
-    <span class="derecha" onclick = "window.location= '../salir.php?m='+localStorage.contador+'&fi='+localStorage.fechaInicio+'&hi='+localStorage.horaInicio"><a>SALIR</a></span>
+    <span class="derecha" onclick = "botonSalir();"><a>SALIR</a></span>
     <br>
     <br>
     <h3><?php echo $usuario['user']; ?></h3>

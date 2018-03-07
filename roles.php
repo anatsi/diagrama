@@ -43,7 +43,7 @@
                <div  class="btn btn-sık"><span>CHEQUER</span></div>
             </label>
             <label id="lab">
-              <input  type="radio" name="CANOPY" value="CANOPY" onclick="window.location = './canopy/origen.php';">
+              <input  type="radio" name="CANOPY" value="CANOPY" onclick="window.location = 'canopy.php';">
              <div class="btn btn-sık"><span>CANOPY</span></div>
            </label>
            <label id="lab" style="display: none;">
@@ -51,7 +51,7 @@
             <div class="btn btn-sık"><span>CAMPA</span></div>
           </label>
           <label id="lab">
-            <input  type="radio" name="VARIOS" value="VARIOS" onclick="window.location = './varios/origen.php';">
+            <input  type="radio" name="VARIOS" value="VARIOS" onclick="window.location = 'varios.php';">
            <div class="btn btn-sık"><span>VARIOS</span></div>
          </label>
          <label id="lab" style="display: none;">
