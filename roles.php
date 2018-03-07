@@ -18,7 +18,11 @@
   <!--<link href="./pace/themes/pace-theme-center-radar.css" rel="stylesheet">-->
   <link rel="shortcut icon" href="./assets/ico/favicon.ico">
 
-  </script>
+  <script type="text/javascript" src="comprobar.js"></script>
+  <!-- Links para alerts y confirms -->
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="jquery/jquery-confirm.css">
+    <script src="jquery/jquery-confirm.js"></script>
 
 </head>
 
@@ -27,7 +31,7 @@
     <span class="izquierda">
     	<a  href= "#"><img src="./assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
     </span>
-    <span class="derecha" onclick = "window.location= 'salir.php?m='+localStorage.contador+'&fi='+localStorage.fechaInicio+'&hi='+localStorage.horaInicio"><a>SALIR</a></span>
+    <span class="derecha" onclick = "botonSalir2();"><a>SALIR</a></span>
     <br>
     <br>
     <h3><?php echo $usuario['user']; ?></h3>
@@ -39,7 +43,7 @@
           <label for="origen" id="titulo">ROLES</label>
           <div class="wrap">
             <label id="lab" style="display: none;">
-              <input type="radio" name="CHEQUER" value="CHEQUER" onclick="window.location = './chequer/index.php';">
+              <input type="radio" name="CHEQUER" value="CHEQUER" onclick="window.location = 'chequer.php';">
                <div  class="btn btn-sık"><span>CHEQUER</span></div>
             </label>
             <label id="lab">
@@ -47,7 +51,7 @@
              <div class="btn btn-sık"><span>CANOPY</span></div>
            </label>
            <label id="lab" style="display: none;">
-             <input  type="radio" name="CAMPA" value="CAMPA" onclick="window.location = './campa/index.php';">
+             <input  type="radio" name="CAMPA" value="CAMPA" onclick="window.location = 'campa.php';">
             <div class="btn btn-sık"><span>CAMPA</span></div>
           </label>
           <label id="lab">
@@ -55,7 +59,7 @@
            <div class="btn btn-sık"><span>VARIOS</span></div>
          </label>
          <label id="lab" style="display: none;">
-           <input  type="radio" name="WRAP" value="WRAP" onclick="window.location = './wrapGuard/index.php';">
+           <input  type="radio" name="WRAP" value="WRAP" onclick="window.location = 'wrapGuard.php';">
           <div class="btn btn-sık btn5"><span>WRAP GUARD</span></div>
         </label>
           </div>

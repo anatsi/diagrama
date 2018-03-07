@@ -116,3 +116,23 @@ function botonSalir() {
     },
   });
 }
+
+function botonSalir2() {
+  /*var confirmacion = confirm('¿Confirmar atras?');
+  if (confirmacion == true) {
+    window.location = 'origen.php';
+  }*/
+  $.confirm({
+    title: 'SALIR',
+    content: '¿Has terminado tu jornada laboral?',
+    buttons: {
+      SI: function () {
+        window.location = 'salir.php?m=' + localStorage.contador + '&fi=' + localStorage.fechaInicio + '&hi=' + localStorage.horaInicio;
+      },
+
+      NO: function () {
+        console.log('cancelado');
+      },
+    },
+  });
+}
