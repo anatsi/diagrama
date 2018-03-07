@@ -90,3 +90,9 @@ function borrar() {
     document.getElementById('atras').disabled = true;
   }
 }
+
+function enviar() {
+  document.getElementById('siguiente').innerHTML = '<b>Enviando...</b>';
+  document.getElementById('siguiente').disabled = true;
+  return true;
+}
