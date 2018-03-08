@@ -42,10 +42,7 @@
         <li>
           <label for="origen" id="titulo">ROLES</label>
           <div class="wrap">
-            <label id="lab" style="display: none;">
-              <input type="radio" name="CHEQUER" value="CHEQUER" onclick="window.location = 'chequer.php';">
-               <div  class="btn btn-sık"><span>CHEQUER</span></div>
-            </label>
+
             <label id="lab">
               <input  type="radio" name="CANOPY" value="CANOPY" onclick="window.location = 'canopy.php';">
              <div class="btn btn-sık"><span>CANOPY</span></div>
@@ -61,6 +58,10 @@
          <label id="lab">
            <input  type="radio" name="WRAP" value="WRAP" onclick="window.location = 'wrapGuard.php';">
           <div class="btn btn-sık btn5"><span>WRAP GUARD</span></div>
+        </label>
+        <label id="lab">
+          <input type="radio" name="CHEQUER" value="CHEQUER" onclick="window.location = 'chequer.php';">
+           <div  class="btn btn-sık"><span>CHEQUER</span></div>
         </label>
           </div>
         </li>
