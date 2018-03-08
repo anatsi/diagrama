@@ -32,7 +32,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
     <h3><?php echo $usuario['user']; ?></h3>
   </header>
     <div class="two-columns">
-      <form class="contact_form" action="bastidor.php" method="post" enctype="multipart/form-data" onsubmit="return guardarUser();">
+      <form class="contact_form" action="comprobarUsuario.php" method="post" enctype="multipart/form-data" onsubmit="return guardarUser();">
         <ul>
           <li>
             <label for="origen" id="titulo">SEGUNDO USUARIO: </label>
