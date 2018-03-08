@@ -39,7 +39,6 @@ if (isset($_SESSION['usuario'])) {
     </span>
     <br>
     <br>
-    <br>
     <h3><?php echo $usuario['user']; ?>    -    <?php echo $_POST['origen']; ?>
       <br>
       <?php echo $_POST['bastidor']; ?>

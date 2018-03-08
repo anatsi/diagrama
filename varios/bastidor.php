@@ -43,7 +43,6 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
     </span>
     <br>
     <br>
-    <br>
     <h3><?php echo $usuario['user']; ?>    -    <?php echo $origen; ?></h3>
   </header>
   <div class="two-columns">
