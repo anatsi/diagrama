@@ -58,7 +58,7 @@
             <input  type="radio" name="VARIOS" value="VARIOS" onclick="window.location = 'varios.php';">
            <div class="btn btn-sık"><span>VARIOS</span></div>
          </label>
-         <label id="lab" style="display: none;">
+         <label id="lab">
            <input  type="radio" name="WRAP" value="WRAP" onclick="window.location = 'wrapGuard.php';">
           <div class="btn btn-sık btn5"><span>WRAP GUARD</span></div>
         </label>

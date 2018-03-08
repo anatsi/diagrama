@@ -21,7 +21,6 @@ if (isset($_SESSION['usuario'])) {
   <script type="text/javascript" src="../comprobar.js"></script>
 
 </head>
-
 <body>
   <header>
     <span class="izquierda">
@@ -35,7 +34,7 @@ if (isset($_SESSION['usuario'])) {
     <h3><?php echo $usuario['user']; ?></h3>
   </header>
   <div class="two-columns">
-    <form class="contact_form" action="" method="post" enctype="multipart/form-data">
+    <form class="contact_form" action="destino.php" method="post" enctype="multipart/form-data">
       <ul>
         <li>
           <label for="Bastidor" id="titulo">BASTIDOR</label>
@@ -45,8 +44,7 @@ if (isset($_SESSION['usuario'])) {
   </div>
   <div class="botones">
     <button type="submit" name="button" id="siguiente"><b>SIGUIENTE</b></button>
-    <button type="reset" name="button" id="reset"><b>LIMPIAR</b></button>
-    <button type="button" name="button" id="atras" onclick="volverAtras();"><b>ATRAS</b></button>
+    <button type="reset" name="button" id="reset" style="width: 98%;"><b>LIMPIAR</b></button>
   </div>
   </form>
 

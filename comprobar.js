@@ -136,3 +136,29 @@ function botonSalir2() {
     },
   });
 }
+
+function guardarUser() {
+  var usuario = document.getElementById('usuario2').value;
+  localStorage.setItem('usuario2', usuario);
+  return true;
+}
+
+function volverAtrasWrap() {
+  /*var confirmacion = confirm('¿Confirmar atras?');
+  if (confirmacion == true) {
+    window.location = 'origen.php';
+  }*/
+  $.confirm({
+    title: 'ATRÁS',
+    content: '¿Confirmar atrás?',
+    buttons: {
+      Aceptar: function () {
+        window.location = 'bastidor.php';
+      },
+
+      Cancelar: function () {
+        console.log('cancelado');
+      },
+    },
+  });
+}

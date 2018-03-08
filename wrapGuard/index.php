@@ -16,9 +16,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
   <script src="../pace/pace.js"></script>
   <!--<link href="../pace/themes/pace-theme-center-radar.css" rel="stylesheet">-->
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-  <script type="text/javascript" src="../comprobar.js">
-
-  </script>
+  <script type="text/javascript" src="../comprobar.js"></script>
 </head>
 
 <body>
@@ -34,12 +32,12 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
     <h3><?php echo $usuario['user']; ?></h3>
   </header>
     <div class="two-columns">
-      <form class="contact_form" action="bastidor.php" method="post" enctype="multipart/form-data">
+      <form class="contact_form" action="bastidor.php" method="post" enctype="multipart/form-data" onsubmit="return guardarUser();">
         <ul>
           <li>
             <label for="origen" id="titulo">SEGUNDO USUARIO: </label>
             <div class="wrap">
-              <input type="text" name="usuario2" value="">
+              <input type="text" name="usuario2" value="" id='usuario2'>
             </div>
           </li>
         </ul>
