@@ -47,14 +47,14 @@
               <input  type="radio" name="CANOPY" value="CANOPY" onclick="window.location = 'canopy.php';">
              <div class="btn btn-sık"><span>CANOPY</span></div>
            </label>
-           <label id="lab" style="display: none;">
-             <input  type="radio" name="CAMPA" value="CAMPA" onclick="window.location = 'campa.php';">
-            <div class="btn btn-sık"><span>CAMPA</span></div>
-          </label>
           <label id="lab">
             <input  type="radio" name="VARIOS" value="VARIOS" onclick="window.location = 'varios.php';">
            <div class="btn btn-sık"><span>VARIOS</span></div>
          </label>
+         <label id="lab">
+           <input  type="radio" name="CAMPA" value="CAMPA" onclick="window.location = 'campa.php';">
+          <div class="btn btn-sık"><span>CAMPA</span></div>
+        </label>
          <label id="lab">
            <input  type="radio" name="WRAP" value="WRAP" onclick="window.location = 'wrapGuard.php';">
           <div class="btn btn-sık btn5"><span>WRAP GUARD</span></div>
