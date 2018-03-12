@@ -44,6 +44,7 @@ if (isset($_SESSION['usuario'])) {
     </h3>
   </header>
   <div class="two-columns">
+    <p style="font-weight: bold; font-size:16px; float: right;">SUPERVISOR CAMPA</p>
     <form class="contact_form" action="nuevaCampa.php" method="post" enctype="multipart/form-data">
       <?php
         $dia = date('Y-m-d');

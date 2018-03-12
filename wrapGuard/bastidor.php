@@ -34,6 +34,7 @@ if (isset($_SESSION['usuario'])) {
     <h3><?php echo $usuario['user']; ?></h3>
   </header>
   <div class="two-columns">
+    <p style="font-weight: bold; font-size:16px; float: right;">VINILOS</p>
     <form class="contact_form" action="destino.php" method="post" enctype="multipart/form-data">
       <ul>
         <li>
