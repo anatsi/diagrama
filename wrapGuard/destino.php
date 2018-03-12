@@ -38,7 +38,7 @@ if (isset($_SESSION['usuario'])) {
     </span>
     <br>
     <br>
-    <h3><?php echo $usuario['user']; ?>
+    <h3><?php echo $usuario['user']; ?> - <script>document.write(localStorage.usuario2);</script>
       <br>
       <?php echo $_POST['bastidor']; ?>
     </h3>

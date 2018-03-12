@@ -31,7 +31,7 @@ if (isset($_SESSION['usuario'])) {
     <span class="derecha" onclick = "window.location= '../salir.php?m='+localStorage.contador+'&fi='+localStorage.fechaInicio+'&hi='+localStorage.horaInicio"><a>SALIR</a></span>
     <br>
     <br>
-    <h3><?php echo $usuario['user']; ?></h3>
+    <h3><?php echo $usuario['user']; ?> - <script>document.write(localStorage.usuario2);</script></h3>
   </header>
   <div class="two-columns">
     <p style="font-weight: bold; font-size:16px; float: right;">VINILOS</p>
