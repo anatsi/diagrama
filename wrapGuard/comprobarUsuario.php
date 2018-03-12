@@ -18,34 +18,36 @@
 
 </head>
 <body>
-  <?php
-    require_once '../bbdd/empleados.php';
-    $empleado = new Empleados();
+  <div class="two-columns">
+    <?php
+      require_once '../bbdd/empleados.php';
+      $empleado = new Empleados();
 
-    $existe = $empleado -> LoginUser($_POST['usuario2']);
+      $existe = $empleado -> LoginUser($_POST['usuario2']);
 
-    if ($existe == null) {
-      ?>
-        <script type="text/javascript">
-          $.confirm({
-            title: 'ERROR',
-            content: 'El usuario elegido no existe.',
-            type: 'red',
-            buttons: {
-              OK: function () {
-                window.location = 'index.php';
+      if ($existe == null) {
+        ?>
+          <script type="text/javascript">
+            $.confirm({
+              title: 'ERROR',
+              content: 'El usuario elegido no existe.',
+              type: 'red',
+              buttons: {
+                OK: function () {
+                  window.location = 'index.php';
+                },
               },
-            },
-          });
-        </script>
-      <?php
-    }else {
-      ?>
-        <script type="text/javascript">
-          window.location = 'bastidor.php';
-        </script>
-      <?php
-    }
-   ?>
+            });
+          </script>
+        <?php
+      }else {
+        ?>
+          <script type="text/javascript">
+            window.location = 'bastidor.php';
+          </script>
+        <?php
+      }
+     ?>
+  </div>
 </body>
 </html>

@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>CAMBIAR CONTRASEÑA</title>
-    <style media="screen">
-      body{
-        color: white;
-      }
-      .titul{
-        color: black;
-      }
-    </style>
+<head>
+  <meta charset="utf-8">
+  <title>ELEGIR ORIGEN</title>
+  <style media="screen">
+    body{
+      color: white;
+    }
+    .titul{
+      color: black;
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" type="text/css" media="all">
+  <script src="pace/pace.js"></script>
+  <!--  <link href="../pace/themes/pace-theme-center-radar.css" rel="stylesheet">-->
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <script type="text/javascript" src="comprobar.js"></script>
+
   <!-- Links para alerts y confirms -->
-    <script src="./jquery/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="./jquery/jquery-confirm.css">
-    <script src="./jquery/jquery-confirm.js"></script>
-    <script type="text/javascript" src="comprobar.js"></script>
-  </head>
-  <body>
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="jquery/jquery-confirm.css">
+    <script src="jquery/jquery-confirm.js"></script>
+
+</head>
+<body>
+  <div class="two-columns">
     <?php
       require_once './bbdd/empleados.php';
       $empleados = new Empleados();
@@ -100,5 +108,6 @@
 
       }
      ?>
-  </body>
+  </div>
+</body>
 </html>
