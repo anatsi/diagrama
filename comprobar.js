@@ -139,6 +139,7 @@ function botonSalir2() {
 
 function guardarUser() {
   var usuario = document.getElementById('usuario2').value;
+  usuario = usuario.toUpperCase();
   localStorage.setItem('usuario2', usuario);
   return true;
 }
