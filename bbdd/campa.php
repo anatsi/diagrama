@@ -14,7 +14,7 @@ class Campa extends dbJockeys
     parent::__construct();
   }
 
-  //funcion encargada de insertar los recuros para un servicio en la ddbb
+  //funcion encargada de insertar una nueva entrada en la tabla campa
   function nuevoBastidor($bastidor, $fecha, $hora, $usuario){
     //realizamos la consuta y la guardamos en $sql
     $sql="INSERT INTO campa(id, bastidor, fecha, hora, usuario)
@@ -28,7 +28,7 @@ class Campa extends dbJockeys
     }
   }
 
-
+  //funcion encargada de sacar el ultimo bastidor que ha guardado un usuario
   function UltimoBastidor($usuario){
     //Construimos la consulta
     $sql="SELECT * from campa WHERE usuario='".$usuario."' ORDER BY id DESC LIMIT 1";

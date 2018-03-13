@@ -14,7 +14,7 @@ class WrapGuard extends dbJockeys
     parent::__construct();
   }
 
-  //funcion encargada de insertar los recuros para un servicio en la ddbb
+  //funcion encargada de insertar un nuevo registro de vinilos en la base de datos
   function nuevoWrap($usuario, $usuario2, $modelo, $destino, $bastidor, $fecha, $hora, $repetido){
     //realizamos la consuta y la guardamos en $sql
     $sql="INSERT INTO wrap_guard(id, usuario1, usuario2, modelo, destino, bastidor, fecha, hora, repetido)
@@ -28,6 +28,7 @@ class WrapGuard extends dbJockeys
     }
   }
 
+  //funcion para comprobar si ya existe una entrada con ese mismo VIn en la base de ddatos
   function mismoVIN($bastidor){
     //Construimos la consulta
     $sql="SELECT * from wrap_guard WHERE bastidor='".$bastidor."' ORDER BY id DESC LIMIT 1";

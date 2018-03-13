@@ -14,6 +14,7 @@ class Roles extends dbJockeys
     parent::__construct();
   }
 
+  //funcion para sacar el ultimo rol que ha mantenido un usuario
   function ultimoRol($usuario){
     //Construimos la consulta
     $sql="SELECT * from roles WHERE usuario='".$usuario."' ORDER BY id DESC LIMIT 1";
@@ -30,7 +31,7 @@ class Roles extends dbJockeys
     }
   }
 
-  //funcion encargada de insertar los recuros para un servicio en la ddbb
+  //funcion encargada de insertar un nuevo rol para el usuario
   function nuevoRol($rol, $usuario, $fechai, $horai){
     //realizamos la consuta y la guardamos en $sql
     $sql="INSERT INTO roles(id, rol, usuario, fecha_inicio, hora_inicio, fecha_fin, hora_fin)
@@ -44,6 +45,7 @@ class Roles extends dbJockeys
     }
   }
 
+  //funcion encargada de poner hora y fecha de fin a un rol de un usuario
   function finalizarRol($id, $fechaf, $horaf){
     $sql="UPDATE roles SET fecha_fin = '".$fechaf."', hora_fin = '".$horaf."' WHERE id = ".$id;
     $consulta=$this->realizarConsulta($sql);

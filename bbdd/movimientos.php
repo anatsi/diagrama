@@ -14,7 +14,7 @@ class Movimientos extends dbJockeys
     parent::__construct();
   }
 
-  //funcion encargada de insertar los recuros para un servicio en la ddbb
+  //funcion encargada de insertar un nuevo movimiento en la tabla de movimientos
   function nuevoMovimiento($fechao, $horao, $origen, $bastidor, $fechad, $horad, $destino, $usuario, $rol){
     //realizamos la consuta y la guardamos en $sql
     $sql="INSERT INTO movimientos(id, fecha_origen, hora_origen, origen, bastidor, fecha_destino, hora_destino, destino, usuario, error, rol)
@@ -42,6 +42,7 @@ class Movimientos extends dbJockeys
     }
   }
 
+  //funcion para sacar el ultimo movimiento que ha hecho un usuario
   function UltimoMovimiento($usuario){
     //Construimos la consulta
     $sql="SELECT * from movimientos WHERE usuario='".$usuario."' AND error = 0 ORDER BY id DESC LIMIT 1";
@@ -58,6 +59,7 @@ class Movimientos extends dbJockeys
     }
   }
 
+  //funcion encargada de sacar un moivmiento sabiendo su id
   function MovimientoID($id){
     //Construimos la consulta
     $sql="SELECT * from movimientos WHERE id=".$id;
@@ -74,6 +76,7 @@ class Movimientos extends dbJockeys
     }
   }
 
+  //funcion para marcar que un movimiento tiene error
   function marcarError($id){
     $sql="UPDATE movimientos SET error = 1 WHERE id = ".$id;
     $consulta=$this->realizarConsulta($sql);

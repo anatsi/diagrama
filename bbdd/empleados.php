@@ -43,7 +43,7 @@ class Empleados extends dbOperativa
     }
   }
 
-
+  //funcion que guarda las contraseñas al registrar el usuario
   function guardarrContra($contra, $user){
     $sql="UPDATE empleados SET password = '".$contra."' WHERE user = '".$user."'";
     $consulta=$this->realizarConsulta($sql);
@@ -54,6 +54,7 @@ class Empleados extends dbOperativa
     }
   }
 
+  //funcion para sacar el usuario por su id
   function EmpleadoUser($id){
     //Construimos la consulta
     $sql="SELECT * from empleados WHERE id=".$id;
