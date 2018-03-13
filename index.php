@@ -1,10 +1,14 @@
 <?php
+//sacamos los headers del dispositivo desd ele que entramos
 /*$headers = apache_request_headers();
 
+// los guardamos en variables
  $mystring = $headers['User-Agent'];
  $findme = 'Android';
+ //comprobamos si es android
  $pos1 = strpos($mystring, $findme);
  if ($pos1 != true) {
+ // si es android lo enviamos a la pagina de no disponible
    ?>
     <script type="text/javascript">
       window.location = 'nodisponible.html';

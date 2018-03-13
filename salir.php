@@ -1,4 +1,5 @@
 <?php
+//incluimos los archivos necesarios e inicializamos sus objetos
 require_once './bbdd/sesiones.php';
 $sesion = new Sesiones();
 require_once './bbdd/empleados.php';
@@ -7,6 +8,7 @@ require_once './bbdd/movimientos.php';
 $movimientos = new Movimientos();
 require_once './bbdd/roles.php';
 $rol = new Roles();
+//sacamos el nombre del empleado con la sesion iniciada
 $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
  ?>
 <!DOCTYPE html>
@@ -43,17 +45,22 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
 </body>
 </html>
 <?php
+//recogemos las variables de inicio de sesion y de movimientos realizadps
   $movimientosVar= $_GET['m'];
   $fechaInicio = $_GET['fi'];
   $horaInicio = $_GET['hi'];
   $fechaFin = date('Y-m-d');
   $horaFin = date('H:i:s');
+  //guardamos los movimientos realizados ese dia
   $nuevoRegistro = $movimientos -> movimientosDia($usuario['user'], $fechaInicio, $horaInicio, $movimientosVar, $fechaFin, $horaFin);
+  //sacamos el ultimo rol que ha hecho ese usuario
   $ultimoRol = $rol -> ultimoRol($usuario['user']);
+  // si el ultimo rol no tiene fecha de fin, se la ponemos
   if ($ultimoRol['fecha_fin'] == null && $ultimoRol['hora_fin'] == null || $ultimoRol['fecha_fin'] == '0000-00-00' && $ultimoRol['hora_fin'] == '00:00:00') {
     $finalizarRol = $rol -> finalizarRol($ultimoRol['id'], $fechaFin, $horaFin);
   }
  ?>
 <script type="text/javascript">
+//devolvemos el contador a 0
   localStorage.setItem('contador', 0);
 </script>

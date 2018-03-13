@@ -1,4 +1,5 @@
 <?php
+// incluimos los archivos necesarios e inicializamos sus objetos
   require_once './bbdd/sesiones.php';
   require_once './bbdd/roles.php';
   require_once './bbdd/empleados.php';
@@ -7,10 +8,13 @@
   $empleado = new Empleados();
   $rol = new Roles();
 
+  //sacamos la fecha y la hora actuales
   $fecha = date('Y-m-d');
   $hora = date('H:i:s');
 
+  // comprobamos si la sesion esta inciiada
   if (isset($_SESSION['usuario'])) {
+    //sacamos el nombre del usuario con la sesion iniciada
     $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
 
     //recoger el ultimo rol para ese usuario
@@ -92,6 +96,7 @@
       }
     }
   }else {
+    //si la sesion no esta iniciada, volvemos a la pagina de inicio de sesion
     ?>
       <script type="text/javascript">
         window.location = 'index.php';

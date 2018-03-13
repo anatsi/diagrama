@@ -1,8 +1,5 @@
+//funcion para sacar el confirm cuando se pulsa el boton de atras
 function volverAtras() {
-  /*var confirmacion = confirm('¿Confirmar atras?');
-  if (confirmacion == true) {
-    window.location = 'origen.php';
-  }*/
   $.confirm({
     title: 'ATRÁS',
     content: '¿Confirmar atrás?',
@@ -18,6 +15,7 @@ function volverAtras() {
   });
 }
 
+//funcion para comprobar que origen se ha elegido y bloquear el resto
 function comprobar() {
   var opciones = document.getElementsByName('origen');
   for (var i = 0; i < opciones.length; i++) {
@@ -29,6 +27,7 @@ function comprobar() {
   }
 }
 
+// la misma funcion pero para los destinos
 function comprobar2() {
   var opciones = document.getElementsByName('destino');
   for (var i = 0; i < opciones.length; i++) {
@@ -38,6 +37,7 @@ function comprobar2() {
   }
 }
 
+//funcion para cuando eliges un origen del select bloquear el resto
 function bloquear() {
   var elegido = document.getElementById('otro').value;
   if (elegido != 'primera') {
@@ -52,6 +52,7 @@ function bloquear() {
   }
 }
 
+// lo mismo para los destinos
 function bloquear2() {
   var elegido = document.getElementById('otro').value;
   if (elegido != 'primera') {
@@ -65,6 +66,7 @@ function bloquear2() {
   }
 }
 
+//funcion para cuando limpias el formulario volver a activar todas las opciones
 function devolver() {
   localStorage.removeItem('origen');
   var select = document.getElementById('otro');
@@ -77,31 +79,22 @@ function devolver() {
   document.getElementById('opcion4').disabled = false;
 }
 
-/*function tiempo() {
-  myVar = setTimeout(boton, 15000);
-}*/
-
-/*function boton() {
-  document.getElementById('siguiente').disabled = false;
-}*/
-
+//funcion que comprueba si el contador esta a 0 cada vez que se borra, y si lo esta, bloquea el boton de borrar
 function borrar() {
   if (localStorage.contador == 0) {
     document.getElementById('atras').disabled = true;
   }
 }
 
+//funcion que bloquea el boton de enviar una vez pulsado para que no se envie mas de una vez
 function enviar() {
   document.getElementById('siguiente').innerHTML = '<b>Enviando...</b>';
   document.getElementById('siguiente').disabled = true;
   return true;
 }
 
+//funcion que saca el confirm cuando se pulsa el boton de salir
 function botonSalir() {
-  /*var confirmacion = confirm('¿Confirmar atras?');
-  if (confirmacion == true) {
-    window.location = 'origen.php';
-  }*/
   $.confirm({
     title: 'SALIR',
     content: '¿Has terminado tu jornada laboral?',
@@ -117,26 +110,7 @@ function botonSalir() {
   });
 }
 
-function botonSalir2() {
-  /*var confirmacion = confirm('¿Confirmar atras?');
-  if (confirmacion == true) {
-    window.location = 'origen.php';
-  }*/
-  $.confirm({
-    title: 'SALIR',
-    content: '¿Has terminado tu jornada laboral?',
-    buttons: {
-      SI: function () {
-        window.location = 'salir.php?m=' + localStorage.contador + '&fi=' + localStorage.fechaInicio + '&hi=' + localStorage.horaInicio;
-      },
-
-      NO: function () {
-        console.log('cancelado');
-      },
-    },
-  });
-}
-
+//funcion que guarda en local storage el segundo usuario en el rol de vinilos
 function guardarUser() {
   var usuario = document.getElementById('usuario2').value;
   usuario = usuario.toUpperCase();
@@ -144,11 +118,8 @@ function guardarUser() {
   return true;
 }
 
+//confirm de volver atras para el rol de vinilos
 function volverAtrasWrap() {
-  /*var confirmacion = confirm('¿Confirmar atras?');
-  if (confirmacion == true) {
-    window.location = 'origen.php';
-  }*/
   $.confirm({
     title: 'ATRÁS',
     content: '¿Confirmar atrás?',

@@ -1,7 +1,8 @@
 <?php
+//incluimos los archivos necesarios e inicializamos sus objetos
 require_once './bbdd/sesiones.php';
 $sesiones = new Sesiones();
-
+//comprobamos si hay alguna sesion iniciada
 if (isset($_SESSION['usuario'])) {
  ?>
 <!DOCTYPE html>
@@ -63,6 +64,7 @@ if (isset($_SESSION['usuario'])) {
 <?php
 }
 else {
+  //si no hay ninguna sesion iniciada, le volvemos a la pantalla de iniciar sesion
   ?>
     <script type="text/javascript">
       window.location = "index.php";

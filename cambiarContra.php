@@ -27,17 +27,23 @@
 <body>
   <div class="two-columns">
     <?php
+    //incluimos los archivos necesarios e inicializamos sus objetos
       require_once './bbdd/empleados.php';
       $empleados = new Empleados();
 
       require_once './bbdd/sesiones.php';
       $sesiones = new Sesiones();
 
+      //comprbarmos que se hayan rellenado las dos contraseñas
       if (isset($_POST['form-username']) && isset($_POST['form-password'])) {
+        //sacamos el nombre del usuario que tiene la sesion iniciada
         $usuario = $empleados -> EmpleadoUser($_SESSION['usuario']);
+        // comprobamos si las dos contraseñas coinciden
         if ($_POST['form-username'] == $_POST['form-password']) {
           $salt = '$tsi$/';
+          //encriptamos la contraseña y la compramos con la que ya tenia el usuario
           if ($usuario['password'] == sha1(md5($salt . $_POST['form-username']))) {
+            // si es la misma le marcamos el error y lo devolvemos a el formulario de cambiar las contraseñas
             ?>
               <script type="text/javascript">
               $.confirm({
@@ -53,11 +59,12 @@
               </script>
             <?php
           }else {
-
+            // si es diferente, la encriptamos y la guardamos en la bbdd
             $contraC = sha1(md5($salt . $_POST['form-username']));
             $nuevaContra = $empleados -> cambiarContra($contraC, $_SESSION['usuario']);
 
             if ($nuevaContra == false) {
+              // si no se guarda bien avisamos y volvemos al formulario
               ?>
                 <script type="text/javascript">
                 $.confirm({
@@ -73,6 +80,7 @@
                 </script>
               <?php
             }else {
+              // si se guarda bien avisamos y le llevamos a la pantalla de roles
               ?>
                 <script type="text/javascript">
                 $.confirm({
@@ -90,6 +98,7 @@
           }
 
         }else {
+          // si las contraseñas no coinciden avisamos y volvemos al formulario de cambiar la contraseña
           ?>
             <script type="text/javascript">
             $.confirm({

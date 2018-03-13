@@ -1,9 +1,12 @@
 <?php
+//incluimos los archivos necesarios e inicializamos sus objetos
   include './bbdd/sesiones.php';
   $sesion= new Sesiones();
   require_once './bbdd/empleados.php';
   $empleado = new Empleados();
+  //comprobamos si la sesion esta iniciada
   if (isset($_SESSION['usuario'])) {
+    //sacamos el nombre del usaurio por la sesion
   $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
  ?>
 <!DOCTYPE html>
@@ -70,6 +73,7 @@
     </form>
   <?php
   }else {
+    //si la sesion no ests iniciada la devolvemos a la pagina de inicio de sesion
     ?>
       <script type="text/javascript">
         window.location = 'index.php';
