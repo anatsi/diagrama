@@ -1,8 +1,10 @@
 <?php
+//inclimos los archivos necesarios e inicializamos sus objetos
 require_once '../bbdd/sesiones.php';
 $sesion = new Sesiones();
 require_once '../bbdd/empleados.php';
 $empleado = new Empleados();
+//sacamos el usuario de la  sesion iniciada
 $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
  ?>
 <!DOCTYPE html>

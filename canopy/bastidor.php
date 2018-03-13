@@ -1,9 +1,11 @@
 <?php
+//incluimos los archivos necesarios e inicializamos sus objetos
 require_once '../bbdd/sesiones.php';
 $sesiones = new Sesiones();
 require_once '../bbdd/empleados.php';
 $empleado = new Empleados();
 
+//comprobamos si la sesión esta iniciada.
 if (isset($_SESSION['usuario'])) {
  ?>
 <!DOCTYPE html>
@@ -26,8 +28,11 @@ if (isset($_SESSION['usuario'])) {
 
 </head>
 <?php
+//comprobamos si se ha seleccionado un origen
 if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
+  //sacamos el nombre del usuario conectado
   $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
+  //guardamos en una variable el origen elegido
   if ($_POST['origen']) {
     $origen = $_POST['origen'];
   }else {
@@ -46,6 +51,7 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
   <div class="two-columns">
     <form class="contact_form" action="destino.php" method="post" enctype="multipart/form-data">
       <?php
+      //guardamos la hora y la fecha de origen
         $diao = date('Y-m-d');
         $horao = date('H:i:s');
         echo "<input type='hidden' name='horao' value='".$horao."'>";

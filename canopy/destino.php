@@ -1,12 +1,12 @@
 <?php
+//incluimos los archivos necesarios e inicializamos sus objetos
 require_once '../bbdd/sesiones.php';
 $sesiones = new Sesiones();
 require_once '../bbdd/empleados.php';
 $empleado = new Empleados();
 
+//comprobamos si se ha iniciado la sesion
 if (isset($_SESSION['usuario'])) {
-
-
  ?>
 <!DOCTYPE html>
 <html>
@@ -29,7 +29,9 @@ if (isset($_SESSION['usuario'])) {
 
 </head>
 <?php
+//comprobamos si se ha escaneado bien el bastidor
 if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
+  //sacamos el usuario de la sesion iniciada
   $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
  ?>
 <body onload="inicio();">
@@ -95,7 +97,6 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
         echo "<input type='hidden' name='diao' value='".$_POST['diao']."'>";
         echo "<input type='hidden' name='origen' value='".$_POST['origen']."'>";
         echo "<input type='hidden' name='bastidor' value='".$_POST['bastidor']."'>";
-
        ?>
   </div>
   <div class="botones">
@@ -109,6 +110,7 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
 </html>
 <?php
 }else {
+  //si el bastidor no se ha escaneado, lo devolvemos a la pagian de escanear bastidor
   ?>
     <script type="text/javascript">
     $.confirm({
@@ -127,6 +129,7 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
  ?>
  <?php
  }else {
+   //si la sesion no se ha iniciado lo devolvemos a la pagina de iniciar sesion
    ?>
      <script type="text/javascript">
        window.location = "../index.php";
