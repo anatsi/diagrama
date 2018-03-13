@@ -47,7 +47,7 @@ function elegidoSelect() {
 }
 
 function sp9() {
-  tiempoFinal = 10000 - contador;
+  tiempoFinal = 40000 - contador;
   console.log(tiempoFinal);
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'FCPA') {
@@ -67,7 +67,7 @@ function sp9() {
 }
 
 function p9() {
-  tiempoFinal = 10000 - contador;
+  tiempoFinal = 40000 - contador;
   console.log(tiempoFinal);
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'FCPA') {
@@ -87,7 +87,7 @@ function p9() {
 }
 
 function p12() {
-  tiempoFinal = 10000 - contador;
+  tiempoFinal = 40000 - contador;
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'FCPA') {
       console.log('origen:fcpa');
@@ -106,7 +106,7 @@ function p12() {
 }
 
 function malvinas() {
-  tiempoFinal = 10000 - contador;
+  tiempoFinal = 40000 - contador;
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'FCPA') {
       console.log('origen:fcpa');
@@ -125,7 +125,7 @@ function malvinas() {
 }
 
 function puva() {
-  tiempoFinal = 10000 - contador;
+  tiempoFinal = 40000 - contador;
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'FCPA') {
       console.log('origen:fcpa');
@@ -144,7 +144,7 @@ function puva() {
 }
 
 function rai() {
-  tiempoFinal = 10000 - contador;
+  tiempoFinal = 40000 - contador;
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'FCPA') {
       console.log('origen:fcpa');

@@ -47,7 +47,7 @@ function elegidoSelect() {
 }
 
 function sp9() {
-  tiempoFinal = 10000 - contador;
+  tiempoFinal = 40000 - contador;
   console.log(tiempoFinal);
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'MALVINAS') {
@@ -67,7 +67,7 @@ function sp9() {
 }
 
 function p9() {
-  tiempoFinal = 10000 - contador;
+  tiempoFinal = 40000 - contador;
   console.log(tiempoFinal);
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'MALVINAS') {
@@ -87,7 +87,7 @@ function p9() {
 }
 
 function p12() {
-  tiempoFinal = 10000 - contador;
+  tiempoFinal = 40000 - contador;
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'MALVINAS') {
       console.log('origen:malvinas');
@@ -106,7 +106,7 @@ function p12() {
 }
 
 function fcpa() {
-  tiempoFinal = 10000 - contador;
+  tiempoFinal = 40000 - contador;
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'MALVINAS') {
       console.log('origen:malvinas');
@@ -125,7 +125,7 @@ function fcpa() {
 }
 
 function puva() {
-  tiempoFinal = 10000 - contador;
+  tiempoFinal = 40000 - contador;
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'MALVINAS') {
       console.log('origen:malvinas');
@@ -144,7 +144,7 @@ function puva() {
 }
 
 function rai() {
-  tiempoFinal = 10000 - contador;
+  tiempoFinal = 40000 - contador;
   if (tiempoFinal > 0) {
     if (localStorage.origen == 'MALVINAS') {
       console.log('origen:malvinas');
