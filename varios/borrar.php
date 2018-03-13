@@ -1,10 +1,12 @@
 <?php
+//incluimos los archivos necesarios e inicializamos sus objetos
 require_once '../bbdd/sesiones.php';
 $sesion = new Sesiones();
 require_once '../bbdd/empleados.php';
 $empleado = new Empleados();
 require_once '../bbdd/movimientos.php';
 $movimientos = new Movimientos();
+//sacamos el usuario de la sesion iniciada
 $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
  ?>
 <!DOCTYPE html>
@@ -25,6 +27,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
 
 <body>
   <?php
+  //sacamos el ultimo movimiento que ha hecho ese usuario
     $ultimoMovimiento = $movimientos ->UltimoMovimiento($usuario['user']);
    ?>
   <header>

@@ -1,7 +1,9 @@
+//iniciamos las variables necesarias para despues
 var esteNo = 0;
 var contador = 0;
 var tiempoFinal = 0;
 
+//funcion encargada de empezar con contador y comprobar si hay und estino seleccionado cada 3s
 function inicio() {
   esteNo = 0;
   myVar = setTimeout(elegido, 3000);
@@ -10,6 +12,7 @@ function inicio() {
   console.log(localStorage.origen);
 }
 
+//funcion encargada de comprbar cual es el destino seleccionado y redireccionar a su funcion
 function elegido() {
   var elegido = document.getElementsByName('destino');
   for (var i = 0; i < elegido.length; i++) {
@@ -33,6 +36,7 @@ function elegido() {
   }
 }
 
+//lo mismo que la de arriba pero para las opciones del select
 function elegidoSelect() {
   var elegidoSel = document.getElementById('otro').value;
   if (elegidoSel == "") {
@@ -46,6 +50,7 @@ function elegidoSelect() {
   }
 }
 
+//funciones de los diferentes destinos
 function sp9() {
   tiempoFinal = 40000 - contador;
   console.log(tiempoFinal);
@@ -162,6 +167,7 @@ function rai() {
   }
 }
 
+//funcion final para poner el contador a 0 otra vez y desbloquear el boton de siguiente
 function fin() {
   contador = 0;
   tiempoFinal = 0;

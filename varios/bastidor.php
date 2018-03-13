@@ -1,12 +1,12 @@
 <?php
+//incluimos los archivos necesarios e inicializamos los objetos
 require_once '../bbdd/sesiones.php';
 $sesiones = new Sesiones();
 require_once '../bbdd/empleados.php';
 $empleado = new Empleados();
 
+//comprobamos si la sesion esta iniciada
 if (isset($_SESSION['usuario'])) {
-
-
  ?>
 <!DOCTYPE html>
 <html>
@@ -28,8 +28,11 @@ if (isset($_SESSION['usuario'])) {
 
 </head>
 <?php
+//comprobamos si se ha elegido un origen
 if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
+  //sacamos el nombre del usuario con la sesion iniciada
   $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
+  //guardamos el origen elegido en una variable
   if ($_POST['origen']) {
     $origen = $_POST['origen'];
   }else {
@@ -48,6 +51,7 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
   <div class="two-columns">
     <form class="contact_form" action="destino.php" method="post" enctype="multipart/form-data">
       <?php
+      //sacamos la fecha y la hora de origen
         $diao = date('Y-m-d');
         $horao = date('H:i:s');
         echo "<input type='hidden' name='horao' value='".$horao."'>";
@@ -75,6 +79,7 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
 </html>
 <?php
 }else {
+  //si no se ha elegido un origen, lo enviamos a la pantalla de origen paara que lo haga
   ?>
     <script type="text/javascript">
       $.confirm({
@@ -92,6 +97,7 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
 }
  ?>
  <?php
+ //si no hay una sesion iniciada, le enviamos a la pantalla de iniciar sesion
  }else {
    ?>
      <script type="text/javascript">

@@ -6,10 +6,12 @@
   </head>
   <body>
     <?php
+    //incluimos los archivos necesarios e inicializamos los objetos
       require_once '../bbdd/movimientos.php';
       $movimientos = new Movimientos();
-
+      //actualizamos el movimiento para marcar error
       $error = $movimientos -> marcarError($_GET['id']);
+      //sacamos todos los datos de movimiento por el id
       $ultimoMovimiento = $movimientos -> MovimientoID($_GET['id']);
       if ($error == false) {
         ?>
@@ -18,7 +20,9 @@
           </script>
         <?php
       }else {
+        //comprobamos si se ha seleccionada un nuevo origen o un nuevo destino
         if (isset($_POST['origen']) || isset($_POST['destino'])) {
+          //dependiendo de lo que se haya seleccionado, hacemos la consulta  ala bbdd para guardar el movimiento corregido
           if (isset($_POST['origen']) && isset($_POST['destino'])) {
             $nuevoMov = $movimientos -> nuevoMovimiento($ultimoMovimiento['fecha_origen'], $ultimoMovimiento['hora_origen'], $_POST['origen'], $ultimoMovimiento['bastidor'], $ultimoMovimiento['fecha_destino'], $ultimoMovimiento['hora_destino'], $_POST['destino'], $ultimoMovimiento['usuario'], $ultimoMovimiento['rol']);
           }
@@ -30,6 +34,7 @@
           }
 
           if ($nuevoMov == true) {
+            //si se guarda bien, lo devolvemos a la pagina de origen
             ?>
             <script type="text/javascript">
               window.location = 'origen.php';
@@ -37,6 +42,7 @@
             <?php
           }
         }else {
+          // si no se habia elegido ni origen ni destino, descontamos uno del contador y lo devolvemos a la pantalla de origen
           ?>
           <script type="text/javascript">
             localStorage.setItem("contador", Number(localStorage.contador) - 1);

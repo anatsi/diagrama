@@ -1,12 +1,12 @@
 <?php
+//incluimos los archivos necesarios y inicializamos lsus objetos
 require_once '../bbdd/sesiones.php';
 $sesiones = new Sesiones();
 require_once '../bbdd/empleados.php';
 $empleado = new Empleados();
 
+//comprobamos si la sesion esta iniciada
 if (isset($_SESSION['usuario'])) {
-
-
  ?>
 <!DOCTYPE html>
 <html>
@@ -29,7 +29,9 @@ if (isset($_SESSION['usuario'])) {
 
 </head>
 <?php
+// comprobamos si el bastidor se ha escaneado bien
   if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
+    //sacamos el nombre del usuario con la sesion iniciada
     $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
  ?>
 <body onload="inicio();">
@@ -110,6 +112,7 @@ if (isset($_SESSION['usuario'])) {
 
 </html>
 <?php
+// si el bastidos no se ha escaneado bien, le devolvemos a la pagian de escaneo
 }else {
   ?>
     <script type="text/javascript">
@@ -128,6 +131,7 @@ if (isset($_SESSION['usuario'])) {
 }
  ?>
  <?php
+ // si no se ha iniciado sesion, le devolvemos a la pagina de inicio de sesion
  }else {
    ?>
      <script type="text/javascript">

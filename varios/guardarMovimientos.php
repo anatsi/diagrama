@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>ELEGIR ORIGEN</title>
@@ -28,6 +27,7 @@
 <body>
   <div class="two-columns">
     <?php
+    //incluimos los archivos necesarios e inicializamos sus objetos
     require_once '../bbdd/movimientos.php';
     $movimiento = new Movimientos();
     require_once '../bbdd/sesiones.php';
@@ -35,11 +35,13 @@
     require_once '../bbdd/empleados.php';
     $empleado = new Empleados();
 
+    // comprobamos si se ha seleccionado algun destino
     if ($_POST['destino']) {
       $destino = $_POST['destino'];
     }elseif ($_POST['otrosDestinos']) {
       $destino = $_POST['otrosDestinos'];
     }else {
+      // si no se ha seleccionado algun destino, lo devuelves a la pagina de destino
       ?>
         <script type="text/javascript">
           $.confirm({
@@ -55,13 +57,17 @@
         </script>
       <?php
     }
-
+      //comprobamos si existe un origen y un destino
       if (isset($_POST['origen']) && isset($destino)) {
+        //sacamos la fecha y la hora final
         $diad = date('Y-m-d');
         $horad = date('H:i:s');
+        //sacamos le nombre del usuario conectado
         $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
+        //guardamos el nuevo movimiento en la bbdd
         $nuevoMovimiento=$movimiento->nuevoMovimiento($_POST['diao'], $_POST['horao'], $_POST['origen'], $_POST['bastidor'], $diad, $horad, $destino, $usuario['user'], 'VARIOS');
         if ($nuevoMovimiento == null) {
+          // si no se guarda, le avisamos y lo devolvemos a la pantalla de origen
           ?>
             <script type="text/javascript">
               $.confirm({
@@ -77,6 +83,7 @@
             </script>
           <?php
         }else {
+          //si se guarda correctamente, aumentamos el contador y le llevamos a la pantalla de finalizado
           ?>
             <script type="text/javascript">
               localStorage.setItem("contador", Number(localStorage.contador) + 1);
