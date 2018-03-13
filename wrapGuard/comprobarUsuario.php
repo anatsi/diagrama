@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>ELEGIR DESTINO</title>
@@ -20,12 +19,14 @@
 <body>
   <div class="two-columns">
     <?php
+    //incluimos los archivos necesarios e inicializamos sus objetos
       require_once '../bbdd/empleados.php';
       $empleado = new Empleados();
-
+      //comprobamos si el usuario elegido existe
       $existe = $empleado -> LoginUser($_POST['usuario2']);
 
       if ($existe == null) {
+        //si no exite se lo decimos y le devolvemos a la pantalla de elegir usuario
         ?>
           <script type="text/javascript">
             $.confirm({
@@ -41,6 +42,7 @@
           </script>
         <?php
       }else {
+        // si si que existe le llevamos a la pantalla de escanear el bastidor
         ?>
           <script type="text/javascript">
             window.location = 'bastidor.php';

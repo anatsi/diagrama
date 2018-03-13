@@ -1,12 +1,12 @@
 <?php
+//incluimos los archivos necesarios e inicializamos sus objetos
 require_once '../bbdd/sesiones.php';
 $sesiones = new Sesiones();
 require_once '../bbdd/empleados.php';
 $empleado = new Empleados();
 
+//comprobamos si hay alguna sesion iniciada
 if (isset($_SESSION['usuario'])) {
-
-
  ?>
 <!DOCTYPE html>
 <html>
@@ -28,7 +28,9 @@ if (isset($_SESSION['usuario'])) {
 
 </head>
 <?php
+  //comprobamos si el bastidor se ha escaneado corretamente
   if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
+    //sacamos el nombre del usuario con la sesion iniciada
     $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
  ?>
 <body>
@@ -83,6 +85,7 @@ if (isset($_SESSION['usuario'])) {
 </html>
 <?php
 }else {
+  // si el bastidor no se ha escaneado correctamente, avisamos y le devolvemos a la pantalla de escanear el bastidor
   ?>
     <script type="text/javascript">
       $.confirm({
@@ -101,6 +104,7 @@ if (isset($_SESSION['usuario'])) {
  ?>
  <?php
  }else {
+   //si no hay ninguna sesion inciada, lo devolvemos a la pantalla de iniciar sesion
    ?>
      <script type="text/javascript">
        window.location = "../index.php";

@@ -1,13 +1,14 @@
 <?php
+//incluimos los archivos necesarios e inicializamos sus objetos
 require_once '../bbdd/sesiones.php';
 $sesion = new Sesiones();
 require_once '../bbdd/empleados.php';
 $empleado = new Empleados();
+//sacamos el nombre del usuario con la sesion iniciada
 $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
  ?>
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>MODO WRAP GUARD</title>

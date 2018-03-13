@@ -1,10 +1,13 @@
 <?php
+//incluimos los archivos necesarios e inicializamos sus objetos
 require_once '../bbdd/sesiones.php';
 $sesiones = new Sesiones();
 require_once '../bbdd/empleados.php';
 $empleado = new Empleados();
 
+//comprobamos si la sesion esta iniciada
 if (isset($_SESSION['usuario'])) {
+  //sacamos el nombre del usuario con la sesion inciada
   $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
  ?>
 <!DOCTYPE html>
@@ -54,6 +57,7 @@ if (isset($_SESSION['usuario'])) {
 </html>
 <?php
  }else {
+   //si no hay ninguna sesion iniciada, lo devolvemos a la pantalla de iniciar sesion
    ?>
      <script type="text/javascript">
        window.location = "../index.php";
