@@ -1,4 +1,5 @@
 <?php
+//incluimos los archivos necesarios e inicializamos sus objetos
 require_once '../bbdd/sesiones.php';
 $sesiones = new Sesiones();
 require_once '../bbdd/empleados.php';
@@ -7,6 +8,7 @@ require_once '../bbdd/campa.php';
 $campa = new Campa();
 
 if (isset($_SESSION['usuario'])) {
+  //comprobamos si la sesion esta iniciada
   $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
  ?>
 <!DOCTYPE html>
@@ -38,6 +40,7 @@ if (isset($_SESSION['usuario'])) {
       <?php echo $usuario['user']; ?>
       <br>
       <?php
+      //sacamos el bastidor del ultimo registro de ese usuario
         $ultimoMov = $campa -> UltimoBastidor($usuario['user']);
         echo $ultimoMov['bastidor'];
        ?>
@@ -70,6 +73,7 @@ if (isset($_SESSION['usuario'])) {
 </html>
  <?php
  }else {
+   //si la sesion no esta iniciada, lo devolvemos al formulario de inicio de sesion
    ?>
      <script type="text/javascript">
        window.location = "../index.php";
