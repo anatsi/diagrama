@@ -65,7 +65,7 @@ if (isset($_SESSION['usuario'])) {
            <div class="btn btn-sık"><span>CAMPA</span></div>
          </label>
           </div>
-          <select class="btn" name="otrosOrigenes" id="otro" onchange="bloquear();">
+          <select class="" name="otrosOrigenes" id="otro" onchange="bloquear();">
              <option value="primera" selected disabled>OTRAS ZONAS</option>
              <option value="P9" onchange="bloquear();">P9</option>
              <option value="ZENDER" onchange="bloquear();">ZENDER</option>
@@ -76,7 +76,6 @@ if (isset($_SESSION['usuario'])) {
              <option value="RAVA" onchange="bloquear();">RAVA</option>
              <option value="RAVA2" onchange="bloquear();">RAVA2</option>
              <option value="SP9VA" onchange="bloquear();">SP9VA</option>
-
              <option value="SP9" onchange="bloquear();">SP9</option>
              <option value="FCPA" onchange="bloquear();">FCPA</option>
              <option value="VQC" onchange="bloquear();">VQC</option>
