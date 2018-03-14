@@ -46,7 +46,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
       <form class="contact_form" action="borrarddbb.php?id=<?php echo $ultimoMovimiento['id']; ?>" method="post" enctype="multipart/form-data">
         <ul>
           <li>
-            <select class="btn" name="origen" id="otro">
+            <select class="" name="origen" id="otro">
                <option value="primera" selected disabled>NUEVO ORIGEN</option>
                <option value="CANOPY">CANOPY</option>
                <option value="P12">P12</option>
@@ -73,7 +73,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
              </select>
           </li>
           <li>
-            <select class="btn" name="destino" id="otro">
+            <select class="" name="destino" id="otro">
                <option value="primera" selected disabled>NUEVO DESTINO</option>
                <option value="P9">P9</option>
                <option value="SP9">SP9</option>
