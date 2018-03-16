@@ -22,6 +22,8 @@
     //incluimos los archivos necesarios e inicializamos sus objetos
       require_once '../bbdd/empleados.php';
       $empleado = new Empleados();
+      require_once '../bbdd/roles.php';
+      $rol = new Roles();
       //comprobamos si el usuario elegido existe
       $existe = $empleado -> LoginUser($_POST['usuario2']);
 
@@ -42,7 +44,10 @@
           </script>
         <?php
       }else {
+        $fecha = date('Y-m-d');
+        $hora = date('H:i:s');
         // si si que existe le llevamos a la pantalla de escanear el bastidor
+        $nuevoRol = $rol -> nuevoRol('VINILOS', $_POST['usuario2'], $fecha, $hora);
         ?>
           <script type="text/javascript">
             window.location = 'bastidor.php';

@@ -100,7 +100,7 @@ function botonSalir() {
     content: '¿Has terminado tu jornada laboral?',
     buttons: {
       SI: function () {
-        window.location = '../salir.php?m=' + localStorage.contador + '&fi=' + localStorage.fechaInicio + '&hi=' + localStorage.horaInicio;
+        window.location = '../salir.php?m=' + localStorage.contador + '&fi=' + localStorage.fechaInicio + '&hi=' + localStorage.horaInicio + '&u2=' + localStorage.usuario2;
       },
 
       NO: function () {

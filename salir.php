@@ -59,6 +59,10 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
   if ($ultimoRol['fecha_fin'] == null && $ultimoRol['hora_fin'] == null || $ultimoRol['fecha_fin'] == '0000-00-00' && $ultimoRol['hora_fin'] == '00:00:00') {
     $finalizarRol = $rol -> finalizarRol($ultimoRol['id'], $fechaFin, $horaFin);
   }
+  if ($_GET['u2']) {
+    $ultimoRol2 = $rol -> ultimoRol($_GET['u2']);
+    $finalizarRol = $rol -> finalizarRol($ultimoRol2['id'], $fechaFin, $horaFin);
+  }
  ?>
 <script type="text/javascript">
 //devolvemos el contador a 0
