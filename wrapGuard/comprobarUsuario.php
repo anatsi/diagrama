@@ -46,8 +46,9 @@
       }else {
         $fecha = date('Y-m-d');
         $hora = date('H:i:s');
+        $usuario2 = strtoupper($_POST['usuario2']);
         // si si que existe le llevamos a la pantalla de escanear el bastidor
-        $nuevoRol = $rol -> nuevoRol('VINILOS', $_POST['usuario2'], $fecha, $hora);
+        $nuevoRol = $rol -> nuevoRol('VINILOS', $usuario2, $fecha, $hora);
         ?>
           <script type="text/javascript">
             window.location = 'bastidor.php';
