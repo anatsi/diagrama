@@ -44,6 +44,18 @@ class WrapGuard extends dbJockeys
       return null;
     }
   }
+
+  //funcion para cambiar el destino de un bastidor
+  function cambiarDestino($bastidor, $destino){
+    $sql="UPDATE wrap_guard SET destino = '".$destino."' WHERE bastidor = '".$bastidor."'";
+    $consulta=$this->realizarConsulta($sql);
+    if ($consulta=!false) {
+         return true;
+    }else {
+         return false;
+    }
+  }
+
 }
 
  ?>

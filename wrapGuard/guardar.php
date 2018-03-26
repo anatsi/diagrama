@@ -12,6 +12,7 @@
   $wrap = new WrapGuard();
   //sacamos el nombre del usuario con sesion iniciada
   $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
+  $error = 0;
 
 //comprobamos si se ha elegido un destino
   if (isset($_POST['destino'])) {
@@ -40,6 +41,11 @@
     }else {
       // si ya existia le sumamos 1 a su variable de repetido
       $repetido = $mismoVIN['repetido'] +1;
+      //comprobamos si tenian el mismo destino
+      if ($mismoVIN['destino'] != $_POST['destino']) {
+        // si no tienen el mismo destino marcamos que hay un error
+        $error = 1;
+      }
     }
 
     //sacamos la fecha y la hora actual
@@ -64,12 +70,24 @@
       </script>
       <?php
     }else {
+
+      if ($error == 1) {
+        //si habiamos marcado error, lo llevamos a elegir un nuevo destino
+        ?>
+          <script type="text/javascript">
+            window.location='nuevoDestino.php?vin=<?php echo $_POST['bastidor']; ?>';
+          </script>
+        <?php
+      }
       // si se ha guardado bien, le mandamos a la pantalla de finalizado
-      ?>
-        <script type="text/javascript">
-          window.location = 'finalizado.php';
-        </script>
-      <?php
+      else {
+        ?>
+          <script type="text/javascript">
+            window.location = 'finalizado.php';
+          </script>
+        <?php
+      }
+
     }
   }else {
     // si no se habia elegido un destino, lo devolvemos a la pantalla de destinos
