@@ -172,5 +172,6 @@ function fin() {
   contador = 0;
   tiempoFinal = 0;
   console.log('fin');
+  document.getElementById('siguiente').innerHTML = '<b>FINALIZAR</b>';
   document.getElementById('siguiente').disabled = false;
 }

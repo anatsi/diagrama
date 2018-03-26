@@ -17,8 +17,8 @@ class Campa extends dbJockeys
   //funcion encargada de insertar una nueva entrada en la tabla campa
   function nuevoBastidor($bastidor, $fecha, $hora, $usuario){
     //realizamos la consuta y la guardamos en $sql
-    $sql="INSERT INTO campa(id, bastidor, fecha, hora, usuario)
-    VALUES(NULL, '".$bastidor."', '".$fecha."', '".$hora."', '".$usuario."')";
+    $sql="INSERT INTO campa(id, bastidor, fecha, hora, usuario, proveedor, inspeccion)
+    VALUES(NULL, '".$bastidor."', '".$fecha."', '".$hora."', '".$usuario."', NULL, NULL)";
     //Realizamos la consulta utilizando la funcion creada en db.php
     $resultado=$this->realizarConsulta($sql);
     if($resultado!=false){
