@@ -1,4 +1,5 @@
 function si() {
+  document.getElementById('siguiente').disabled=true;
   document.getElementById('opcion3').disabled=false;
   document.getElementById('lab lab3').style.display='inline-block';
   document.getElementById('opcion4').disabled=false;

@@ -6,7 +6,6 @@ require_once '../bbdd/empleados.php';
 $empleado = new Empleados();
 require_once '../bbdd/movimientos.php';
 $movimientos = new Movimientos();
-//sacamos el usuario de la sesion iniciada
 $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
  ?>
 <!DOCTYPE html>
@@ -27,8 +26,8 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
 
 <body>
   <?php
-  //sacamos el ultimo movimiento que ha hecho ese usuario
-    $ultimoMovimiento = $movimientos ->UltimoMovimiento($usuario['user']);
+  //sacamos la informacion del ultimo movimiento de ese usuario
+    $ultimoMovimiento = $movimientos ->UltimoMovimiento($_POST['bastidor']);
    ?>
   <header>
     <span class="izquierda">
@@ -39,7 +38,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
     <h3>
       <?php echo $usuario['user']; ?>
       <br>
-      <?php echo $ultimoMovimiento['bastidor']; ?>
+      <?php echo $_POST['bastidor']; ?>
     </h3>
   </header>
     <div class="two-columns">
@@ -49,27 +48,27 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
           <li>
             <select class="" name="origen" id="otro">
                <option value="primera" selected disabled>NUEVO ORIGEN</option>
-               <option value="P12">P12</option>
-               <option value="FCPA">FCPA</option>
-               <option value="VQC">VQC</option>
-               <option value="P.COLORES">P.COLORES</option>
                <option value="CANOPY">CANOPY</option>
-               <option value="P9">P9</option>
+               <option value="P12">P12</option>
                <option value="MALVINAS">MALVINAS</option>
-               <option value="CIRCUITO">CIRCUITO</option>
-
-               <option value="SP9">SP9</option>
+               <option value="CAMPA">CAMPA</option>
+               <option value="P9">P9</option>
+               <option value="ZENDER">ZENDER</option>
                <option value="RAI">RAI</option>
                <option value="MOLINO">MOLINO</option>
-               <option value="ZENDER">ZENDER</option>
                <option value="MOVA1">MOVA1</option>
                <option value="MOVA2">MOVA2</option>
                <option value="PUVA">PUVA</option>
-               <option value="RAVA">RAVA2</option>
+               <option value="RAVA">RAVA</option>
                <option value="RAVA2">RAVA2</option>
                <option value="SP9VA">SP9VA</option>
+
+               <option value="SP9">SP9</option>
+               <option value="FCPA">FCPA</option>
+               <option value="VQC">VQC</option>
+               <option value="P.COLORES">P.COLORES</option>
+               <option value="CIRCUITO">CIRCUITO</option>
                <option value="PRPB">PRPB</option>
-               <option value="CAMPA">CAMPA</option>
 
              </select>
           </li>
@@ -78,22 +77,22 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
                <option value="primera" selected disabled>NUEVO DESTINO</option>
                <option value="P9">P9</option>
                <option value="SP9">SP9</option>
-               <option value="MALVINAS">MALVINAS</option>
                <option value="P12">P12</option>
-               <option value="ZENDER">ZENDER</option>
-               <option value="MOVA1">MOVA1</option>
-               <option value="MOVA2">MOVA2</option>
-               <option value="PUVA">PUVA</option>
-               <option value="RAVA">RAVA</option>
-               <option value="RAVA">RAVA2</option>
-               <option value="SP9VA">SP9VA</option>
-               <option value="RAI">RAI</option>
-               <option value="MOLINO">MOLINO</option>
-
                <option value="FCPA">FCPA</option>
                <option value="VQC">VQC</option>
                <option value="P.COLORES">P.COLORES</option>
                <option value="CIRCUITO">CIRCUITO</option>
+               <option value="MOVA1">MOVA1</option>
+               <option value="MOVA2">MOVA2</option>
+               <option value="PUVA">PUVA</option>
+               <option value="RAVA">RAVA</option>
+               <option value="RAVA2">RAVA2</option>
+               <option value="SP9VA">SP9VA</option>
+               <option value="RAI">RAI</option>
+               <option value="MOLINO">MOLINO</option>
+
+               <option value="MALVINAS">MALVINAS</option>
+               <option value="ZENDER">ZENDER</option>
                <option value="PRPB">PRPB</option>
                <option value="CAMPA">CAMPA</option>
                <option value="CANOPY">CANOPY</option>
@@ -101,7 +100,9 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
              </select>
           </li>
         </ul>
-
+        <?php
+          echo "<input type='hidden' name='bastidor' value='".$_POST['bastidor']."'>";
+         ?>
     </div>
   <div class="botones">
     <button type="submit" name="button" id="siguiente"><b>ACEPTAR</b></button>

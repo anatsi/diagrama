@@ -43,9 +43,9 @@ class Movimientos extends dbJockeys
   }
 
   //funcion para sacar el ultimo movimiento que ha hecho un usuario
-  function UltimoMovimiento($usuario){
+  function UltimoMovimiento($bastidor){
     //Construimos la consulta
-    $sql="SELECT * from movimientos WHERE usuario='".$usuario."' AND error = 0 ORDER BY id DESC LIMIT 1";
+    $sql="SELECT * from movimientos WHERE bastidor='".$bastidor."' AND error = 0 ORDER BY id DESC LIMIT 1";
     //Realizamos la consulta
     $resultado=$this->realizarConsulta($sql);
     if($resultado!=false){
