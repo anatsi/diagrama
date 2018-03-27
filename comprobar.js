@@ -94,13 +94,13 @@ function enviar() {
 }
 
 //funcion que saca el confirm cuando se pulsa el boton de salir
-function botonSalir() {
+function botonSalir(pagina) {
   $.confirm({
     title: 'SALIR',
     content: '¿Has terminado tu jornada laboral?',
     buttons: {
       SI: function () {
-        window.location = '../salir.php?m=' + localStorage.contador + '&fi=' + localStorage.fechaInicio + '&hi=' + localStorage.horaInicio + '&u2=' + localStorage.usuario2;
+        window.location = '../'+pagina+'.php?m=' + localStorage.contador + '&fi=' + localStorage.fechaInicio + '&hi=' + localStorage.horaInicio + '&u2=' + localStorage.usuario2;
       },
 
       NO: function () {
