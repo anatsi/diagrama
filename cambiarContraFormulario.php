@@ -40,11 +40,11 @@ if (isset($_SESSION['usuario'])) {
               <form role="form" action="cambiarContra.php" method="post" class="login-form">
                 <div class="form-group">
                   <label class="sr-only" for="form-username">Nueva contraseña</label>
-                  <input type="password" name="form-username" placeholder="Nueva contraseña" class="form-username form-control" id="form-username">
+                  <input type="password" name="form-username" placeholder="Nueva contraseña" class="form-username form-control" id="form-username" required>
                 </div>
                 <div class="form-group">
                   <label class="sr-only" for="form-password">Repetir nueva contraseña</label>
-                  <input type="password" name="form-password" placeholder="Repetir nueva contraseña" class="form-password form-control" id="form-password">
+                  <input type="password" name="form-password" placeholder="Repetir nueva contraseña" class="form-password form-control" id="form-password" required>
                 </div>
                 <button type="submit" class="btn">Cambiar contraseña</button>
               </form>

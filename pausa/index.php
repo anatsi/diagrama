@@ -23,9 +23,10 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
     <script src="../jquery/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="../jquery/jquery-confirm.css">
     <script src="../jquery/jquery-confirm.js"></script>
+    <script type="text/javascript" src="contador.js"></script>
 </head>
 
-<body>
+<body onload="tiempo();">
   <header>
     <span class="izquierda">
       <a href="../roles.php" id='roles'>ROLES</a>
@@ -38,7 +39,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
     <h3><?php echo $usuario['user']; ?></h3>
   </header>
     <div class="two-columns">
-      <h3>HAS ENTRADO EN MODO CHEQUER</h3>
+      <h3>HAS ENTRADO EN PAUSA</h3>
     </div>
 </body>
 </html>
