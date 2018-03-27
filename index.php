@@ -51,11 +51,11 @@
               <form role="form" action="login.php" method="post" class="login-form">
                 <div class="form-group">
                   <label class="sr-only" for="form-username">Usuario</label>
-                  <input type="text" name="form-username" placeholder="Usuario" class="form-username form-control" id="form-username" autofocus>
+                  <input type="text" name="form-username" placeholder="Usuario" class="form-username form-control" id="form-username" autofocus required>
                 </div>
                 <div class="form-group">
                   <label class="sr-only" for="form-password">Contraseña</label>
-                  <input type="password" name="form-password" placeholder="Contraseña" class="form-password form-control" id="form-password">
+                  <input type="password" name="form-password" placeholder="Contraseña" class="form-password form-control" id="form-password" required>
                 </div>
                 <button type="submit" class="btn">Iniciar sesion</button>
               </form>
