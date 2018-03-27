@@ -25,8 +25,11 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
   <script type="text/javascript" src="comprobar.js"></script>
   <script type="text/javascript">
     function movimientos() {
-      if (localStorage.contador <= 0) {
+      var contador = <?php echo $_GET['m']; ?>;
+      if (contador == 0) {
         document.getElementById('movimientos').style.display='none';
+      }else {
+        document.getElementById('movimientos').style.display='block';
       }
     }
   </script>
