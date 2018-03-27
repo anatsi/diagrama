@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>ELEGIR ORIGEN</title>
+  <title>ELEGIR ORIGE</title>
   <style media="screen">
     body{
       color: white;

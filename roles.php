@@ -65,6 +65,10 @@
             <input type="radio" name="CHEQUER" value="CHEQUER" onclick="window.location = 'chequer.php';">
              <div  class="btn btn-sık"><span>CHEQUER</span></div>
           </label>
+          <label id="lab">
+            <input type="radio" name="RADIO" value="RADIO" onclick="window.location = 'radio.php';">
+             <div  class="btn btn-sık"><span>RADIO</span></div>
+          </label>
             </div>
           </li>
         </ul>
