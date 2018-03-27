@@ -8,7 +8,7 @@
  //comprobamos si es android
  $pos1 = strpos($mystring, $findme);
  if ($pos1 != true) {
- // si es android lo enviamos a la pagina de no disponible
+ // si no es android lo enviamos a la pagina de no disponible
    ?>
     <script type="text/javascript">
       window.location = 'nodisponible.html';
