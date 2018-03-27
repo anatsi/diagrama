@@ -22,12 +22,17 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
   <script src="./pace/pace.js"></script>
   <!--<link href="./pace/themes/pace-theme-center-radar.css" rel="stylesheet">-->
   <link rel="shortcut icon" href="./assets/ico/favicon.ico">
-  <script type="text/javascript" src="comprobar.js">
-
+  <script type="text/javascript" src="comprobar.js"></script>
+  <script type="text/javascript">
+    function movimientos() {
+      if (localStorage.contador <= 0) {
+        document.getElementById('movimientos').style.display='none';
+      }
+    }
   </script>
 </head>
 
-<body>
+<body onload="movimientos();">
   <header>
     <span class="izquierda">
     	<a  href= "#"><img src="./assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
@@ -37,7 +42,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
     <h3><?php echo $usuario['user']; ?></h3>
   </header>
     <div class="two-columns">
-      <h3>MOVIMIENTOS REALIZADOS: <script>document.write(localStorage.contador);</script></h3>
+      <h3 id="movimientos">MOVIMIENTOS REALIZADOS: <script>document.write(localStorage.contador);</script></h3>
     </div>
   <div class="botones">
     <button type="submit" name="button" id="siguiente" onclick="window.location = './bbdd/logout.php'"><b>SALIR</b></button>
