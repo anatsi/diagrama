@@ -13,7 +13,7 @@ if (isset($_SESSION['usuario'])) {
 
 <head>
   <meta charset="utf-8">
-  <title>RADIO</title>
+  <title>¿RADIO?</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles.css" type="text/css" media="all">
   <script src="../pace/pace.js"></script>
@@ -79,8 +79,7 @@ if (isset($_SESSION['usuario'])) {
   </div>
   <div class="botones">
     <button type="submit" name="button" id="siguiente" disabled=true><b>SIGUIENTE</b></button>
-    <button type="button" name="button" id="reset" onclick="location.reload(true);"><b>LIMPIAR</b></button>
-    <button type="button" name="button" id="atras" onclick="volverAtrasWrap();"><b>ATRAS</b></button>
+    <button type="button" name="button" id="atras" onclick="volverAtrasWrap();" style="width:98%;"><b>ATRAS</b></button>
   </div>
   </form>
 </body>

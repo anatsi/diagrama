@@ -57,7 +57,7 @@ if (isset($_SESSION['usuario'])) {
 
       <ul>
         <li>
-          <label for="destino" id="titulo">CLIMA</label>
+          <label for="destino" id="titulo">¿CLIMATIZADOR?</label>
           <div class="wrap">
             <label id="lab">
               <input type="radio" id="opcion1" name="arriba" value="SI" onclick="si();">
@@ -85,8 +85,7 @@ if (isset($_SESSION['usuario'])) {
   </div>
   <div class="botones">
     <button type="submit" name="button" id="siguiente" disabled=true><b>SIGUIENTE</b></button>
-    <button type="button" name="button" id="reset" onclick="location.reload(true);"><b>LIMPIAR</b></button>
-    <button type="button" name="button" id="atras" onclick="volverAtrasWrap();"><b>ATRAS</b></button>
+    <button type="button" name="button" id="atras" onclick="volverAtrasWrap();" style="width:98%;"><b>ATRAS</b></button>
   </div>
   </form>
 </body>
