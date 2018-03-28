@@ -52,7 +52,7 @@ if (isset($_SESSION['usuario'])) {
 
       <ul>
         <li>
-          <label for="destino" id="titulo">RADIO</label>
+          <label for="destino" id="titulo">¿RADIO?</label>
           <div class="wrap">
             <label id="lab">
               <input type="radio" id="opcion1" name="arriba" value="SI" onclick="si();">
