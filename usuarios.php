@@ -1,6 +1,6 @@
 <?php
-require_once './bbdd/empleados.php';
-$empleados = new Empleados();
+/*require_once './bbdd/empleados.php';
+$empleados = new Empleados();*/
 $usuarios = array (
 "DSR",
 "AFD",
@@ -143,7 +143,8 @@ $usuarios = array (
 "DAB",
 "FDT",
 "GBE",
-"RAP"
+"RAP",
+"CAH"
 );
 $salt='$tsi$/';
 foreach ($usuarios as $usuario) {
