@@ -28,20 +28,6 @@ class Movimientos extends dbMovimientos
     }
   }
 
-  //funcion encargada de insertar los movimientos diarios de cada jockey
-  function movimientosDia($usuario, $fechao, $horao, $movimientos, $fechaf, $horaf){
-    //realizamos la consuta y la guardamos en $sql
-    $sql="INSERT INTO usuarios_movimientos(usuario, fecha_inicio, hora_inicio, movimientos_numero, fecha_fin, hora_fin)
-    VALUES('".$usuario."', '".$fechao."', '".$horao."', ".$movimientos.", '".$fechaf."', '".$horaf."')";
-    //Realizamos la consulta utilizando la funcion creada en db.php
-    $resultado=$this->realizarConsulta($sql);
-    if($resultado!=false){
-      return true;
-    }else{
-      return null;
-    }
-  }
-
   //funcion para sacar el ultimo movimiento que ha hecho un usuario
   function UltimoMovimiento($bastidor){
     //Construimos la consulta

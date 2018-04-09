@@ -4,9 +4,9 @@
  */
 
  //Llamamos a la clase db, encargada de la conexion.
- require_once 'dbMovimientos.php';
+ require_once 'dbJockeys.php';
 
-class Radio extends dbMovimientos
+class Radio extends dbJockeys
 {
   //la funcion construct llama al construct de db, encargada de la conexión.
   function __construct()

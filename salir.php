@@ -60,7 +60,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
   $fechaFin = date('Y-m-d');
   $horaFin = date('H:i:s');
   //guardamos los movimientos realizados ese dia
-  $nuevoRegistro = $movimientos -> movimientosDia($usuario['user'], $fechaInicio, $horaInicio, $movimientosVar, $fechaFin, $horaFin);
+  $nuevoRegistro = $rol -> movimientosDia($usuario['user'], $fechaInicio, $horaInicio, $movimientosVar, $fechaFin, $horaFin);
   //sacamos el ultimo rol que ha hecho ese usuario
   $ultimoRol = $rol -> ultimoRol($usuario['user']);
   // si el ultimo rol no tiene fecha de fin, se la ponemos
