@@ -6,7 +6,9 @@ var tiempoFinal = 0;
 //funcion encargada de empezar con contador y comprobar si hay und estino seleccionado cada 3s
 function inicio() {
   esteNo = 0;
+  //iniciamos la cuenta atras en 3 segundos
   myVar = setTimeout(elegido, 3000);
+  //sumamos los 3 segundos al contador
   contador += 3000;
   console.log('inicio');
   console.log(localStorage.origen);
@@ -14,10 +16,13 @@ function inicio() {
 
 //funcion encargada de comprbar cual es el destino seleccionado y redireccionar a su funcion
 function elegido() {
+  //recogemos las opciones de destino en un array
   var elegido = document.getElementsByName('destino');
+  //recorremos el array para ver cual es el destino elegido
   for (var i = 0; i < elegido.length; i++) {
     if (elegido[i].checked) {
       var esEste = elegido[i].value;
+      //dependiendo del elegido, le enviamos a su funcion personalizada
       if (esEste == 'SP9') {
         sp9();
       } else if (esEste == 'P9') {
@@ -28,6 +33,7 @@ function elegido() {
         malvinas();
       }
     } else {
+      //si no se ha elegido ninguno, le enviamos a la siguiente funcion de comprobacion
       esteNo++;
       if (esteNo >= elegido.length) {
         elegidoSelect();
@@ -38,10 +44,14 @@ function elegido() {
 
 //lo mismo que la de arriba pero para las opciones del select
 function elegidoSelect() {
+  //recogemos el destino elegido
   var elegidoSel = document.getElementById('otro').value;
   if (elegidoSel == "") {
+    // si no se ha elegido ninguno, le devolvemos a la funiocn de inicio
     inicio();
-  } else if (elegidoSel == 'PUVA') {
+  }
+  //dependiendo del elegido, le enviamos a su funcion personalizada
+  else if (elegidoSel == 'PUVA') {
     puva();
   } else if (elegidoSel == 'RAI') {
     rai();
@@ -170,8 +180,10 @@ function rai() {
 //funcion final para poner el contador a 0 otra vez y desbloquear el boton de siguiente
 function fin() {
   contador = 0;
+  //ponemos el contador y el tiempo final a 0
   tiempoFinal = 0;
   console.log('fin');
+  //desbloqueamos el boton de siguiente y cambiamos el titulo
   document.getElementById('siguiente').innerHTML = '<b>FINALIZAR</b>';
   document.getElementById('siguiente').disabled = false;
 }

@@ -17,11 +17,15 @@ function volverAtras() {
 
 //funcion para comprobar que origen se ha elegido y bloquear el resto
 function comprobar() {
+  //recogemos las opciones de origen disponible en un array
   var opciones = document.getElementsByName('origen');
+  //recorremos el array para ver cual es el elegido
   for (var i = 0; i < opciones.length; i++) {
     if (opciones[i].checked) {
       var elegido = opciones[i].value;
+      //guardamos el valor del origen elegido en el localStorage
       localStorage.setItem('origen', elegido);
+      //bloqueamos el desplegable de mas origenes
       document.getElementById('otro').disabled = true;
     }
   }
@@ -29,9 +33,12 @@ function comprobar() {
 
 // la misma funcion pero para los destinos
 function comprobar2() {
+  //recogemos las opciones de destino disponibles en un array
   var opciones = document.getElementsByName('destino');
+  //recorremos el array para ver cual es la elegida
   for (var i = 0; i < opciones.length; i++) {
     if (opciones[i].checked) {
+      //cuando encontramos la elegida, bloqueamos el desplegable de mas destinos
       document.getElementById('otro').disabled = true;
     }
   }
@@ -39,12 +46,16 @@ function comprobar2() {
 
 //funcion para cuando eliges un origen del select bloquear el resto
 function bloquear() {
+  //recogemos el origen elegido del desplegable
   var elegido = document.getElementById('otro').value;
   if (elegido != 'primera') {
+    //guardamos el origen en localStorage
     localStorage.setItem('origen', elegido);
+    //pintamos el select de verde
     var select = document.getElementById('otro');
     select.style.backgroundColor = 'rgb(3, 119, 25)';
     select.style.color = 'white';
+    //bloqueamos las opciones de origen de fuera del select
     document.getElementById('opcion1').disabled = true;
     document.getElementById('opcion2').disabled = true;
     document.getElementById('opcion3').disabled = true;
@@ -54,11 +65,14 @@ function bloquear() {
 
 // lo mismo para los destinos
 function bloquear2() {
+  //recogemos la opcion elegida del select
   var elegido = document.getElementById('otro').value;
   if (elegido != 'primera') {
+    //pintamos el select de verde
     var select = document.getElementById('otro');
     select.style.backgroundColor = 'rgb(3, 119, 25)';
     select.style.color = 'white';
+    //bloqueamos las opciones de destino de fuera del select
     document.getElementById('opcion1').disabled = true;
     document.getElementById('opcion2').disabled = true;
     document.getElementById('opcion3').disabled = true;
@@ -68,10 +82,13 @@ function bloquear2() {
 
 //funcion para cuando limpias el formulario volver a activar todas las opciones
 function devolver() {
+  //borramos el origen de localStorage
   localStorage.removeItem('origen');
+  //volvemos a pintar el select de blanco
   var select = document.getElementById('otro');
   select.style.backgroundColor = 'white';
   select.style.color = 'black';
+  //desbloqueamos todas las opciones de origen
   document.getElementById('otro').disabled = false;
   document.getElementById('opcion1').disabled = false;
   document.getElementById('opcion2').disabled = false;
@@ -112,8 +129,11 @@ function botonSalir() {
 
 //funcion que guarda en local storage el segundo usuario en el rol de vinilos
 function guardarUser() {
+  //recogemos el usuario insertado
   var usuario = document.getElementById('usuario2').value;
+  //lo cambiamos a mayusculas
   usuario = usuario.toUpperCase();
+  //lo guardamos en el localStorage
   localStorage.setItem('usuario2', usuario);
   return true;
 }

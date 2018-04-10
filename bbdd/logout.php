@@ -5,7 +5,7 @@
 
   //llamamos a la funcion que se encarga de destruir la sesion.
   $sesion->logOut();
-  //una vez cerrada la sesion, te devuelve al formulario de inicio.
+  //una vez cerrada la sesion, te devuelve al formulario de inicio de sesion.
   ?>
   <script type="text/javascript">
   	window.location="../index.php";

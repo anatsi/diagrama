@@ -18,9 +18,9 @@ if (isset($_SESSION['usuario'])) {
   <meta charset="utf-8">
   <title>MODO CAMPA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Enlaces a los archivos js y css necesarios -->
   <link rel="stylesheet" href="../styles.css" type="text/css" media="all">
   <script src="../pace/pace.js"></script>
-<!--  <link href="../pace/themes/pace-theme-center-radar.css" rel="stylesheet">-->
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
   <script type="text/javascript" src="../comprobar.js"></script>
   <!-- Links para alerts y confirms -->
@@ -54,6 +54,7 @@ if (isset($_SESSION['usuario'])) {
     <p style="font-weight: bold; font-size:16px; float: right;">SUPERVISOR CAMPA</p>
     <form class="contact_form" action="nuevaCampa.php" method="post" enctype="multipart/form-data">
       <?php
+      //recogemos la fecha y la hora actuales y la pasamos por un input hidden
         $dia = date('Y-m-d');
         $hora = date('H:i:s');
         echo "<input type='hidden' name='hora' value='".$hora."'>";

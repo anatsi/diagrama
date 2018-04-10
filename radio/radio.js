@@ -1,3 +1,4 @@
+//funcion para hacer visibles las opciones de ok/nok cuando se pulsa al si
 function si() {
   document.getElementById('siguiente').disabled=true;
   document.getElementById('opcion3').disabled=false;
@@ -6,10 +7,12 @@ function si() {
   document.getElementById('lab lab4').style.display='inline-block';
 }
 
+//funcion para desbloquear el boton de siguiente
 function desbloquear() {
   document.getElementById('siguiente').disabled=false;
 }
 
+//funcion para ocultar las opciones de ok/nok cuando se pulsa al no
 function no() {
   document.getElementById('opcion3').disabled=true;
   document.getElementById('lab lab3').style.display='none';
@@ -17,6 +20,7 @@ function no() {
   document.getElementById('lab lab4').style.display='none';
 }
 
+//funcion para comprobar que el bastidor es de una connect
 function comprobarBastidor() {
   var bastidor = document.getElementById('bastidor').value;
   var modelo = bastidor.substr(8, 1);

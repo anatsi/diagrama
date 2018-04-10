@@ -17,7 +17,6 @@ if (isset($_SESSION['usuario'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles.css" type="text/css" media="all">
   <script src="../pace/pace.js"></script>
-  <!--  <link href="../pace/themes/pace-theme-center-radar.css" rel="stylesheet">-->
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
   <script type="text/javascript" src="../comprobar.js"></script>
 
@@ -65,9 +64,11 @@ if (isset($_SESSION['usuario'])) {
             <div class="btn btn-sık"><span>S. AFRICA</span></div>
           </label>
          <?php
+         //guardamos el bastidor escaneado en un input para pasarlo a la siguiente pantalla
             echo "<input type='hidden' name='bastidor' value='".$_POST['bastidor']."'>";
           ?>
           <script type="text/javascript">
+          //guardamos el segundo usuario en un input para pasarlo a la siguiente pantalla
             document.write("<input type='hidden' name='usuario2' value='"+localStorage.usuario2+"'>")
           </script>
           </div>

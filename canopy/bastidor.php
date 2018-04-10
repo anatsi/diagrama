@@ -15,9 +15,9 @@ if (isset($_SESSION['usuario'])) {
   <meta charset="utf-8">
   <title>ESCANEAR BASTIDOR</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Enlaces a los archivos css y js necesarios -->
   <link rel="stylesheet" href="../styles.css" type="text/css" media="all">
   <script src="../pace/pace.js"></script>
-<!--  <link href="../pace/themes/pace-theme-center-radar.css" rel="stylesheet">-->
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
   <script type="text/javascript" src="../comprobar.js"></script>
 
@@ -64,6 +64,7 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
         </li>
       </ul>
       <?php
+      //guardamos el origen que teniamos en una variable, en un input para pasarlo a la siguiente pagina
         echo "<input type='hidden' name='origen' value='".$origen."'>";
        ?>
   </div>
@@ -79,6 +80,7 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
 </html>
 <?php
 }else {
+  //si no se habia elegido el origen, lo enviamos a la pantalla anterior
   ?>
     <script type="text/javascript">
       $.confirm({
@@ -97,6 +99,7 @@ if (isset($_POST['origen']) || isset($_POST['otrosOrigenes'])) {
  ?>
  <?php
  }else {
+   //si no se habia iniciado sesion le enviamos a la pagina de inicio de sesion
    ?>
      <script type="text/javascript">
        window.location = "../index.php";

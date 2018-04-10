@@ -1,4 +1,5 @@
 <?php
+//incluimos los archios necesarios e iniciamos sus objetos
 require_once '../bbdd/wrapGuard.php';
 $wrap = new WrapGuard();
 

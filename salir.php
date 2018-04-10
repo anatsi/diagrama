@@ -24,6 +24,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
   <link rel="shortcut icon" href="./assets/ico/favicon.ico">
   <script type="text/javascript" src="comprobar.js"></script>
   <script type="text/javascript">
+  //comprobamos si ha habido movimientos para sacar el total por pantalla o no
     function movimientos() {
       var contador = <?php echo $_GET['m']; ?>;
       if (contador == 0) {

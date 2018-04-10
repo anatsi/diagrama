@@ -1,6 +1,6 @@
 <?php
 /**
- * Clase encargada de las consultas a la tabla movimientos.
+ * Clase encargada de las consultas a la tabla wrap_guard.
  */
 
  //Llamamos a la clase db, encargada de la conexion.

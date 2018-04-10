@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles.css" type="text/css" media="all">
   <script src="../pace/pace.js"></script>
-  <!--  <link href="../pace/themes/pace-theme-center-radar.css" rel="stylesheet">-->
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
   <script type="text/javascript" src="../comprobar.js"></script>
 
@@ -44,8 +43,10 @@
           </script>
         <?php
       }else {
+        //recogemos la fecha y la hora actuales
         $fecha = date('Y-m-d');
         $hora = date('H:i:s');
+        //convertimos a mayusculas el segundo usuario
         $usuario2 = strtoupper($_POST['usuario2']);
         // si si que existe le llevamos a la pantalla de escanear el bastidor
         $nuevoRol = $rol -> nuevoRol('VINILOS', $usuario2, $fecha, $hora);

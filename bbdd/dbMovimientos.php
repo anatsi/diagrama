@@ -1,6 +1,6 @@
 <?php
 /**
- * Permitir la conexion contra la base de datos de acceso
+ * Permitir la conexion contra la base de datos de work orders
  */
 class dbMovimientos
 {

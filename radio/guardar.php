@@ -14,7 +14,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles.css" type="text/css" media="all">
   <script src="../pace/pace.js"></script>
-  <!--  <link href="../pace/themes/pace-theme-center-radar.css" rel="stylesheet">-->
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
   <script type="text/javascript" src="../comprobar.js"></script>
 
@@ -34,6 +33,7 @@
     $sesion = new Sesiones();
     require_once '../bbdd/empleados.php';
     $empleado = new Empleados();
+    //sacamos el usuario con la sesion iniciada
     $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
 
     //comprobar que se ha rellenado el ultimo formulario
@@ -52,6 +52,7 @@
         //guardamos la entrada.
         $nuevaEntrada = $radio -> nuevaRadio($_POST['bastidor'], $_POST['radio'], $clima, $fecha, $hora, $usuario['user']);
         if ($nuevaEntrada == null || $nuevaEntrada == false) {
+          // si se guarda mal, avisamos al usuario
           ?>
             <script type="text/javascript">
               $.confirm({
@@ -67,6 +68,7 @@
             </script>
           <?php
         }else {
+          //si se guarda bien, lo enviamos a la pagina de finalizado
           ?>
             <script type="text/javascript">
               window.location = 'finalizado.php';

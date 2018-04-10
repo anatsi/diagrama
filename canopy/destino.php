@@ -17,7 +17,6 @@ if (isset($_SESSION['usuario'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles.css" type="text/css" media="all">
   <script src="../pace/pace.js"></script>
-<!--  <link href="../pace/themes/pace-theme-center-radar.css" rel="stylesheet">-->
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
   <script type="text/javascript" src="../comprobar.js"></script>
   <script type="text/javascript" src="tiempo.js"></script>
@@ -93,6 +92,7 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
         </li>
       </ul>
       <?php
+      //recogemos los datos de origen bastidos y fechas que ya habiamos sacado en inputs para pasarlo a la siguiente pagina
         echo "<input type='hidden' name='horao' value='".$_POST['horao']."'>";
         echo "<input type='hidden' name='diao' value='".$_POST['diao']."'>";
         echo "<input type='hidden' name='origen' value='".$_POST['origen']."'>";

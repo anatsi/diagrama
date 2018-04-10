@@ -1,6 +1,6 @@
 <?php
 /**
- * Clase encargada de las consultas a la tabla movimientos.
+ * Clase encargada de las consultas a la tabla roles.
  */
 
  //Llamamos a la clase db, encargada de la conexion.
@@ -56,7 +56,7 @@ class Roles extends dbJockeys
     }
   }
 
-  //funcion encargada de insertar los movimientos diarios de cada jockey
+  //funcion encargada de insertar los movimientos diarios de cada jockey en la tabla usuarios_movimientos
   function movimientosDia($usuario, $fechao, $horao, $movimientos, $fechaf, $horaf){
     //realizamos la consuta y la guardamos en $sql
     $sql="INSERT INTO usuarios_movimientos(usuario, fecha_inicio, hora_inicio, movimientos_numero, fecha_fin, hora_fin)

@@ -16,16 +16,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles.css" type="text/css" media="all">
   <script src="../pace/pace.js"></script>
-  <!--  <link href="../pace/themes/pace-theme-center-radar.css" rel="stylesheet">-->
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-  <!--<script type="text/javascript">
-    function movimientoFinalizado() {
-      myVar = setTimeout(fuera, 2000);
-    }
-    function fuera() {
-      window.location = 'origen.php';
-    }
-  </script>-->
 </head>
 
 <body>
@@ -38,7 +29,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
     <h3><?php echo $usuario['user']; ?></h3>
   </header>
     <div class="two-columns">
-      <h3>VEHICULO REGISTRADO CON EXITO</script></h3>
+      <h3>VEHICULO REGISTRADO CON EXITO</h3>
     </div>
     <div class="botones">
       <button type="button" name="button" id="siguiente" onclick="window.location = 'bastidor.php'"><b>ACEPTAR</b></button>
