@@ -144,7 +144,8 @@ $usuarios = array (
 "FDT",
 "GBE",
 "RAP",
-"CAH"
+"CAH",
+"RGP"
 );
 $salt='$tsi$/';
 foreach ($usuarios as $usuario) {
