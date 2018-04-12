@@ -33,8 +33,14 @@
       $modelo = 'CONNECT';
     }
 
+    //cambiamos los caracteres 5 y 6 del bastidor por X.
+    $bastidor = $_POST['bastidor'];
+    $primera= substr($bastidor, 0, 4);
+    $segunda = substr($bastidor, 6);
+    $bastidorFinal = $primera .'XX'. $segunda;
+
     //comprobamos si ya existia una entrada del mismo coche
-    $mismoVIN = $wrap -> mismoVIN($_POST['bastidor']);
+    $mismoVIN = $wrap -> mismoVIN($bastidorFinal);
     // si no existia ponemos la variable repetido a 1
     if ($mismoVIN == null || $mismoVIN == false) {
       $repetido = 1;
@@ -51,8 +57,11 @@
     //sacamos la fecha y la hora actual
     $fecha = date('Y-m-d');
     $hora = date('H:i:s');
+
+
+
     //guardamos el movimiento de wrap en la bbdd
-    $nuevoWrap = $wrap -> nuevoWrap($usuario['user'], $usuario2, $modelo, $_POST['destino'], $_POST['bastidor'], $fecha, $hora, $repetido);
+    $nuevoWrap = $wrap -> nuevoWrap($usuario['user'], $usuario2, $modelo, $_POST['destino'], $bastidorFinal, $fecha, $hora, $repetido);
     if ($nuevoWrap == false || $nuevoWrap == null) {
       // si no se guarda bien, le marcamos el error y lo devolvemos a la pantalla de escanear el bastidor
       ?>
@@ -75,7 +84,7 @@
         //si habiamos marcado error, lo llevamos a elegir un nuevo destino
         ?>
           <script type="text/javascript">
-            window.location='nuevoDestino.php?vin=<?php echo $_POST['bastidor']; ?>';
+            window.location='nuevoDestino.php?vin=<?php echo $bastidorFinal; ?>';
           </script>
         <?php
       }

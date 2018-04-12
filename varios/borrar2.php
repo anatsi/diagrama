@@ -26,8 +26,13 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
 
 <body>
   <?php
+  //cambiamos los caracteres 5 y 6 del bastidor por X.
+  $bastidor = $_POST['bastidor'];
+  $primera= substr($bastidor, 0, 4);
+  $segunda = substr($bastidor, 6);
+  $bastidorFinal = $primera .'XX'. $segunda;
   //sacamos el ultimo movimiento que ha hecho ese usuario
-    $ultimoMovimiento = $movimientos ->UltimoMovimiento($_POST['bastidor']);
+    $ultimoMovimiento = $movimientos ->UltimoMovimiento($bastidorFinal);
    ?>
   <header>
     <span class="izquierda">
@@ -102,7 +107,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
         </ul>
         <?php
         //guardamos el bastidor escaneado en un input pra pasarlo a la siguiente pagina
-          echo "<input type='hidden' name='bastidor' value='".$_POST['bastidor']."'>";
+          echo "<input type='hidden' name='bastidor' value='".$bastidorFinal."'>";
          ?>
     </div>
   <div class="botones">

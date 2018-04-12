@@ -63,8 +63,13 @@
         $horad = date('H:i:s');
         //sacamos le nombre del usuario conectado
         $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
+        //cambiamos los caracteres 5 y 6 del bastidor por X.
+        $bastidor = $_POST['bastidor'];
+        $primera= substr($bastidor, 0, 4);
+        $segunda = substr($bastidor, 6);
+        $bastidorFinal = $primera .'XX'. $segunda;
         //guardamos el nuevo movimiento en la bbdd
-        $nuevoMovimiento=$movimiento->nuevoMovimiento($_POST['diao'], $_POST['horao'], $_POST['origen'], $_POST['bastidor'], $diad, $horad, $destino, $usuario['user'], 'VARIOS');
+        $nuevoMovimiento=$movimiento->nuevoMovimiento($_POST['diao'], $_POST['horao'], $_POST['origen'], $bastidorFinal, $diad, $horad, $destino, $usuario['user'], 'VARIOS');
         if ($nuevoMovimiento == null) {
           // si no se guarda, le avisamos y lo devolvemos a la pantalla de origen
           ?>

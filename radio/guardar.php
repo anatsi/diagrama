@@ -49,8 +49,14 @@
         $fecha = date('Y-m-d');
         $hora = date('H:i:s');
 
+        //cambiamos los caracteres 5 y 6 del bastidor por X.
+        $bastidor = $_POST['bastidor'];
+        $primera= substr($bastidor, 0, 4);
+        $segunda = substr($bastidor, 6);
+        $bastidorFinal = $primera .'XX'. $segunda;
+
         //guardamos la entrada.
-        $nuevaEntrada = $radio -> nuevaRadio($_POST['bastidor'], $_POST['radio'], $clima, $fecha, $hora, $usuario['user']);
+        $nuevaEntrada = $radio -> nuevaRadio($bastidorFinal, $_POST['radio'], $clima, $fecha, $hora, $usuario['user']);
         if ($nuevaEntrada == null || $nuevaEntrada == false) {
           // si se guarda mal, avisamos al usuario
           ?>

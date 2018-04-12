@@ -43,8 +43,14 @@
         //convertimos el destino a mayusculas para guardarlo en la bbdd
         $destino = strtoupper($_POST['destino']);
 
+        //cambiamos los caracteres 5 y 6 del bastidor por X.
+        $bastidor = $_POST['bastidor'];
+        $primera= substr($bastidor, 0, 4);
+        $segunda = substr($bastidor, 6);
+        $bastidorFinal = $primera .'XX'. $segunda;
+
         //guardamos la entrada.
-        $nuevaEntrada = $reallocation -> nuevaReallocation($_POST['bastidor'], $fecha, $hora, $destino, $usuario['user']);
+        $nuevaEntrada = $reallocation -> nuevaReallocation($bastidorFinal, $fecha, $hora, $destino, $usuario['user']);
         if ($nuevaEntrada == null || $nuevaEntrada == false) {
           // si se guarda mal, avisamos al usuario
           ?>
