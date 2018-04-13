@@ -7,9 +7,9 @@ var tiempoFinal = 0;
 function inicio() {
   esteNo = 0;
   //iniciamos el contados
-  myVar = setTimeout(elegido, 3000);
+  myVar = setTimeout(elegido, 1000);
   //le sumamos 3 segundos mas al contador
-  contador += 3000;
+  contador += 1000;
   console.log('inicio');
   console.log(localStorage.origen);
 }
@@ -24,7 +24,7 @@ function elegido() {
       var esEste = elegido[i].value;
       //dependiendo del elegido lo enviamos a su funcion personalizada
       if (esEste == 'SP9') {
-        sp9();
+        p9();
       } else if (esEste == 'P9') {
         p9();
       } else if (esEste == 'P12') {
@@ -51,128 +51,185 @@ function elegidoSelect() {
     inicio();
   }
   //si si que se ha elegido alguno, lo llevamos a su funcion personalizada
-  else if (elegidoSel == 'PUVA') {
-    puva();
-  } else if (elegidoSel == 'RAI') {
-    rai();
+  else if (elegidoSel == 'VQC') {
+    vqc();
+  } else if (elegidoSel == 'P.COLORES') {
+    colores();
+  }else if (elegidoSel == 'MALVINAS') {
+    malvinas();
   } else {
     fin();
   }
 }
 
 //funciones de los direfenres destinos que se pueden seleccionar
-function sp9() {
-  tiempoFinal = 40000 - contador;
-  console.log(tiempoFinal);
-  if (tiempoFinal > 0) {
-    if (localStorage.origen == 'MALVINAS') {
-      console.log('origen:malvinas');
-    } else if (localStorage.origen == 'CANOPY') {
-      console.log('origen:canopy');
-    } else if (localStorage.origen == 'CAMPA') {
-      console.log('origen:campa');
-    } else if (localStorage.origen == 'P12') {
-      console.log('origen:p12');
-    }
-    setTimeout(fin, tiempoFinal);
-    console.log('sp9');
-  } else {
-    fin();
-  }
-}
-
 function p9() {
-  tiempoFinal = 40000 - contador;
-  console.log(tiempoFinal);
-  if (tiempoFinal > 0) {
-    if (localStorage.origen == 'MALVINAS') {
-      console.log('origen:malvinas');
-    } else if (localStorage.origen == 'CANOPY') {
-      console.log('origen:canopy');
-    } else if (localStorage.origen == 'CAMPA') {
-      console.log('origen:campa');
-    } else if (localStorage.origen == 'P12') {
-      console.log('origen:p12');
+  if (localStorage.origen == 'CANOPY') {
+    console.log('origen:canopy');
+    tiempoFinal = 104000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
     }
-    setTimeout(fin, tiempoFinal);
-    console.log('p9');
-  } else {
+  } else if (localStorage.origen == 'P12') {
+    console.log('origen:p12');
+    tiempoFinal = 120000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  } else if (localStorage.origen == 'VQC') {
+    console.log('origen:vqc');
+    tiempoFinal = 166000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  }else {
     fin();
   }
 }
 
 function p12() {
-  tiempoFinal = 40000 - contador;
-  if (tiempoFinal > 0) {
-    if (localStorage.origen == 'MALVINAS') {
-      console.log('origen:malvinas');
-    } else if (localStorage.origen == 'CANOPY') {
-      console.log('origen:canopy');
-    } else if (localStorage.origen == 'CAMPA') {
-      console.log('origen:campa');
-    } else if (localStorage.origen == 'P12') {
-      console.log('origen:p12');
+  if (localStorage.origen == 'CANOPY') {
+    console.log('origen:canopy');
+    tiempoFinal = 94000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
     }
-    setTimeout(fin, tiempoFinal);
-    console.log('p12');
-  } else {
+  } else if (localStorage.origen == 'P12') {
+    console.log('origen:p12');
+    tiempoFinal = 94000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  } else if (localStorage.origen == 'FCPA') {
+    console.log('origen:fcpa');
+    tiempoFinal = 48000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  }else {
     fin();
   }
 }
 
 function fcpa() {
-  tiempoFinal = 40000 - contador;
-  if (tiempoFinal > 0) {
-    if (localStorage.origen == 'MALVINAS') {
-      console.log('origen:malvinas');
-    } else if (localStorage.origen == 'CANOPY') {
-      console.log('origen:canopy');
-    } else if (localStorage.origen == 'CAMPA') {
-      console.log('origen:campa');
-    } else if (localStorage.origen == 'P12') {
-      console.log('origen:p12');
+  if (localStorage.origen == 'CANOPY') {
+    console.log('origen:canopy');
+    tiempoFinal = 67000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
     }
-    setTimeout(fin, tiempoFinal);
-    console.log('fcpa');
+  }else {
+    fin();
+  }
+}
+
+function vqc() {
+  if (localStorage.origen == 'CANOPY') {
+    console.log('origen:canopy');
+    tiempoFinal = 80000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  } else if (localStorage.origen == 'P12') {
+    console.log('origen:p12');
+    tiempoFinal = 65000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  } else if (localStorage.origen == 'FCPA') {
+    console.log('origen:fcpa');
+    tiempoFinal = 51000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
   } else {
     fin();
   }
 }
 
-function puva() {
-  tiempoFinal = 40000 - contador;
-  if (tiempoFinal > 0) {
-    if (localStorage.origen == 'MALVINAS') {
-      console.log('origen:malvinas');
-    } else if (localStorage.origen == 'CANOPY') {
-      console.log('origen:canopy');
-    } else if (localStorage.origen == 'CAMPA') {
-      console.log('origen:campa');
-    } else if (localStorage.origen == 'P12') {
-      console.log('origen:p12');
+function colores() {
+  if (localStorage.origen == 'CANOPY') {
+    console.log('origen:canopy');
+    tiempoFinal = 62000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
     }
-    setTimeout(fin, tiempoFinal);
-    console.log('puva');
-  } else {
+  } else if (localStorage.origen == 'P12') {
+    console.log('origen:p12');
+    tiempoFinal = 48000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  } else if (localStorage.origen == 'FCPA') {
+    console.log('origen:fcpa');
+    tiempoFinal = 49000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  } else if (localStorage.origen == 'VQC') {
+    console.log('origen:vqc');
+    tiempoFinal = 111000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  }else {
     fin();
   }
 }
 
-function rai() {
-  tiempoFinal = 40000 - contador;
-  if (tiempoFinal > 0) {
-    if (localStorage.origen == 'MALVINAS') {
-      console.log('origen:malvinas');
-    } else if (localStorage.origen == 'CANOPY') {
-      console.log('origen:canopy');
-    } else if (localStorage.origen == 'CAMPA') {
-      console.log('origen:campa');
-    } else if (localStorage.origen == 'P12') {
-      console.log('origen:p12');
+function malvinas() {
+  if (localStorage.origen == 'P.COLORES' || localStorage.origen == 'P12' || localStorage.origen == 'FCPA' || localStorage.origen == 'VQC') {
+    console.log('origen: colores, 12, fcpa, vqc');
+    tiempoFinal = 123000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
     }
-    setTimeout(fin, tiempoFinal);
-    console.log('rai');
-  } else {
+  }else {
     fin();
   }
 }

@@ -6,10 +6,12 @@ var tiempoFinal = 0;
 //funcion encargada de empezar con contador y comprobar si hay und estino seleccionado cada 3s
 function inicio() {
   esteNo = 0;
+
   //iniciamos la cuenta atras en 3 segundos
-  myVar = setTimeout(elegido, 3000);
+  myVar = setTimeout(elegido, 1000);
+
   //sumamos los 3 segundos al contador
-  contador += 3000;
+  contador += 1000;
   console.log('inicio');
   console.log(localStorage.origen);
 }
@@ -18,13 +20,15 @@ function inicio() {
 function elegido() {
   //recogemos las opciones de destino en un array
   var elegido = document.getElementsByName('destino');
+
   //recorremos el array para ver cual es el destino elegido
   for (var i = 0; i < elegido.length; i++) {
     if (elegido[i].checked) {
       var esEste = elegido[i].value;
+
       //dependiendo del elegido, le enviamos a su funcion personalizada
       if (esEste == 'SP9') {
-        sp9();
+        p9();
       } else if (esEste == 'P9') {
         p9();
       } else if (esEste == 'P12') {
@@ -51,128 +55,203 @@ function elegidoSelect() {
     inicio();
   }
   //dependiendo del elegido, le enviamos a su funcion personalizada
-  else if (elegidoSel == 'PUVA') {
-    puva();
-  } else if (elegidoSel == 'RAI') {
-    rai();
-  } else {
+  else if (elegidoSel == 'FCPA') {
+    fcpa();
+  } else if (elegidoSel == 'VQC') {
+    vqc();
+  }else if (elegidoSel == 'P.COLORES') {
+    colores();
+  }else {
     fin();
   }
 }
 
 //funciones de los diferentes destinos
-function sp9() {
-  tiempoFinal = 40000 - contador;
-  console.log(tiempoFinal);
-  if (tiempoFinal > 0) {
-    if (localStorage.origen == 'FCPA') {
-      console.log('origen:fcpa');
-    } else if (localStorage.origen == 'VQC') {
-      console.log('origen:vqc');
-    } else if (localStorage.origen == 'P.COLORES') {
-      console.log('origen:p.colores');
-    } else if (localStorage.origen == 'P12') {
-      console.log('origen:p12');
-    }
-    setTimeout(fin, tiempoFinal);
-    console.log('sp9');
-  } else {
-    fin();
-  }
-}
-
 function p9() {
-  tiempoFinal = 40000 - contador;
-  console.log(tiempoFinal);
-  if (tiempoFinal > 0) {
-    if (localStorage.origen == 'FCPA') {
-      console.log('origen:fcpa');
-    } else if (localStorage.origen == 'VQC') {
-      console.log('origen:vqc');
-    } else if (localStorage.origen == 'P.COLORES') {
-      console.log('origen:p.colores');
-    } else if (localStorage.origen == 'P12') {
-      console.log('origen:p12');
+  if (localStorage.origen == 'P12') {
+    console.log('origen:p12');
+    tiempoFinal = 120000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
     }
-    setTimeout(fin, tiempoFinal);
-    console.log('p9');
-  } else {
+  } else if (localStorage.origen == 'VQC') {
+    console.log('origen:vqc');
+    tiempoFinal = 166000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  } else if (localStorage.origen == 'CANOPY') {
+    console.log('origen:canopy');
+    tiempoFinal = 104000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  }else {
     fin();
   }
 }
 
 function p12() {
-  tiempoFinal = 40000 - contador;
-  if (tiempoFinal > 0) {
-    if (localStorage.origen == 'FCPA') {
-      console.log('origen:fcpa');
-    } else if (localStorage.origen == 'VQC') {
-      console.log('origen:vqc');
-    } else if (localStorage.origen == 'P.COLORES') {
-      console.log('origen:p.colores');
-    } else if (localStorage.origen == 'P12') {
-      console.log('origen:p12');
+  if (localStorage.origen == 'FCPA') {
+    console.log('origen:fcpa');
+    tiempoFinal = 48000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
     }
-    setTimeout(fin, tiempoFinal);
-    console.log('p12');
+  } else if (localStorage.origen == 'P12') {
+    console.log('origen:p12');
+    tiempoFinal = 94000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  } else if (localStorage.origen == 'CANOPY') {
+    console.log('origen:canopy');
+    tiempoFinal = 94000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
   } else {
     fin();
   }
 }
 
 function malvinas() {
-  tiempoFinal = 40000 - contador;
-  if (tiempoFinal > 0) {
-    if (localStorage.origen == 'FCPA') {
-      console.log('origen:fcpa');
-    } else if (localStorage.origen == 'VQC') {
-      console.log('origen:vqc');
-    } else if (localStorage.origen == 'P.COLORES') {
-      console.log('origen:p.colores');
-    } else if (localStorage.origen == 'P12') {
-      console.log('origen:p12');
+  if (localStorage.origen == 'FCPA') {
+    console.log('origen:fcpa');
+    tiempoFinal = 123000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
     }
-    setTimeout(fin, tiempoFinal);
-    console.log('malvinas');
-  } else {
+  } else if (localStorage.origen == 'VQC') {
+    console.log('origen:vqc');
+    tiempoFinal = 123000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  } else if (localStorage.origen == 'P.COLORES') {
+    console.log('origen:p.colores');
+    tiempoFinal = 123000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  } else if (localStorage.origen == 'P12') {
+    console.log('origen:p12');
+    tiempoFinal = 123000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  }else {
     fin();
   }
 }
 
-function puva() {
-  tiempoFinal = 40000 - contador;
-  if (tiempoFinal > 0) {
-    if (localStorage.origen == 'FCPA') {
-      console.log('origen:fcpa');
-    } else if (localStorage.origen == 'VQC') {
-      console.log('origen:vqc');
-    } else if (localStorage.origen == 'P.COLORES') {
-      console.log('origen:p.colores');
-    } else if (localStorage.origen == 'P12') {
-      console.log('origen:p12');
+function fcpa() {
+  if (localStorage.origen == 'CANOPY') {
+    console.log('origen:canopy');
+    tiempoFinal = 67000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
     }
-    setTimeout(fin, tiempoFinal);
-    console.log('puva');
-  } else {
+  }else {
     fin();
   }
 }
 
-function rai() {
-  tiempoFinal = 40000 - contador;
-  if (tiempoFinal > 0) {
-    if (localStorage.origen == 'FCPA') {
-      console.log('origen:fcpa');
-    } else if (localStorage.origen == 'VQC') {
-      console.log('origen:vqc');
-    } else if (localStorage.origen == 'P.COLORES') {
-      console.log('origen:p.colores');
-    } else if (localStorage.origen == 'P12') {
-      console.log('origen:p12');
+function vqc() {
+  if (localStorage.origen == 'FCPA') {
+    console.log('origen:fcpa');
+    tiempoFinal = 51000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
     }
-    setTimeout(fin, tiempoFinal);
-    console.log('rai');
-  } else {
+  } else if (localStorage.origen == 'CANOPY') {
+    console.log('origen:canopy');
+    tiempoFinal = 80000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  } else if (localStorage.origen == 'P12') {
+    console.log('origen:p12');
+    tiempoFinal = 65000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  }else {
+    fin();
+  }
+}
+
+function colores() {
+  if (localStorage.origen == 'P12') {
+    console.log('origen: p12');
+    tiempoFinal = 48000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  }else if (localStorage.origen == 'VQC') {
+    console.log('origen: vqc');
+    tiempoFinal = 111000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  }else if (localStorage.origen == 'CANOPY') {
+    console.log('origen: canopy');
+    tiempoFinal = 62000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
+  }else {
     fin();
   }
 }
