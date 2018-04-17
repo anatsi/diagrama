@@ -251,6 +251,15 @@ function colores() {
     }else {
       fin();
     }
+  }else if (localStorage.origen == 'FCPA') {
+    console.log('origen: FCPA');
+    tiempoFinal = 49000 - contador;
+    console.log(tiempoFinal);
+    if (tiempoFinal > 0) {
+      setTimeout(fin, tiempoFinal);
+    }else {
+      fin();
+    }
   }else {
     fin();
   }
@@ -265,4 +274,5 @@ function fin() {
   //desbloqueamos el boton de siguiente y cambiamos el titulo
   document.getElementById('siguiente').innerHTML = '<b>FINALIZAR</b>';
   document.getElementById('siguiente').disabled = false;
+  document.getElementById('siguiente').style.backgroundColor = 'rgb(3, 119, 25)';
 }

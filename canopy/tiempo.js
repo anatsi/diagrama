@@ -243,4 +243,5 @@ function fin() {
   //desbloqueamos el boton de finalizar para que puedan guardar el movimiento
   document.getElementById('siguiente').innerHTML = '<b>FINALIZAR</b>';
   document.getElementById('siguiente').disabled = false;
+  document.getElementById('siguiente').style.backgroundColor = 'rgb(3, 119, 25)';
 }

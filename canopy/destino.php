@@ -100,7 +100,7 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
        ?>
   </div>
   <div class="botones">
-    <button type="submit" name="button" id="siguiente" disabled=true><b>REALIZANDO...</b></button>
+    <button type="submit" name="button" style="background-color: grey" id="siguiente" disabled=true><b>REALIZANDO...</b></button>
     <button type="button" name="button" id="reset" onclick="location.reload(true);"><b>LIMPIAR</b></button>
     <button type="button" name="button" id="atras" onclick="volverAtras();"><b>ATRAS</b></button>
   </div>
