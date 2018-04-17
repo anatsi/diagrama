@@ -35,11 +35,15 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
     $ultimoMovimiento = $movimientos ->UltimoMovimiento($bastidorFinal);
    ?>
   <header>
-    <span class="izquierda">
-    	<a  href= "#"><img src="../assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
-    </span>
-    <br>
-    <br>
+    <header>
+      <span class="izquierda">
+        <a href="../roles.php" id='roles' style="visibility:hidden;">ROLES</a>
+        <a  href= "#"><img src="../assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
+      </span>
+      <br>
+      <span class="derecha" onclick = "botonSalir();" style="visibility:hidden;"><a>SALIR</a></span>
+      <br>
+      <br>
     <h3>
       <?php echo $usuario['user']; ?>
       <br>

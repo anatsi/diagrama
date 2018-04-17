@@ -57,7 +57,7 @@
              <input  type="radio" name="CAMPA" value="CAMPA" onclick="window.location = 'campa.php';">
             <div class="btn btn-sık"><span>CAMPA</span></div>
           </label>
-           <label id="lab" style="display:none;">
+           <label id="lab">
              <input  type="radio" name="WRAP" value="WRAP" onclick="window.location = 'wrapGuard.php';">
             <div class="btn btn-sık btn5"><span>VINILOS</span></div>
           </label>
@@ -79,7 +79,7 @@
     </div>
     <div class="botones">
       <button type="button" name="button" id='reset' style="width:98%;" onclick="window.location='pausa.php'"><b> PAUSA </b></button>
-      <button type="button" name="button" id='reset' style='width:98%;' onclick="window.location = 'ticketFormulario.php'"><b>TICKET</b></button>
+      <button type="button" name="button" id='reset' style='width:98%;display:none;' onclick="window.location = 'ticketFormulario.php'"><b>TICKET</b></button>
     </div>
     </form>
   <?php
