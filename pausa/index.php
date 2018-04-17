@@ -26,7 +26,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
 </head>
 
 <!-- Al cargar la pagina, iniciamos la funcion del cronometro -->
-<body onload="tiempo();">
+<body>
   <header>
     <span class="izquierda">
       <a href="../roles.php" id='roles'>ROLES</a>
