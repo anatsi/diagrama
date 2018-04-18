@@ -48,7 +48,7 @@
             //guardamos la fecha y la hora de inicio de sesion
               var fecha = new Date();
               var dia = fecha.getDate();
-              var mes = fecha.getMonth();
+              var mes = fecha.getMonth()+1;
               var year = fecha.getFullYear();
 
               var fechaInicio = year + '-' + mes + '-' + dia;

@@ -32,8 +32,11 @@
   <body>
     <header>
       <span class="izquierda">
-      	<a  href= "#"><img src="./assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
+        <a href="roles.php" id='roles' style="visibility:hidden;">ROLES</a>
+        <a  href= "#"><img src="./assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
       </span>
+      <br>
+      <span class="derecha" onclick = "botonSalir();" style="visibility:hidden;"><a>SALIR</a></span>
       <br>
       <br>
       <h3><?php echo $usuario['user']; ?></h3>
@@ -79,7 +82,7 @@
     </div>
     <div class="botones">
       <button type="button" name="button" id='reset' style="width:98%;" onclick="window.location='pausa.php'"><b> PAUSA </b></button>
-      <button type="button" name="button" id='reset' style='width:98%;display:none;' onclick="window.location = 'ticketFormulario.php'"><b>TICKET</b></button>
+      <button type="button" name="button" id='reset' style='width:98%;' onclick="window.location = 'ticketFormulario.php'"><b>TICKET</b></button>
     </div>
     </form>
   <?php
