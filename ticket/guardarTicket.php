@@ -1,12 +1,12 @@
 <?php
   //incluimos los archivos necesarios e inicializamos sus objetos.
-  require_once './bbdd/empleados.php';
+  require_once '../bbdd/empleados.php';
   $empleados = new Empleados();
 
-  require_once './bbdd/sesiones.php';
+  require_once '../bbdd/sesiones.php';
   $sesiones = new Sesiones();
 
-  require_once './bbdd/ticket.php';
+  require_once '../bbdd/ticket.php';
   $ticket = new Ticket();
 
   //sacamos el usuario conectado.
@@ -55,14 +55,13 @@
         '<br />Enviado el ' . date('d/m/Y', time()) .
       '</body></html>';
 
-      $para = 'aasins@tsiberia.es';
-      $copia= 'aasins@tsiberia.com';
+      $para = 'ticket_upmovements@tsiberia.es';
       $asunto = 'NUEVO TICKET';
 
-      mail("$para,$copia", $asunto, $mensaje, $header);
+      mail($para, $asunto, $mensaje, $header);
       ?>
       <script type="text/javascript">
-        window.location = 'roles.php';
+        window.location = '../roles.php';
       </script>
       <?php
     }
@@ -70,7 +69,7 @@
     ?>
       <script type="text/javascript">
         alert('Rellenar todos los campos antes de continuar');
-        window.location = 'roles.php';
+        window.location = '../roles.php';
       </script>
     <?php
   }

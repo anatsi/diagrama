@@ -28,5 +28,23 @@ class Ticket extends dbJockeys
     }
   }
 
+  //SACAR TODOS LOS TICKETS DE UN USUARIO
+  function listaTicketsUsuario($usuario){
+    //Construimos la consulta
+    $sql="SELECT * from ticket WHERE usuario = '".$usuario."' ORDER BY id desc";
+    //Realizamos la consulta
+    $resultado=$this->realizarConsulta($sql);
+    if($resultado!=null){
+      //Montamos la tabla de resultados
+      $tabla=[];
+      while($fila=$resultado->fetch_assoc()){
+        $tabla[]=$fila;
+      }
+      return $tabla;
+    }else{
+      return null;
+    }
+  }
+
 }
  ?>

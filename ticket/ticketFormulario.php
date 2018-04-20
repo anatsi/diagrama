@@ -8,12 +8,12 @@
   <title>ENVIAR TICKET</title>
 
   <!-- CSS-->
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/form-elements.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/form-elements.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 
   <!-- Favicon and touch icons -->
-  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <link rel="shortcut icon" href="../assets/ico/favicon.ico">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
           <div class="col-sm-6 col-sm-offset-3 form-box">
             <div class="form-top">
               <div class="form-top-left">
-                <p><img src="assets/files/logo.png" alt="logo TSI" title="Logo TSI" width="100" height="75" /></p>
+                <p><img src="../assets/files/logo.png" alt="logo TSI" title="Logo TSI" width="100" height="75" /></p>
                 <h3>Formulario ticket</h3>
               </div>
             </div>
@@ -41,7 +41,7 @@
                 </div>
                 <button type="submit" class="btn">ENVIAR</button>
                 <br><br>
-                <button type="button" name="button" class="btn" onclick="window.location = 'roles.php'">ATRÁS</button>
+                <button type="button" name="button" class="btn" onclick="window.location = 'index.php'">ATRÁS</button>
               </form>
             </div>
           </div>
@@ -50,9 +50,9 @@
     </div>
   </div>
   <!-- Javascript -->
-  <script src="assets/js/jquery-1.11.1.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.backstretch.min.js"></script>
+  <script src="../assets/js/jquery-1.11.1.min.js"></script>
+  <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.backstretch.min.js"></script>
 </body>
 
 </html>
