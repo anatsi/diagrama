@@ -14,12 +14,15 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
 
 <head>
   <meta charset="utf-8">
-  <title>TICKETS</title>
+  <title>INCIDENCIAS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles.css" type="text/css" media="all">
   <script src="../pace/pace.js"></script>
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
   <script type="text/javascript" src="../comprobar.js"></script>
+  <script src="../jquery/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="../jquery/jquery-confirm.css">
+  <script src="../jquery/jquery-confirm.js"></script>
 </head>
 
 <!-- Al cargar la pagina, iniciamos la funcion del cronometro -->
@@ -37,7 +40,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
   </header>
     <div class="two-columns">
       <div class="botones">
-        <button type="button" name="button" id='siguiente' style="width:98%;" onclick="window.location='ticketFormulario.php'"><b> NUEVO TICKET </b></button>
+        <button type="button" name="button" id='siguiente' style="width:98%;" onclick="window.location='ticketFormulario.php'"><b> NUEVA INCIDENCIA </b></button>
       </div>
       <?php
         $lista= $ticket -> listaTicketsUsuario($usuario['user']);
@@ -62,7 +65,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
           echo "
           <div style='".$stilo."'>
             <hr>
-            <h4>TICKET Nº ".$ticket['id']."</h4>
+            <h4>INCIDENCIA Nº ".$ticket['id']."</h4>
             <hr>
             <h6><b>ASUNTO: </b>".$ticket['asunto']."</h6>
             <hr>

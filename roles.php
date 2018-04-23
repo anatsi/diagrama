@@ -81,8 +81,8 @@
         </ul>
     </div>
     <div class="botones">
-      <button type="button" name="button" id='reset' style="width:98%;" onclick="window.location='pausa.php'"><b> PAUSA </b></button>
-      <button type="button" name="button" id='reset' style='width:98%;' onclick="window.location = 'ticket/index.php'"><b>TICKET</b></button>
+      <button type="button" name="button" id='siguiente' onclick="window.location='pausa.php'"><b> PAUSA </b></button>
+      <button type="button" name="button" id='atras' style='width:98%;' onclick="window.location = 'ticket/index.php'"><b>INCIDENCIAS</b></button>
     </div>
     </form>
   <?php

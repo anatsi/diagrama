@@ -101,8 +101,13 @@ body {
 
 .botones #siguiente {
   background-color: rgb(3, 119, 25);
+  color: white;
   height: auto;
   padding: 14px;
+}
+
+.botones #siguiente b{
+  color: white;
 }
 
 /*----- estilos visuales de los elementos --------*/

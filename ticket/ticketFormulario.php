@@ -26,14 +26,20 @@
             <div class="form-top">
               <div class="form-top-left">
                 <p><img src="../assets/files/logo.png" alt="logo TSI" title="Logo TSI" width="100" height="75" /></p>
-                <h3>Formulario ticket</h3>
+                <h3>INCIDENCIA</h3>
               </div>
             </div>
             <div class="form-bottom">
               <form role="form" action="guardarTicket.php" method="post" class="login-form">
                 <div class="form-group">
-                  <label class="sr-only" for="form-username">Asunto</label>
-                  <input type="text" name="asunto" maxlength="200" placeholder="ASUNTO" class="form-username form-control" id="form-username" required>
+                  <label class="sr-only" for="fallo">Fallo</label>
+                  <select class="form-username form-control" name="asunto">
+                    <option value="" disabled selected>ASUNTO</option>
+                    <option value="APP">Fallo en la aplicaión</option>
+                    <option value="LECTOR">Fallo en el lector</option>
+                    <option value="MOVIL">Fallo en el movil</option>
+                    <option value="OTRO">Otro...</option>
+                  </select>
                 </div>
                 <div class="form-group">
                   <label class="sr-only" for="form-password">Mensaje</label>
