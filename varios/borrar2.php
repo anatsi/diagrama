@@ -77,7 +77,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
                <option value="SP9VA">SP9VA</option>
                <option value="PRPB">PRPB</option>
                <option value="CAMPA">CAMPA</option>
-
+               <option value="RINCON AMERICANO">RINCON AMERICANO</option>
              </select>
           </li>
           <li>
@@ -104,7 +104,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
                <option value="PRPB">PRPB</option>
                <option value="CAMPA">CAMPA</option>
                <option value="CANOPY">CANOPY</option>
-
+               <option value="RINCON AMERICANO">RINCON AMERICANO</option>
              </select>
           </li>
         </ul>

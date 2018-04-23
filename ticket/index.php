@@ -67,17 +67,17 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
             <hr>
             <h4>INCIDENCIA Nº ".$ticket['id']."</h4>
             <hr>
-            <h6><b>ASUNTO: </b>".$ticket['asunto']."</h6>
+             <b>ASUNTO: </b>".$ticket['asunto']."
             <hr>
-            <h6><b>MENSAJE: </b>".$ticket['mensaje']."</h6>
+             <b>MENSAJE: </b>".$ticket['mensaje']."
             <hr>
-            <h6><b>DIA: </b>".$fecha."</h6>
+             <b>DIA: </b>".$fecha."
             <hr>
-            <h6><b>HORA: </b>".$ticket['hora']."</h6>
+             <b>HORA: </b>".$ticket['hora']."
             <hr>
-            <h6><b>RESUELTO: </b>".$resuelto."</h6>
+             <b>RESUELTO: </b>".$resuelto."
             <hr>
-            <h6><b>COMENTARIO: </b>".$comentario."</h6>
+             <b>COMENTARIO: </b>".$comentario."
             <hr>
           </div>
           ";
