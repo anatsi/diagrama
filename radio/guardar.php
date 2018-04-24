@@ -5,7 +5,7 @@
   <title></title>
   <style media="screen">
     body{
-      color: white;
+      color: BLACK;
     }
     .titul{
       color: black;
@@ -40,9 +40,9 @@
       if (isset($_POST['arriba'])) {
         //recoger los datos del ultimo formulario
         if ($_POST['arriba'] == 'SI') {
-          $clima = $_POST['abajo'];
+          $radios = $_POST['abajo'];
         }else {
-          $clima = $_POST['arriba'];
+          $radios = $_POST['arriba'];
         }
 
         //sacar fecha y hora actual
@@ -56,7 +56,7 @@
         $bastidorFinal = $primera .'XX'. $segunda;
 
         //guardamos la entrada.
-        $nuevaEntrada = $radio -> nuevaRadio($bastidorFinal, $_POST['radio'], $clima, $fecha, $hora, $usuario['user']);
+        $nuevaEntrada = $radio -> nuevaRadio($bastidorFinal, $radios, $fecha, $hora, $usuario['user']);
         if ($nuevaEntrada == null || $nuevaEntrada == false) {
           // si se guarda mal, avisamos al usuario
           ?>

@@ -40,7 +40,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
   </header>
     <div class="two-columns">
       <div class="botones">
-        <button type="button" name="button" id='siguiente' style="width:98%;" onclick="window.location='ticketFormulario.php'"><b> NUEVA INCIDENCIA </b></button>
+        <button type="button" name="button" id='siguiente' onclick="window.location='ticketFormulario.php'"><b> NUEVA INCIDENCIA </b></button>
       </div>
       <?php
         $lista= $ticket -> listaTicketsUsuario($usuario['user']);

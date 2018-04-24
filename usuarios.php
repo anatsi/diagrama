@@ -146,7 +146,20 @@ $usuarios = array (
 "RAP",
 "CAH",
 "RGP",
-"aasins"
+"aasins",
+"JGZ",
+"MCP",
+"JSM",
+"CCM",
+"KAB",
+"TOG",
+"ESA",
+"JBP",
+"MFG",
+"DGD",
+"SMA",
+"EMD",
+"SRS"
 );
 $salt='$tsi$/';
 foreach ($usuarios as $usuario) {

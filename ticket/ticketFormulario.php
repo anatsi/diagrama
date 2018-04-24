@@ -33,9 +33,9 @@
               <form role="form" action="guardarTicket.php" method="post" class="login-form">
                 <div class="form-group">
                   <label class="sr-only" for="fallo">Fallo</label>
-                  <select class="form-username form-control" name="asunto">
+                  <select class="form-username form-control" name="asunto" required>
                     <option value="" disabled selected>ASUNTO</option>
-                    <option value="APP">Fallo en la aplicaión</option>
+                    <option value="APP">Fallo en la aplicación</option>
                     <option value="LECTOR">Fallo en el lector</option>
                     <option value="MOVIL">Fallo en el movil</option>
                     <option value="OTRO">Otro...</option>

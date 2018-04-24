@@ -15,10 +15,11 @@ class Radio extends dbJockeys
   }
 
   //funcion encargada de insertar una nueva revision de radio
-  function nuevaRadio($bastidor, $radio, $clima, $fecha, $hora, $usuario){
+  function nuevaRadio($bastidor, $radio, $fecha, $hora, $usuario){
     //realizamos la consuta y la guardamos en $sql
     $sql="INSERT INTO radio(id, bastidor, radio, clima, fecha, hora, usuario)
-    VALUES(NULL, '".$bastidor."', '".$radio."', '".$clima."', '".$fecha."', '".$hora."', '".$usuario."')";
+    VALUES(NULL, '".$bastidor."', '".$radio."', '', '".$fecha."', '".$hora."', '".$usuario."')";
+    echo $sql;
     //Realizamos la consulta utilizando la funcion creada en db.php
     $resultado=$this->realizarConsulta($sql);
     if($resultado!=false){
