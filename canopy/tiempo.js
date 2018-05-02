@@ -3,25 +3,31 @@ var esteNo = 0;
 var contador = 0;
 var tiempoFinal = 0;
 
-//funcion encargada de iniciar el contador y comprobar si hay un destino seleccionado cada 3 segundos
+/*funcion encargada de iniciar el contador y comprobar
+si hay un destino seleccionado cada 3 segundos*/
 function inicio() {
   esteNo = 0;
+
   //iniciamos el contados
   myVar = setTimeout(elegido, 1000);
+
   //le sumamos 3 segundos mas al contador
   contador += 1000;
   console.log('inicio');
   console.log(localStorage.origen);
 }
 
-//funcion encargada de ver que destino ha sigo el seleccionado y rederigir a la funcion de este destino
+//funcion encargada de ver que destino ha sigo el seleccionado
+//y rederigir a la funcion de este destino
 function elegido() {
   //guardamos los destinos en un array
   var elegido = document.getElementsByName('destino');
-//recorremos el array para comprobar cual es el que se ha elegido
+
+  //recorremos el array para comprobar cual es el que se ha elegido
   for (var i = 0; i < elegido.length; i++) {
     if (elegido[i].checked) {
       var esEste = elegido[i].value;
+
       //dependiendo del elegido lo enviamos a su funcion personalizada
       if (esEste == 'SP9') {
         p9();
@@ -50,6 +56,7 @@ function elegidoSelect() {
     //si no se ha elegido ninguno volvemos a la funcion de inicio
     inicio();
   }
+    
   //si si que se ha elegido alguno, lo llevamos a su funcion personalizada
   else if (elegidoSel == 'VQC') {
     vqc();
@@ -240,6 +247,7 @@ function fin() {
   contador = 0;
   tiempoFinal = 0;
   console.log('fin');
+
   //desbloqueamos el boton de finalizar para que puedan guardar el movimiento
   document.getElementById('siguiente').innerHTML = '<b>FINALIZAR</b>';
   document.getElementById('siguiente').disabled = false;

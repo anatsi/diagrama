@@ -50,10 +50,11 @@ function elegido() {
 function elegidoSelect() {
   //recogemos el destino elegido
   var elegidoSel = document.getElementById('otro').value;
-  if (elegidoSel == "") {
+  if (elegidoSel == '') {
     // si no se ha elegido ninguno, le devolvemos a la funiocn de inicio
     inicio();
   }
+
   //dependiendo del elegido, le enviamos a su funcion personalizada
   else if (elegidoSel == 'FCPA') {
     fcpa();
@@ -268,9 +269,11 @@ function colores() {
 //funcion final para poner el contador a 0 otra vez y desbloquear el boton de siguiente
 function fin() {
   contador = 0;
+
   //ponemos el contador y el tiempo final a 0
   tiempoFinal = 0;
   console.log('fin');
+  
   //desbloqueamos el boton de siguiente y cambiamos el titulo
   document.getElementById('siguiente').innerHTML = '<b>FINALIZAR</b>';
   document.getElementById('siguiente').disabled = false;
