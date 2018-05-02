@@ -56,13 +56,13 @@ function elegidoSelect() {
     //si no se ha elegido ninguno volvemos a la funcion de inicio
     inicio();
   }
-    
+
   //si si que se ha elegido alguno, lo llevamos a su funcion personalizada
   else if (elegidoSel == 'VQC') {
     vqc();
   } else if (elegidoSel == 'P.COLORES') {
     colores();
-  }else if (elegidoSel == 'MALVINAS') {
+  } else if (elegidoSel == 'MALVINAS') {
     malvinas();
   } else {
     fin();
@@ -77,7 +77,7 @@ function p9() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else if (localStorage.origen == 'P12') {
@@ -86,7 +86,7 @@ function p9() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else if (localStorage.origen == 'VQC') {
@@ -95,10 +95,10 @@ function p9() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
-  }else {
+  } else {
     fin();
   }
 }
@@ -110,7 +110,7 @@ function p12() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else if (localStorage.origen == 'P12') {
@@ -119,7 +119,7 @@ function p12() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else if (localStorage.origen == 'FCPA') {
@@ -128,10 +128,10 @@ function p12() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
-  }else {
+  } else {
     fin();
   }
 }
@@ -143,10 +143,10 @@ function fcpa() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
-  }else {
+  } else {
     fin();
   }
 }
@@ -158,7 +158,7 @@ function vqc() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else if (localStorage.origen == 'P12') {
@@ -167,7 +167,7 @@ function vqc() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else if (localStorage.origen == 'FCPA') {
@@ -176,7 +176,7 @@ function vqc() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else {
@@ -191,7 +191,7 @@ function colores() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else if (localStorage.origen == 'P12') {
@@ -200,7 +200,7 @@ function colores() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else if (localStorage.origen == 'FCPA') {
@@ -209,7 +209,7 @@ function colores() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else if (localStorage.origen == 'VQC') {
@@ -218,10 +218,10 @@ function colores() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
-  }else {
+  } else {
     fin();
   }
 }
@@ -233,10 +233,10 @@ function malvinas() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
-  }else {
+  } else {
     fin();
   }
 }

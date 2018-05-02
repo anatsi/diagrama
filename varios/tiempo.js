@@ -60,9 +60,9 @@ function elegidoSelect() {
     fcpa();
   } else if (elegidoSel == 'VQC') {
     vqc();
-  }else if (elegidoSel == 'P.COLORES') {
+  } else if (elegidoSel == 'P.COLORES') {
     colores();
-  }else {
+  } else {
     fin();
   }
 }
@@ -75,7 +75,7 @@ function p9() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else if (localStorage.origen == 'VQC') {
@@ -84,7 +84,7 @@ function p9() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else if (localStorage.origen == 'CANOPY') {
@@ -93,10 +93,10 @@ function p9() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
-  }else {
+  } else {
     fin();
   }
 }
@@ -108,7 +108,7 @@ function p12() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else if (localStorage.origen == 'P12') {
@@ -117,7 +117,7 @@ function p12() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else if (localStorage.origen == 'CANOPY') {
@@ -126,7 +126,7 @@ function p12() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else {
@@ -141,7 +141,7 @@ function malvinas() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else if (localStorage.origen == 'VQC') {
@@ -150,7 +150,7 @@ function malvinas() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else if (localStorage.origen == 'P.COLORES') {
@@ -159,7 +159,7 @@ function malvinas() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else if (localStorage.origen == 'P12') {
@@ -168,10 +168,10 @@ function malvinas() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
-  }else {
+  } else {
     fin();
   }
 }
@@ -183,10 +183,10 @@ function fcpa() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
-  }else {
+  } else {
     fin();
   }
 }
@@ -198,7 +198,7 @@ function vqc() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else if (localStorage.origen == 'CANOPY') {
@@ -207,7 +207,7 @@ function vqc() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
   } else if (localStorage.origen == 'P12') {
@@ -216,10 +216,10 @@ function vqc() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
-  }else {
+  } else {
     fin();
   }
 }
@@ -231,37 +231,37 @@ function colores() {
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
-  }else if (localStorage.origen == 'VQC') {
+  } else if (localStorage.origen == 'VQC') {
     console.log('origen: vqc');
     tiempoFinal = 30000 - contador;
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
-  }else if (localStorage.origen == 'CANOPY') {
+  } else if (localStorage.origen == 'CANOPY') {
     console.log('origen: canopy');
     tiempoFinal = 40000 - contador;
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
-  }else if (localStorage.origen == 'FCPA') {
+  } else if (localStorage.origen == 'FCPA') {
     console.log('origen: FCPA');
     tiempoFinal = 30000 - contador;
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
-    }else {
+    } else {
       fin();
     }
-  }else {
+  } else {
     fin();
   }
 }
@@ -273,7 +273,7 @@ function fin() {
   //ponemos el contador y el tiempo final a 0
   tiempoFinal = 0;
   console.log('fin');
-  
+
   //desbloqueamos el boton de siguiente y cambiamos el titulo
   document.getElementById('siguiente').innerHTML = '<b>FINALIZAR</b>';
   document.getElementById('siguiente').disabled = false;

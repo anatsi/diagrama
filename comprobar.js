@@ -4,11 +4,11 @@ function volverAtras() {
     title: 'ATRÁS',
     content: '¿Confirmar atrás?',
     buttons: {
-      Aceptar: function () {
+      Aceptar: function() {
         window.location = 'origen.php';
       },
 
-      Cancelar: function () {
+      Cancelar: function() {
         console.log('cancelado');
       },
     },
@@ -126,11 +126,11 @@ function botonSalir() {
     title: 'SALIR',
     content: '¿Has terminado tu jornada laboral?',
     buttons: {
-      SI: function () {
+      SI: function() {
         window.location = '../salir.php?m=' + localStorage.contador + '&fi=' + localStorage.fechaInicio + '&hi=' + localStorage.horaInicio + '&u2=' + localStorage.usuario2;
       },
 
-      NO: function () {
+      NO: function() {
         console.log('cancelado');
       },
     },
@@ -156,11 +156,11 @@ function volverAtrasWrap() {
     title: 'ATRÁS',
     content: '¿Confirmar atrás?',
     buttons: {
-      Aceptar: function () {
+      Aceptar: function() {
         window.location = 'bastidor.php';
       },
 
-      Cancelar: function () {
+      Cancelar: function() {
         console.log('cancelado');
       },
     },
