@@ -159,7 +159,8 @@ $usuarios = array (
 "DGD",
 "SMA",
 "EMD",
-"SRS"
+"SRS",
+"jtalama5"
 );
 $salt='$tsi$/';
 foreach ($usuarios as $usuario) {
