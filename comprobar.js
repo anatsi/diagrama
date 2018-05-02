@@ -19,12 +19,15 @@ function volverAtras() {
 function comprobar() {
   //recogemos las opciones de origen disponible en un array
   var opciones = document.getElementsByName('origen');
+
   //recorremos el array para ver cual es el elegido
   for (var i = 0; i < opciones.length; i++) {
     if (opciones[i].checked) {
       var elegido = opciones[i].value;
+
       //guardamos el valor del origen elegido en el localStorage
       localStorage.setItem('origen', elegido);
+
       //bloqueamos el desplegable de mas origenes
       document.getElementById('otro').disabled = true;
     }
@@ -35,6 +38,7 @@ function comprobar() {
 function comprobar2() {
   //recogemos las opciones de destino disponibles en un array
   var opciones = document.getElementsByName('destino');
+
   //recorremos el array para ver cual es la elegida
   for (var i = 0; i < opciones.length; i++) {
     if (opciones[i].checked) {
@@ -51,10 +55,12 @@ function bloquear() {
   if (elegido != 'primera') {
     //guardamos el origen en localStorage
     localStorage.setItem('origen', elegido);
+
     //pintamos el select de verde
     var select = document.getElementById('otro');
     select.style.backgroundColor = 'rgb(3, 119, 25)';
     select.style.color = 'white';
+
     //bloqueamos las opciones de origen de fuera del select
     document.getElementById('opcion1').disabled = true;
     document.getElementById('opcion2').disabled = true;
@@ -72,6 +78,7 @@ function bloquear2() {
     var select = document.getElementById('otro');
     select.style.backgroundColor = 'rgb(3, 119, 25)';
     select.style.color = 'white';
+
     //bloqueamos las opciones de destino de fuera del select
     document.getElementById('opcion1').disabled = true;
     document.getElementById('opcion2').disabled = true;
@@ -84,10 +91,12 @@ function bloquear2() {
 function devolver() {
   //borramos el origen de localStorage
   localStorage.removeItem('origen');
+
   //volvemos a pintar el select de blanco
   var select = document.getElementById('otro');
   select.style.backgroundColor = 'white';
   select.style.color = 'black';
+
   //desbloqueamos todas las opciones de origen
   document.getElementById('otro').disabled = false;
   document.getElementById('opcion1').disabled = false;
@@ -96,7 +105,8 @@ function devolver() {
   document.getElementById('opcion4').disabled = false;
 }
 
-//funcion que comprueba si el contador esta a 0 cada vez que se borra, y si lo esta, bloquea el boton de borrar
+//funcion que comprueba si el contador esta a 0 cada vez
+// que se borra, y si lo esta, bloquea el boton de borrar
 function borrar() {
   if (localStorage.contador == 0) {
     document.getElementById('atras').disabled = true;
@@ -131,8 +141,10 @@ function botonSalir() {
 function guardarUser() {
   //recogemos el usuario insertado
   var usuario = document.getElementById('usuario2').value;
+
   //lo cambiamos a mayusculas
   usuario = usuario.toUpperCase();
+
   //lo guardamos en el localStorage
   localStorage.setItem('usuario2', usuario);
   return true;
