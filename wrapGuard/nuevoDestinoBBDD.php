@@ -19,7 +19,7 @@ $wrap = new WrapGuard();
       //si se actualiza bien lo llevamos a la panttalla de escanear el bastidor
       ?>
         <script type="text/javascript">
-          window.location = 'bastidor.php';
+          window.location = 'finalizado.php';
         </script>
       <?php
     }

@@ -30,21 +30,20 @@ if (isset($_SESSION['usuario'])) {
 <body>
   <header>
     <span class="izquierda">
-      <a href="../roles.php" id='roles'>ROLES</a>
+      <a href="../roles.php" id='roles' style="visibility:hidden;">ROLES</a>
       <a  href= "#"><img src="../assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
     </span>
     <br>
-    <span class="derecha" onclick = "botonSalir();"><a>SALIR</a></span>
+    <span class="derecha" onclick = "botonSalir();" style="visibility:hidden;"><a>SALIR</a></span>
     <br>
     <br>
     <h3><?php echo $usuario['user']; ?> - <script>document.write(localStorage.usuario2);</script></h3>
   </header>
   <div class="two-columns">
-    <p style="font-weight: bold; font-size:16px; float: right;">VINILOS</p>
-    <form class="contact_form" action="destino.php" method="post" enctype="multipart/form-data">
+    <form class="contact_form" action="nuevoDestino.php" method="post" enctype="multipart/form-data">
       <ul>
         <li>
-          <label for="Bastidor" id="titulo">BASTIDOR</label>
+          <label for="Bastidor" id="titulo">BASTIDOR A BORRAR:</label>
           <input type="text" name="bastidor" autofocus required pattern="([W][F][a-zA-Z0-9]{8}[A-Z]{2}[0-9]{5})"/>
         </li>
       </ul>
@@ -52,7 +51,7 @@ if (isset($_SESSION['usuario'])) {
   <div class="botones">
     <button type="submit" name="button" id="siguiente"><b>SIGUIENTE</b></button>
     <button type="reset" name="button" id="reset"><b>LIMPIAR</b></button>
-    <button type="button" name="button" id="atras" onclick="window.location='borrarBastidor.php'"><b>BORRAR</b></button>
+    <button type="button" name="button" id='atras' onclick="window.location='bastidor.php'"><b>ATRAS</b></button>
   </div>
   </form>
 

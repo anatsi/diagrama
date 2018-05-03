@@ -26,7 +26,13 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
 </head>
 
 <body>
-
+  <?php
+    if (isset($_GET['vin']) && $_GET['vin'] != '') {
+     $vin = $_GET['vin'];
+   }else {
+     $vin = $_POST['bastidor'];
+   }
+   ?>
   <header>
     <span class="izquierda">
       <a href="../roles.php" id='roles' style="visibility:hidden;">ROLES</a>
@@ -39,7 +45,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
     <h3>
       <?php echo $usuario['user']; ?> - <script>document.write(localStorage.usuario2);</script>
       <br>
-      <?php echo $_GET['vin']; ?>
+      <?php echo $vin; ?>
     </h3>
   </header>
     <div class="two-columns">
@@ -47,7 +53,8 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
       <form class="contact_form" action="nuevoDestinoBBDD.php" method="post" enctype="multipart/form-data">
         <ul>
           <li>
-            <input type="hidden" name="vin" value=<?php echo $_GET['vin']; ?>>
+
+            <input type="hidden" name="vin" value=<?php echo $vin; ?>>
 
             <select class="" name="destino" id="otro">
                <option value="primera" selected disabled>NUEVO DESTINO</option>
