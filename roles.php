@@ -72,9 +72,13 @@
             <input type="radio" name="RADIO" value="RADIO" onclick="window.location = 'radio.php';">
              <div  class="btn btn-sık"><span>RADIO</span></div>
           </label>
-          <label id="lab" >
+          <label id="lab">
             <input type="radio" name="REALLOCATION" value="REALLOCATION" onclick="window.location = 'reallocation.php';">
              <div  class="btn btn-sık"><span>REBOOK</span></div>
+          </label>
+          <label id="lab">
+            <input type="radio" name="DISENGAGEMENT" value="DISENGAGEMENT" onclick="window.location = 'disengagement.php';">
+             <div  class="btn btn-sık" style="width: 160%;"><span>DISENGAGEMENT</span></div>
           </label>
             </div>
           </li>

@@ -1,3 +1,15 @@
+<?php
+//incluimos los archivos necesarios e inicializamos los objetos
+require_once '../bbdd/sesiones.php';
+$sesiones = new Sesiones();
+require_once '../bbdd/empleados.php';
+$empleado = new Empleados();
+
+//comprobamos si la sesion esta iniciada
+if (isset($_SESSION['usuario'])) {
+  //saacamos el nombre del usuario con la sesion iniciada
+  $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
+ ?>
 <!DOCTYPE html>
 <html>
 
@@ -5,7 +17,6 @@
   <meta charset="utf-8">
   <title>ESCANEAR BASTIDOR</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Enlaces a los archivos css y js necesarios -->
   <link rel="stylesheet" href="../styles.css" type="text/css" media="all">
   <script src="../pace/pace.js"></script>
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
@@ -27,28 +38,38 @@
     <span class="derecha" onclick = "botonSalir();"><a>SALIR</a></span>
     <br>
     <br>
-    <h3>AAA</h3>
+    <h3><?php echo $usuario['user']; ?></h3>
   </header>
   <div class="two-columns">
-    <form class="contact_form" action="destino.php" method="post" enctype="multipart/form-data">
+    <form class="contact_form" action="modelo.php" method="post" enctype="multipart/form-data" onsubmit="return comprobarBastidor()">
       <ul>
         <li>
           <label for="Bastidor" id="titulo">BASTIDOR</label>
-          <input type="number" name="bastidor" autofocus required/>
+          <input type="text" id="bastidor" name="bastidor" autofocus required pattern="([W|N][F|M][a-zA-Z0-9]{8}[A-Z]{2}[0-9]{5})"/>
         </li>
         <li>
-          <label for="bastidor2" id="titulo">BSTIDOR 2</label>
-          <input type="number" name="bastidor2" value="">
+          <label for="construccion" id='titulo'>FECHA CONSTRUCCIÓN</label>
+          <input type="date" name="construccion" value="" required>
         </li>
       </ul>
   </div>
   <div class="botones">
     <button type="submit" name="button" id="siguiente"><b>SIGUIENTE</b></button>
-    <button type="reset" name="button" id="reset"><b>LIMPIAR</b></button>
-    <button type="button" name="button" id="atras" onclick="volverAtras();"><b>ATRAS</b></button>
+    <button type="reset" name="button" id="reset" style="width: 98%;"><b>LIMPIAR</b></button>
   </div>
   </form>
 
 </body>
 
 </html>
+
+<?php
+}else {
+  // si la sesion no esta iniciada, lo devolvemos a la pantalla de iniciar sesion
+  ?>
+    <script type="text/javascript">
+      window.location = "../index.php";
+    </script>
+  <?php
+}
+ ?>
