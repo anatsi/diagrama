@@ -71,7 +71,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
                <option value="RAVA">RAVA</option>
                <option value="RAVA2">RAVA2</option>
                <option value="SP9VA">SP9VA</option>
-
+               <option value="P0">P0</option>
                <option value="SP9">SP9</option>
                <option value="FCPA">FCPA</option>
                <option value="VQC">VQC</option>
@@ -99,7 +99,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
                <option value="SP9VA">SP9VA</option>
                <option value="RAI">RAI</option>
                <option value="MOLINO">MOLINO</option>
-
+               <option value="P0">P0</option>
                <option value="MALVINAS">MALVINAS</option>
                <option value="ZENDER">ZENDER</option>
                <option value="PRPB">PRPB</option>

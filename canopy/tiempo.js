@@ -82,7 +82,7 @@ function p9() {
     }
   } else if (localStorage.origen == 'P12') {
     console.log('origen:p12');
-    tiempoFinal = 90000 - contador;
+    tiempoFinal = 60000 - contador;
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);

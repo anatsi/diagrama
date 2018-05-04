@@ -72,7 +72,7 @@ if (isset($_SESSION['usuario'])) {
              <option value="P9" onchange="bloquear();">P9</option>
              <option value="MALVINAS" onchange="bloquear();">MALVINAS</option>
              <option value="CIRCUITO" onchange="bloquear();">CIRCUITO</option>
-
+             <option value="P0" onchange="bloquear();">P0</option>
              <option value="SP9" onchange="bloquear();">SP9</option>
              <option value="RAI" onchange="bloquear();">RAI</option>
              <option value="MOLINO" onchange="bloquear();">MOLINO</option>
