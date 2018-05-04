@@ -166,3 +166,20 @@ function volverAtrasWrap() {
     },
   });
 }
+
+//confirm de volver atras para el rol de vinilos
+function volverAtrasIndex() {
+  $.confirm({
+    title: 'ATRÁS',
+    content: '¿Confirmar atrás?',
+    buttons: {
+      Aceptar: function() {
+        window.location = 'index.php';
+      },
+
+      Cancelar: function() {
+        console.log('cancelado');
+      },
+    },
+  });
+}
