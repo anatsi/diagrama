@@ -32,7 +32,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
     <h3><?php echo $usuario['user']; ?></h3>
   </header>
     <div class="two-columns">
-      <h3>MOVIMIENTO REALIZADO CON EXITO</h3>
+      <h3>VEHICULO REGISTRADO CON EXITO</h3>
     </div>
     <div class="botones">
       <button type="button" name="button" id="siguiente" onclick="window.location = 'index.php'"><b>ACEPTAR</b></button>
