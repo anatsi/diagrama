@@ -92,6 +92,8 @@ if (isset($_SESSION['usuario'])) {
              <option value="PRPB" onchange="bloquear2();">PRPB</option>
              <option value="CANOPY" onchange="bloquear2();">CANOPY</option>
              <option value="CAMPA" onchange="bloquear2();">CAMPA</option>
+             <option value="P.BLANCO" onchange="bloquear2();">P.BLANCO</option>
+             <option value="PINTURAS" onchange="bloquear2();">PINTURAS</option>
              <option value="RINCON AMERICANO" onchange="bloquear2();">RINCON AMERICANO</option>
            </select>
         </li>
