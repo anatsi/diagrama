@@ -34,10 +34,16 @@
     }
 
     //cambiamos los caracteres 5 y 6 del bastidor por X.
-    $bastidor = $_POST['bastidor'];
-    $primera= substr($bastidor, 0, 4);
-    $segunda = substr($bastidor, 6);
-    $bastidorFinal = $primera .'XX'. $segunda;
+    if (strlen($_POST['bastidor'])==17) {
+      $bastidor = $_POST['bastidor'];
+      $primera= substr($bastidor, 0, 4);
+      $segunda = substr($bastidor, 6);
+      $bastidorFinal = $primera .'XX'. $segunda;
+    }elseif (strlen($_POST['bastidor'])==8) {
+      $bastidorFinal = substr($_POST['bastidor'], 0, 7);
+    }else {
+      $bastidorFinal = $_POST['bastidor'];
+    }
 
     //comprobamos si ya existia una entrada del mismo coche
     $mismoVIN = $wrap -> mismoVIN($bastidorFinal);

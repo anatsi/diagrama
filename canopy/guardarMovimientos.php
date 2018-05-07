@@ -65,10 +65,16 @@
         //sacamos el usuario de la sesion iniciada
         $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
         //cambiamos los caracteres 5 y 6 del bastidor por X.
-        $bastidor = $_POST['bastidor'];
-        $primera= substr($bastidor, 0, 4);
-        $segunda = substr($bastidor, 6);
-        $bastidorFinal = $primera .'XX'. $segunda;
+        if (strlen($_POST['bastidor'])==17) {
+          $bastidor = $_POST['bastidor'];
+          $primera= substr($bastidor, 0, 4);
+          $segunda = substr($bastidor, 6);
+          $bastidorFinal = $primera .'XX'. $segunda;
+        }elseif (strlen($_POST['bastidor'])==8) {
+          $bastidorFinal = substr($_POST['bastidor'], 0, 7);
+        }else {
+          $bastidorFinal = $_POST['bastidor'];
+        }
         //llamamos a la funcion de guardar el movimiento
         $nuevoMovimiento=$movimiento->nuevoMovimiento($_POST['diao'], $_POST['horao'], $_POST['origen'], $bastidorFinal, $diad, $horad, $destino, $usuario['user'], 'CANOPY');
         if ($nuevoMovimiento == null) {

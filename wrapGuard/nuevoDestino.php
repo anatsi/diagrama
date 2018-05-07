@@ -30,7 +30,16 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
     if (isset($_GET['vin']) && $_GET['vin'] != '') {
      $vin = $_GET['vin'];
    }else {
-     $vin = $_POST['bastidor'];
+     if (strlen($_POST['bastidor'])==17) {
+       $bastidor = $_POST['bastidor'];
+       $primera= substr($bastidor, 0, 4);
+       $segunda = substr($bastidor, 6);
+       $vin = $primera .'XX'. $segunda;
+     }elseif (strlen($_POST['bastidor'])==8) {
+       $vin = substr($_POST['bastidor'], 0, 7);
+     }else {
+       $vin = $_POST['bastidor'];
+     }
    }
    ?>
   <header>

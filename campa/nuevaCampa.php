@@ -14,10 +14,16 @@ if (isset($_POST['bastidor'])) {
   //sacamos el nombre del usuario activo
   $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
   //cambiamos los caracteres 5 y 6 del bastidor por X.
-  $bastidor = $_POST['bastidor'];
-  $primera= substr($bastidor, 0, 4);
-  $segunda = substr($bastidor, 6);
-  $bastidorFinal = $primera .'XX'. $segunda;
+  if (strlen($_POST['bastidor'])==17) {
+    $bastidor = $_POST['bastidor'];
+    $primera= substr($bastidor, 0, 4);
+    $segunda = substr($bastidor, 6);
+    $bastidorFinal = $primera .'XX'. $segunda;
+  }elseif (strlen($_POST['bastidor'])==8) {
+    $bastidorFinal = substr($_POST['bastidor'], 0, 7);
+  }else {
+    $bastidorFinal = $_POST['bastidor'];
+  }
   //guardamos el nuevo registro de campa
   $nuevaCampa = $campa -> nuevoBastidor($bastidorFinal, $_POST['dia'], $_POST['hora'], $usuario['user']);
   if ($nuevaCampa == null) {

@@ -7,7 +7,7 @@ $empleado = new Empleados();
 
 //comprobamos si la sesión esta iniciada.
 if (isset($_SESSION['usuario'])) {
-  //sacamos el usuario de la sesion iniciada
+  //sacamos el usuario con la sesion iniciada
   $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
 
  ?>
@@ -47,7 +47,7 @@ if (isset($_SESSION['usuario'])) {
       <ul>
         <li>
           <label for="Bastidor" id="titulo">BASTIDOR A BORRAR:</label>
-          <input type="text" name="bastidor" autofocus required pattern="([W|N][F|M][a-zA-Z0-9]{8}[A-Z]{2}[0-9]{5})"/>
+          <input type="text" name="bastidor" autofocus required pattern="([W|N][F|M][a-zA-Z0-9]{8}[A-Z]{2}[0-9]{5})|([A-Z]{2}[0-9]{5}[A-Z]{1})|([A-Z]{2}[0-9]{5})"/>
         </li>
       </ul>
   </div>
@@ -63,7 +63,7 @@ if (isset($_SESSION['usuario'])) {
 </html>
 <?php
 }else {
-  //si no se habia iniciado sesion, le devolvemos a la pagina de inicio de sesion
+  //si no se habia iniciado sesion, le devolvemos a la pantalla de iniciar sesion
   ?>
   <script type="text/javascript">
     window.location='../index.php';

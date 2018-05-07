@@ -27,10 +27,16 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
 <body>
   <?php
   //cambiamos los caracteres 5 y 6 del bastidor por X.
-  $bastidor = $_POST['bastidor'];
-  $primera= substr($bastidor, 0, 4);
-  $segunda = substr($bastidor, 6);
-  $bastidorFinal = $primera .'XX'. $segunda;
+  if (strlen($_POST['bastidor'])==17) {
+    $bastidor = $_POST['bastidor'];
+    $primera= substr($bastidor, 0, 4);
+    $segunda = substr($bastidor, 6);
+    $bastidorFinal = $primera .'XX'. $segunda;
+  }elseif (strlen($_POST['bastidor'])==8) {
+    $bastidorFinal = substr($_POST['bastidor'], 0, 7);
+  }else {
+    $bastidorFinal = $_POST['bastidor'];
+  }
   //sacamos la informacion del ultimo movimiento de ese usuario
     $ultimoMovimiento = $movimientos ->UltimoMovimiento($bastidorFinal);
    ?>

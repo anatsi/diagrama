@@ -2,17 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>BORRAR MOVIMIENTO</title>
+    <title></title>
   </head>
   <body>
     <?php
-    //incluimos los archivos necesarios e inicializamos los objetos
+    //incluimos los archivos necesarios e inicializamos sus objetos
       require_once '../bbdd/movimientos.php';
       $movimientos = new Movimientos();
-      //actualizamos el movimiento para marcar error
+
+      //marcamos el movimiento como error
       $error = $movimientos -> marcarError($_GET['id']);
-      //sacamos todos los datos de movimiento por el id
+      //recogemos el movimiento por su id
       $ultimoMovimiento = $movimientos -> MovimientoID($_GET['id']);
+      //si no se ha podido marcar como error, lo devolvemos a la pagina de origen
       if ($error == false) {
         ?>
         <script type="text/javascript">
@@ -20,9 +22,9 @@
           </script>
         <?php
       }else {
-        //comprobamos si se ha seleccionada un nuevo origen o un nuevo destino
+        //si si que se ha podido marcar como error, comprobamos si se ha elegido un origen o un destino
         if (isset($_POST['origen']) || isset($_POST['destino'])) {
-          //dependiendo de lo que se haya seleccionado, hacemos la consulta  ala bbdd para guardar el movimiento corregido
+          //deppendiendo de las que se hayan marcado, guardamos en la bbdd la nueva entrada
           if (isset($_POST['origen']) && isset($_POST['destino'])) {
             $nuevoMov = $movimientos -> nuevoMovimiento($ultimoMovimiento['fecha_origen'], $ultimoMovimiento['hora_origen'], $_POST['origen'], $ultimoMovimiento['bastidor'], $ultimoMovimiento['fecha_destino'], $ultimoMovimiento['hora_destino'], $_POST['destino'], $ultimoMovimiento['usuario'], $ultimoMovimiento['rol']);
           }
@@ -32,9 +34,8 @@
           if (isset($_POST['origen']) == true && isset($_POST['destino']) == false) {
             $nuevoMov = $movimientos -> nuevoMovimiento($ultimoMovimiento['fecha_origen'], $ultimoMovimiento['hora_origen'], $_POST['origen'], $ultimoMovimiento['bastidor'], $ultimoMovimiento['fecha_destino'], $ultimoMovimiento['hora_destino'], $ultimoMovimiento['destino'], $ultimoMovimiento['usuario'], $ultimoMovimiento['rol']);
           }
-
+          //si se ha guardado bien, lo devolvemos a la pagina de origen
           if ($nuevoMov == true) {
-            //si se guarda bien, lo devolvemos a la pagina de origen
             ?>
             <script type="text/javascript">
               window.location = 'origen.php';
@@ -42,7 +43,7 @@
             <?php
           }
         }else {
-          // si no se habia elegido ni origen ni destino, descontamos uno del contador y lo devolvemos a la pantalla de origen
+          //si no se ha marcado ni origen ni destino, lo devolvemos a origen y descontamos el contador
           ?>
           <script type="text/javascript">
             localStorage.setItem("contador", Number(localStorage.contador) - 1);

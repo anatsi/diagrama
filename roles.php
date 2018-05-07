@@ -60,7 +60,7 @@
              <input  type="radio" name="CAMPA" value="CAMPA" onclick="window.location = 'campa.php';">
             <div class="btn btn-sık"><span>CAMPA</span></div>
           </label>
-           <label id="lab">
+           <label id="lab" style="display:none;">
              <input  type="radio" name="WRAP" value="WRAP" onclick="window.location = 'wrapGuard.php';">
             <div class="btn btn-sık btn5"><span>VINILOS</span></div>
           </label>
@@ -72,14 +72,20 @@
             <input type="radio" name="RADIO" value="RADIO" onclick="window.location = 'radio.php';">
              <div  class="btn btn-sık"><span>RADIO</span></div>
           </label>
-          <label id="lab">
+          <label id="lab" style="display:none;">
             <input type="radio" name="REALLOCATION" value="REALLOCATION" onclick="window.location = 'reallocation.php';">
              <div  class="btn btn-sık"><span>REBOOK</span></div>
           </label>
           <label id="lab">
+            <input type="radio" name="PUERTA" value="PUERTA" onclick="window.location = 'puerta.php';">
+             <div  class="btn btn-sık"><span>PUERTA</span></div>
+          </label>
+          <br>
+          <label id="lab">
             <input type="radio" name="DISENGAGEMENT" value="DISENGAGEMENT" onclick="window.location = 'disengagement.php';">
              <div  class="btn btn-sık" style="width: 160%;"><span>DISENGAGEMENT</span></div>
           </label>
+
             </div>
           </li>
         </ul>
