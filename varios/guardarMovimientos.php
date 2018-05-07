@@ -74,9 +74,13 @@
         }else {
           $bastidorFinal = $_POST['bastidor'];
         }
+        //sacar el valor de lanzamiento.
+        if (isset($_POST['lanzamiento']) == false) {
+          $_POST['lanzamiento']='NO';
+        }
 
         //guardamos el nuevo movimiento en la bbdd
-        $nuevoMovimiento=$movimiento->nuevoMovimiento($_POST['diao'], $_POST['horao'], $_POST['origen'], $bastidorFinal, $diad, $horad, $destino, $usuario['user'], 'VARIOS');
+        $nuevoMovimiento=$movimiento->nuevoMovimiento($_POST['diao'], $_POST['horao'], $_POST['origen'], $bastidorFinal, $diad, $horad, $destino, $usuario['user'], 'VARIOS', $_POST['lanzamiento']);
         if ($nuevoMovimiento == null) {
           // si no se guarda, le avisamos y lo devolvemos a la pantalla de origen
           ?>

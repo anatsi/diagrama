@@ -15,10 +15,10 @@ class Movimientos extends dbMovimientos
   }
 
   //funcion encargada de insertar un nuevo movimiento en la tabla de movimientos
-  function nuevoMovimiento($fechao, $horao, $origen, $bastidor, $fechad, $horad, $destino, $usuario, $rol){
+  function nuevoMovimiento($fechao, $horao, $origen, $bastidor, $fechad, $horad, $destino, $usuario, $rol, $lanzamiento){
     //realizamos la consuta y la guardamos en $sql
-    $sql="INSERT INTO movimientos(id, fecha_origen, hora_origen, origen, bastidor, fecha_destino, hora_destino, destino, usuario, error, rol)
-    VALUES(NULL, '".$fechao."', '".$horao."', '".$origen."', '".$bastidor."', '".$fechad."', '".$horad."', '".$destino."', '".$usuario."', 0, '".$rol."')";
+    $sql="INSERT INTO movimientos(id, fecha_origen, hora_origen, origen, bastidor, fecha_destino, hora_destino, destino, usuario, error, rol, lanzamiento)
+    VALUES(NULL, '".$fechao."', '".$horao."', '".$origen."', '".$bastidor."', '".$fechad."', '".$horad."', '".$destino."', '".$usuario."', 0, '".$rol."', '".$lanzamiento."')";
     //Realizamos la consulta utilizando la funcion creada en db.php
     $resultado=$this->realizarConsulta($sql);
     if($resultado!=false){

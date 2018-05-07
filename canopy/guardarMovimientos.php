@@ -5,7 +5,7 @@
   <title>ELEGIR ORIGEN</title>
   <style media="screen">
     body{
-      color: white;
+      color: black;
     }
     .titul{
       color: black;
@@ -75,8 +75,12 @@
         }else {
           $bastidorFinal = $_POST['bastidor'];
         }
+        //sacar el valor de lanzamiento.
+        if (isset($_POST['lanzamiento']) == false) {
+          $_POST['lanzamiento']='NO';
+        }
         //llamamos a la funcion de guardar el movimiento
-        $nuevoMovimiento=$movimiento->nuevoMovimiento($_POST['diao'], $_POST['horao'], $_POST['origen'], $bastidorFinal, $diad, $horad, $destino, $usuario['user'], 'CANOPY');
+        $nuevoMovimiento=$movimiento->nuevoMovimiento($_POST['diao'], $_POST['horao'], $_POST['origen'], $bastidorFinal, $diad, $horad, $destino, $usuario['user'], 'CANOPY', $_POST['lanzamiento']);
         if ($nuevoMovimiento == null) {
           //si el movimiento no se guarda, avisamos
           ?>

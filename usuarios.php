@@ -165,7 +165,9 @@ $usuarios = array (
 "JGV",
 "PMS",
 "MAG",
-"SQN"
+"SQN",
+"AVS",
+"ZZZ"
 );
 $salt='$tsi$/';
 foreach ($usuarios as $usuario) {

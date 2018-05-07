@@ -57,6 +57,11 @@ if (isset($_SESSION['usuario'])) {
           <label for="destino" id="titulo">DESTINO</label>
           <div class="wrap">
             <label id="lab">
+              <input type="radio" name="lanzamiento" value="SI">
+               <div  class="btn btn-sık" style="width: 160%; background-color: orange; height: 40px;" onclick="this.style.backgroundColor= 'green';"><span>¿LANZAMIENTO?</span></div>
+            </label>
+            <br>
+            <label id="lab">
               <input type="radio" id="opcion1" name="destino" value="P9" onclick="comprobar2();">
                <div  class="btn btn-sık"><span>P9</span></div>
             </label>
