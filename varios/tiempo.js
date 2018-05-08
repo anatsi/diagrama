@@ -122,7 +122,7 @@ function p12() {
     }
   } else if (localStorage.origen == 'CANOPY') {
     console.log('origen:canopy');
-    tiempoFinal = 70000 - contador;
+    tiempoFinal = 50000 - contador;
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
