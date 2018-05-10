@@ -5,7 +5,7 @@
   <title>ELEGIR ORIGEN</title>
   <style media="screen">
     body{
-      color: black;
+      color: white;
     }
     .titul{
       color: black;
