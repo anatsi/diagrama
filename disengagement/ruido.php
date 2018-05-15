@@ -55,7 +55,7 @@ if (isset($_SESSION['usuario'])) {
 
       <ul>
         <li>
-          <label for="destino" id="titulo">RUIDO</label>
+          <label for="destino" id="titulo">CLONK NOISE</label>
           <div class="wrap">
             <label id="lab">
               <input type="radio" id="opcion1" name="ruido" value="DERECHA">

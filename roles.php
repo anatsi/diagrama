@@ -60,7 +60,7 @@
              <input  type="radio" name="CAMPA" value="CAMPA" onclick="window.location = 'campa.php';">
             <div class="btn btn-sık"><span>CAMPA</span></div>
           </label>
-           <label id="lab" style="display:none;">
+           <label id="lab">
              <input  type="radio" name="WRAP" value="WRAP" onclick="window.location = 'wrapGuard.php';">
             <div class="btn btn-sık btn5"><span>VINILOS</span></div>
           </label>
