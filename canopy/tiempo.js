@@ -106,7 +106,7 @@ function p9() {
 function p12() {
   if (localStorage.origen == 'CANOPY') {
     console.log('origen:canopy');
-    tiempoFinal = 50000 - contador;
+    tiempoFinal = 30000 - contador;
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
@@ -115,7 +115,7 @@ function p12() {
     }
   } else if (localStorage.origen == 'P12') {
     console.log('origen:p12');
-    tiempoFinal = 70000 - contador;
+    tiempoFinal = 30000 - contador;
     console.log(tiempoFinal);
     if (tiempoFinal > 0) {
       setTimeout(fin, tiempoFinal);
