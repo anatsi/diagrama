@@ -63,7 +63,7 @@ if (isset($_SESSION['usuario'])) {
       <ul>
         <li>
           <label for="Bastidor" id="titulo">BASTIDOR</label>
-          <input type="text" name="bastidor" autofocus required pattern="([W|N][F|M][a-zA-Z0-9]{8}[A-Z]{2}[0-9]{5})|([A-Z]{2}[0-9]{5}[A-Z]{1})|([A-Z]{2}[0-9]{5})"/>
+          <input type="text" name="bastidor" autofocus required />
         </li>
       </ul>
   </div>
