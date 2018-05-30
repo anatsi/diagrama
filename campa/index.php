@@ -51,7 +51,7 @@ if (isset($_SESSION['usuario'])) {
     </h3>
   </header>
   <div class="two-columns">
-    <p style="font-weight: bold; font-size:16px; float: right;">SUPERVISOR CAMPA</p>
+    <p style="font-weight: bold; font-size:16px; float: right;">CIRCUITO</p>
     <form class="contact_form" action="nuevaCampa.php" method="post" enctype="multipart/form-data">
       <?php
       //recogemos la fecha y la hora actuales y la pasamos por un input hidden
@@ -63,7 +63,7 @@ if (isset($_SESSION['usuario'])) {
       <ul>
         <li>
           <label for="Bastidor" id="titulo">BASTIDOR</label>
-          <input type="text" name="bastidor" autofocus required />
+          <input type="text" name="bastidor" autofocus required  pattern="^\S{17}$|^\S{8}$|^\S{7}$"/>
         </li>
       </ul>
   </div>

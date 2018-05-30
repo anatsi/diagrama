@@ -40,7 +40,7 @@ if (isset($_SESSION['usuario'])) {
     <h3><?php echo $usuario['user']; ?></h3>
   </header>
   <div class="two-columns">
-    <p style="font-weight: bold; font-size:16px; float: left;">TOTAL: <script>document.write(localStorage.contador);</script></p>
+    <!--<p style="font-weight: bold; font-size:16px; float: left;">TOTAL: <script>document.write(localStorage.contador);</script></p>-->
     <p style="font-weight: bold; font-size:16px; float: right;">CANOPY</p>
     <form class="contact_form" action="bastidor.php" method="post" enctype="multipart/form-data">
       <ul>

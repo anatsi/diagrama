@@ -27,5 +27,17 @@ class Disengagement extends dbJockeys
       return null;
     }
   }
+
+
+  function borrarDisengagement($bastidor)
+    {
+      $sql="DELETE FROM disengagement WHERE bastidor='".$bastidor."'";
+      $borrarreserva=$this->realizarConsulta($sql);
+      if ($borrarreserva=!NULL) {
+        return true;
+      }else {
+        return false;
+      }
+    }
 }
  ?>

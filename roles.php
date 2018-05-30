@@ -56,9 +56,9 @@
               <input  type="radio" name="VARIOS" value="VARIOS" onclick="window.location = 'varios.php';">
              <div class="btn btn-sık"><span>VARIOS</span></div>
            </label>
-           <label id="lab" style="display:none;">
+           <label id="lab">
              <input  type="radio" name="CAMPA" value="CAMPA" onclick="window.location = 'campa.php';">
-            <div class="btn btn-sık"><span>CAMPA</span></div>
+            <div class="btn btn-sık"><span>CIRCUITO</span></div>
           </label>
            <label id="lab">
              <input  type="radio" name="WRAP" value="WRAP" onclick="window.location = 'wrapGuard.php';">
@@ -72,7 +72,7 @@
             <input type="radio" name="RADIO" value="RADIO" onclick="window.location = 'radio.php';">
              <div  class="btn btn-sık"><span>RADIO</span></div>
           </label>
-          <label id="lab" style="display:none;">
+          <label id="lab">
             <input type="radio" name="REALLOCATION" value="REALLOCATION" onclick="window.location = 'reallocation.php';">
              <div  class="btn btn-sık"><span>REBOOK</span></div>
           </label>

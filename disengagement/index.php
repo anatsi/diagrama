@@ -45,7 +45,7 @@ if (isset($_SESSION['usuario'])) {
       <ul>
         <li>
           <label for="Bastidor" id="titulo">BASTIDOR</label>
-          <input type="text" id="bastidor" name="bastidor" autofocus required/>
+          <input type="text" id="bastidor" name="bastidor" autofocus required pattern="^\S{17}$|^\S{8}$|^\S{7}$"/>
         </li>
         <li>
           <label for="construccion" id='titulo'>FECHA CONSTRUCCIÓN</label>
@@ -55,7 +55,8 @@ if (isset($_SESSION['usuario'])) {
   </div>
   <div class="botones">
     <button type="submit" name="button" id="siguiente"><b>SIGUIENTE</b></button>
-    <button type="reset" name="button" id="reset" style="width: 98%;"><b>LIMPIAR</b></button>
+    <button type="reset" name="button" id="reset"><b>LIMPIAR</b></button>
+    <button type="button" name="button" id="atras" onclick="window.location = 'borrarBastidor.php';"><b>BORRAR</b></button>
   </div>
   </form>
 

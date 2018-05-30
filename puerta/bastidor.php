@@ -46,7 +46,7 @@ if (isset($_SESSION['usuario'])) {
       <ul>
         <li>
           <label for="Bastidor" id="titulo">BASTIDOR</label>
-          <input type="text" id="bastidor" name="bastidor" autofocus required/>
+          <input type="text" id="bastidor" name="bastidor" autofocus required pattern="^\S{17}$|^\S{8}$|^\S{7}$"/>
         </li>
       </ul>
   </div>

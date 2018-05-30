@@ -5,10 +5,11 @@ $sesiones = new Sesiones();
 require_once '../bbdd/empleados.php';
 $empleado = new Empleados();
 
-//comprobamos si la sesion esta iniciada
+//comprobamos si la sesión esta iniciada.
 if (isset($_SESSION['usuario'])) {
-  //sacamos el nombre del usuario con la sesion inciada
+  //sacamos el usuario con la sesion iniciada
   $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
+
  ?>
 <!DOCTYPE html>
 <html>
@@ -21,38 +22,39 @@ if (isset($_SESSION['usuario'])) {
   <script src="../pace/pace.js"></script>
   <link rel="shortcut icon" href="../assets/ico/favicon.ico">
   <script type="text/javascript" src="../comprobar.js"></script>
-  <!-- Links para alerts y confirms -->
-    <script src="../jquery/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="../jquery/jquery-confirm.css">
-    <script src="../jquery/jquery-confirm.js"></script>
+
+<!-- Links para alerts y confirms -->
+  <script src="../jquery/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="../jquery/jquery-confirm.css">
+  <script src="../jquery/jquery-confirm.js"></script>
 
 </head>
+
 <body>
   <header>
     <span class="izquierda">
-      <a href="../roles.php" id='roles'>ROLES</a>
+      <a href="../roles.php" id='roles' style="visibility:hidden;">ROLES</a>
       <a  href= "#"><img src="../assets/img/logo.png" alt="logo TSI" title="Logo TSI" width="auto" height="50" /></a>
     </span>
     <br>
-    <span class="derecha" onclick = "botonSalir();"><a>SALIR</a></span>
+    <span class="derecha" onclick = "botonSalir();" style="visibility:hidden;"><a>SALIR</a></span>
     <br>
     <br>
-    <h3><?php echo $usuario['user']; ?> - <script>document.write(localStorage.usuario2);</script></h3>
+    <h3><?php echo $usuario['user']; ?></h3>
   </header>
   <div class="two-columns">
-    <p style="font-weight: bold; font-size:16px; float: right;">VINILOS</p>
-    <form class="contact_form" action="destino.php" method="post" enctype="multipart/form-data">
+    <form class="contact_form" action="borrarddbb.php" method="post" enctype="multipart/form-data">
       <ul>
         <li>
-          <label for="Bastidor" id="titulo">BASTIDOR</label>
+          <label for="Bastidor" id="titulo">BASTIDOR A BORRAR:</label>
           <input type="text" name="bastidor" autofocus required pattern="^\S{17}$|^\S{8}$|^\S{7}$"/>
         </li>
       </ul>
   </div>
   <div class="botones">
-    <button type="submit" name="button" id="siguiente"><b>SIGUIENTE</b></button>
+    <button type="submit" name="button" id="siguiente"><b>BORRAR</b></button>
     <button type="reset" name="button" id="reset"><b>LIMPIAR</b></button>
-    <button type="button" name="button" id="atras" onclick="window.location='borrarBastidor.php'"><b>BORRAR</b></button>
+    <button type="button" name="button" id="atras" onclick="window.location='index.php'"><b>ATRAS</b></button>
   </div>
   </form>
 
@@ -60,12 +62,12 @@ if (isset($_SESSION['usuario'])) {
 
 </html>
 <?php
- }else {
-   //si no hay ninguna sesion iniciada, lo devolvemos a la pantalla de iniciar sesion
-   ?>
-     <script type="text/javascript">
-       window.location = "../index.php";
-     </script>
-   <?php
- }
+}else {
+  //si no se habia iniciado sesion, le devolvemos a la pantalla de iniciar sesion
   ?>
+  <script type="text/javascript">
+    window.location='../index.php';
+  </script>
+  <?php
+}
+ ?>
