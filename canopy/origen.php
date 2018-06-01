@@ -76,6 +76,8 @@ if (isset($_SESSION['usuario'])) {
              <option value="RAVA2" onchange="bloquear();">RAVA2</option>
              <option value="SP9VA" onchange="bloquear();">SP9VA</option>
              <option value="SP9" onchange="bloquear();">SP9</option>
+             <option value="MORERAS" onchange="bloquear();">MORERAS</option>
+
              <option value="FCPA" onchange="bloquear();">FCPA</option>
              <option value="VQC" onchange="bloquear();">VQC</option>
              <option value="P.COLORES" onchange="bloquear();">P.COLORES</option>
