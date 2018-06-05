@@ -95,6 +95,7 @@ if(isset($_POST['bastidor']) && $_POST['bastidor'] != ""){
              <option value="ZENDER" onchange="bloquear2();">ZENDER</option>
              <option value="PRPB" onchange="bloquear2();">PRPB</option>
              <option value="MORERAS" onchange="bloquear2();">MORERAS</option>
+             <option value="CARPA" onchange="bloquear2();">CARPA</option>
 
              <option value="CANOPY" onchange="bloquear2();">CANOPY</option>
              <option value="CAMPA" onchange="bloquear2();">CAMPA</option>
