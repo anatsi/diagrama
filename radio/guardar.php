@@ -5,7 +5,7 @@
   <title></title>
   <style media="screen">
     body{
-      color: BLACK;
+      color: black;
     }
     .titul{
       color: black;
@@ -55,15 +55,40 @@
         $segunda = substr($bastidor, 6);
         $bastidorFinal = $primera .'XX'. $segunda;
 
-        //guardamos la entrada.
-        $nuevaEntrada = $radio -> nuevaRadio($bastidorFinal, $radios, $fecha, $hora, $usuario['user']);
-        if ($nuevaEntrada == null || $nuevaEntrada == false) {
-          // si se guarda mal, avisamos al usuario
+        $mismoBastidor= $radio ->buscarBastidor($bastidor);
+        if ($mismoBastidor == null || $mismoBastidor == false) {
+          //guardamos la entrada.
+          $nuevaEntrada = $radio -> nuevaRadio($bastidorFinal, $radios, $fecha, $hora, $usuario['user']);
+          if ($nuevaEntrada == null || $nuevaEntrada == false) {
+            // si se guarda mal, avisamos al usuario
+            ?>
+              <script type="text/javascript">
+                $.confirm({
+                  title: 'ERROR',
+                  content: 'El vehiculo no se ha podido registrar.',
+                  type: 'red',
+                  buttons: {
+                    OK: function () {
+                      window.location = 'bastidor.php';
+                    },
+                  },
+                });
+              </script>
+            <?php
+          }else {
+            //si se guarda bien, lo enviamos a la pagina de finalizado
+            ?>
+              <script type="text/javascript">
+                window.location = 'finalizado.php';
+              </script>
+            <?php
+          }
+        }else {
           ?>
             <script type="text/javascript">
               $.confirm({
                 title: 'ERROR',
-                content: 'El vehiculo no se ha podido registrar.',
+                content: 'Bastidor repetido.',
                 type: 'red',
                 buttons: {
                   OK: function () {
@@ -73,14 +98,9 @@
               });
             </script>
           <?php
-        }else {
-          //si se guarda bien, lo enviamos a la pagina de finalizado
-          ?>
-            <script type="text/javascript">
-              window.location = 'finalizado.php';
-            </script>
-          <?php
         }
+
+
       }else {
         // si el ultimo formulario no se habia rellenado lo devolvemos a la pantalla principal
         ?>

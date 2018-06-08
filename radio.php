@@ -21,7 +21,7 @@
     $ultimoRol = $rol -> ultimoRol($usuario['user']);
     //si no tiene una ultima entrada, guardamos la entrada
     if ($ultimoRol ==  null || $ultimoRol == false) {
-      $nuevoRol = $rol -> nuevoRol('RADIO', $usuario['user'], $fecha, $hora);
+      $nuevoRol = $rol -> nuevoRol('LLAVES', $usuario['user'], $fecha, $hora);
       //si se guarda mal lo sacamos
       if ($nuevoRol == null || $nuevoRol == false) {
         ?>
@@ -43,7 +43,7 @@
       //comprobamos si la entrada tiene fecha de fin puesta o no
       if ($ultimoRol['fecha_fin'] == null && $ultimoRol['hora_fin'] == null || $ultimoRol['fecha_fin'] == '0000-00-00' && $ultimoRol['hora_fin'] == '00:00:00') {
         //si no tiene fecha de fin comprobamos si esta entrando al mismo rol que estaba
-        if ($ultimoRol['rol'] == 'RADIO') {
+        if ($ultimoRol['rol'] == 'LLAVES') {
           //si esta en el mismo rol, lo enviamos a la carpeta de este rol sin guardar nada.
           ?>
             <script type="text/javascript">
@@ -61,7 +61,7 @@
             <?php
           }else {
             //si esto se guarda bien, creamos la nuea entrada y si se guarda bien lo enviamos a la carpeta del rol
-            $nuevoRol = $rol -> nuevoRol('RADIO', $usuario['user'], $fecha, $hora);
+            $nuevoRol = $rol -> nuevoRol('LLAVES', $usuario['user'], $fecha, $hora);
             if ($nuevoRol == null || $nuevoRol == false) {
               ?>
                 <script type="text/javascript">
@@ -79,7 +79,7 @@
         }
       }else {
         //si la ultima entrada si que tenia fecha de fin, guardamos la nueva enntrada y lo enviamos a la carpeta del rol.
-        $nuevoRol = $rol -> nuevoRol('RADIO', $usuario['user'], $fecha, $hora);
+        $nuevoRol = $rol -> nuevoRol('LLAVES', $usuario['user'], $fecha, $hora);
         if ($nuevoRol == null || $nuevoRol == false) {
           ?>
             <script type="text/javascript">

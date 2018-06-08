@@ -30,6 +30,24 @@ class Radio extends dbJockeys
   }
 
 
+  //funcion encargada de sacar el ultimo bastidor que ha guardado un usuario
+  function buscarBastidor($bastidor){
+    //Construimos la consulta
+    $sql="SELECT * from radio WHERE bastidor='".$bastidor."' ORDER BY id DESC LIMIT 1";
+    //Realizamos la consulta
+    $resultado=$this->realizarConsulta($sql);
+    if($resultado!=false){
+      if($resultado!=false){
+        return $resultado->fetch_assoc();
+      }else{
+        return null;
+      }
+    }else{
+      return null;
+    }
+  }
+
+
 }
 
  ?>

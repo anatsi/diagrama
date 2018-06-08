@@ -68,9 +68,9 @@
             <input type="radio" name="CHEQUER" value="CHEQUER" onclick="window.location = 'chequer.php';">
              <div  class="btn btn-sık"><span>CHEQUER</span></div>
           </label>
-          <label id="lab"  style="display:none;">
-            <input type="radio" name="RADIO" value="RADIO" onclick="window.location = 'radio.php';">
-             <div  class="btn btn-sık"><span>RADIO</span></div>
+          <label id="lab">
+            <input type="radio" name="LLAVES" value="LLAVES" onclick="window.location = 'radio.php';">
+             <div  class="btn btn-sık"><span>LLAVES</span></div>
           </label>
           <label id="lab">
             <input type="radio" name="REALLOCATION" value="REALLOCATION" onclick="window.location = 'reallocation.php';">
