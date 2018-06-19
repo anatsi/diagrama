@@ -27,8 +27,8 @@
   <div class="two-columns">
     <?php
     //incluimos los archivos necesarios e inicializamos sus objetos
-    require_once '../bbdd/radio.php';
-    $radio = new Radio();
+    require_once '../bbdd/clatter.php';
+    $clatter = new Clatter();
     require_once '../bbdd/sesiones.php';
     $sesion = new Sesiones();
     require_once '../bbdd/empleados.php';
@@ -40,9 +40,9 @@
       if (isset($_POST['arriba'])) {
         //recoger los datos del ultimo formulario
         if ($_POST['arriba'] == 'SI') {
-          $radios = $_POST['abajo'];
+          $clatters = $_POST['abajo'];
         }else {
-          $radios = $_POST['arriba'];
+          $clatters = $_POST['arriba'];
         }
 
         //sacar fecha y hora actual
@@ -59,10 +59,10 @@
           $bastidorFinal = $_POST['bastidor'];
         }
 
-        $mismoBastidor= $radio ->buscarBastidor($bastidor);
+        $mismoBastidor= $clatter ->buscarBastidor($bastidor);
         if ($mismoBastidor == null || $mismoBastidor == false) {
           //guardamos la entrada.
-          $nuevaEntrada = $radio -> nuevaRadio($bastidorFinal, $radios, $fecha, $hora, $usuario['user']);
+          $nuevaEntrada = $clatter -> nuevaRadio($bastidorFinal, $clatters, $fecha, $hora, $usuario['user']);
           if ($nuevaEntrada == null || $nuevaEntrada == false) {
             // si se guarda mal, avisamos al usuario
             ?>

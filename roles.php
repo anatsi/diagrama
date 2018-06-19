@@ -56,7 +56,7 @@
               <input  type="radio" name="VARIOS" value="VARIOS" onclick="window.location = 'varios.php';">
              <div class="btn btn-sık"><span>VARIOS</span></div>
            </label>
-           <label id="lab">
+           <label id="lab" style="display:none;">
              <input  type="radio" name="CAMPA" value="CAMPA" onclick="window.location = 'campa.php';">
             <div class="btn btn-sık"><span>CIRCUITO</span></div>
           </label>
@@ -68,11 +68,19 @@
             <input type="radio" name="CHEQUER" value="CHEQUER" onclick="window.location = 'chequer.php';">
              <div  class="btn btn-sık"><span>CHEQUER</span></div>
           </label>
-          <label id="lab">
+          <label id="lab" style="display:none;">
             <input type="radio" name="LLAVES" value="LLAVES" onclick="window.location = 'radio.php';">
              <div  class="btn btn-sık"><span>LLAVES</span></div>
           </label>
           <label id="lab">
+            <input type="radio" name="AULLIDO" value="AULLIDO" onclick="window.location = 'aullido.php';">
+             <div  class="btn btn-sık"><span>AULLIDO</span></div>
+          </label>
+          <label id="lab">
+            <input type="radio" name="CLATTER" value="CLATTER" onclick="window.location = 'clatter.php';">
+             <div  class="btn btn-sık"><span>CLATTER</span></div>
+          </label>
+          <label id="lab" style="display:none;">
             <input type="radio" name="REALLOCATION" value="REALLOCATION" onclick="window.location = 'reallocation.php';">
              <div  class="btn btn-sık"><span>REBOOK</span></div>
           </label>
