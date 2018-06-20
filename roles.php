@@ -72,11 +72,15 @@
             <input type="radio" name="LLAVES" value="LLAVES" onclick="window.location = 'radio.php';">
              <div  class="btn btn-sık"><span>LLAVES</span></div>
           </label>
-          <label id="lab">
+          <label id="lab" style="display:none;">
             <input type="radio" name="AULLIDO" value="AULLIDO" onclick="window.location = 'aullido.php';">
              <div  class="btn btn-sık"><span>AULLIDO</span></div>
           </label>
           <label id="lab">
+            <input type="radio" name="WOW" value="WOW" onclick="window.location = 'aullido_wow.php';">
+             <div  class="btn btn-sık"><span>+WOW</span></div>
+          </label>
+          <label id="lab" style="display:none;">
             <input type="radio" name="CLATTER" value="CLATTER" onclick="window.location = 'clatter.php';">
              <div  class="btn btn-sık"><span>CLATTER</span></div>
           </label>
