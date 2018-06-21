@@ -15,10 +15,10 @@ class Aullido_wow extends dbJockeys
   }
 
   //funcion encargada de insertar una nueva revision de radio
-  function nuevaRadio($bastidor, $aullido, $wow, $fecha, $hora, $usuario){
+  function nuevaRadio($bastidor, $aullido, $fecha, $hora, $usuario){
     //realizamos la consuta y la guardamos en $sql
     $sql="INSERT INTO aullido_wow(id, bastidor, aullido, wow, fecha, hora, usuario)
-    VALUES(NULL, '".$bastidor."', '".$aullido."', '".$wow."', '".$fecha."', '".$hora."', '".$usuario."')";
+    VALUES(NULL, '".$bastidor."', '".$aullido."', '-', '".$fecha."', '".$hora."', '".$usuario."')";
     //Realizamos la consulta utilizando la funcion creada en db.php
     $resultado=$this->realizarConsulta($sql);
     if($resultado!=false){

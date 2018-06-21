@@ -4,6 +4,8 @@ require_once '../bbdd/sesiones.php';
 $sesion = new Sesiones();
 require_once '../bbdd/empleados.php';
 $empleado = new Empleados();
+require_once '../bbdd/motor.php';
+$motor = new Motor();
 //sacamos el nombre del usuario que ha iniciado sesion
 $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
  ?>
@@ -32,7 +34,28 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
     <h3><?php echo $usuario['user']; ?></h3>
   </header>
     <div class="two-columns">
-      <h3>VEHICULO REGISTRADO CON EXITO</script></h3>
+      <?php
+      if (strlen($_POST['bastidor'])==17) {
+        $bastidor = $_POST['bastidor'];
+        $primera= substr($bastidor, 0, 4);
+        $segunda = substr($bastidor, 6);
+        $bastidorFinal = $primera .'XX'. $segunda;
+      }elseif (strlen($_POST['bastidor'])==8) {
+        $bastidor = substr($_POST['bastidor'], 0, 7);
+        $bastidorFinal = '%'.$bastidor;
+      }else {
+        $bastidorFinal = '%'. $_POST['bastidor'];
+      }
+
+      $seleccionado = $motor->buscarBastidor($bastidorFinal);
+      $leer = $motor -> bastidorLeido($seleccionado['bastidor']);
+      if ($seleccionado == NULL || $seleccionado == FALSE) {
+        echo "<h3>VEHICULO NO INCLUIDO EN OPERATIVA MOTORES.</h3>";
+      }else {
+        
+      }
+      ?>
+      <h3>VEHICULO REGISTRADO CON EXITO</h3>
     </div>
     <div class="botones">
       <button type="button" name="button" id="siguiente" onclick="window.location = 'bastidor.php'"><b>ACEPTAR</b></button>

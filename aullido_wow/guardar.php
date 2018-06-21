@@ -51,10 +51,10 @@
           $bastidorFinal = $_POST['bastidor'];
         }
 
-        $mismoBastidor= $aullido ->buscarBastidor($bastidor);
+        $mismoBastidor= $aullido ->buscarBastidor($bastidorFinal);
         if ($mismoBastidor == null || $mismoBastidor == false) {
           //guardamos la entrada.
-          $nuevaEntrada = $aullido -> nuevaRadio($bastidorFinal, $_POST['aullido'], $_POST['wow'], $fecha, $hora, $usuario['user']);
+          $nuevaEntrada = $aullido -> nuevaRadio($bastidorFinal, $_POST['aullido'], $fecha, $hora, $usuario['user']);
           if ($nuevaEntrada == null || $nuevaEntrada == false) {
             // si se guarda mal, avisamos al usuario
             ?>
@@ -84,7 +84,7 @@
             <script type="text/javascript">
               $.confirm({
                 title: 'ERROR',
-                content: 'Bastidor repetido.',
+                content: 'VIN ya trabajado.',
                 type: 'red',
                 buttons: {
                   OK: function () {

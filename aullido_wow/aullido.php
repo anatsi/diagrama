@@ -50,7 +50,7 @@ if (isset($_SESSION['usuario'])) {
 
   </header>
   <div class="two-columns">
-    <form class="contact_form" action="wow.php" method="post" enctype="multipart/form-data" onsubmit="return enviar();">
+    <form class="contact_form" action="guardar.php" method="post" enctype="multipart/form-data" onsubmit="return enviar();">
 
       <ul>
         <li>

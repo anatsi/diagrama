@@ -42,7 +42,7 @@ if (isset($_SESSION['usuario'])) {
     <h3><?php echo $usuario['user']; ?></h3>
   </header>
   <div class="two-columns">
-    <form class="contact_form" action="aullido.php" method="post" enctype="multipart/form-data">
+    <form class="contact_form" action="motor.php" method="post" enctype="multipart/form-data">
       <ul>
         <li>
           <label for="Bastidor" id="titulo">BASTIDOR</label>
