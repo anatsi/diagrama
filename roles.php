@@ -76,7 +76,7 @@
             <input type="radio" name="HOWLING" value="HOWLING" onclick="window.location = 'aullido_wow.php';">
              <div  class="btn btn-sık"><span>HOWLING</span></div>
           </label>
-          <label id="lab" style="display:none;">
+          <label id="lab">
             <input type="radio" name="CLATTER" value="CLATTER" onclick="window.location = 'clatter.php';">
              <div  class="btn btn-sık"><span>CLATTER</span></div>
           </label>
@@ -87,6 +87,10 @@
           <label id="lab" style="display:none;">
             <input type="radio" name="PUERTA" value="PUERTA" onclick="window.location = 'puerta.php';">
              <div  class="btn btn-sık"><span>PUERTA</span></div>
+          </label>
+          <label id="lab">
+            <input type="radio" name="MOTOR" value="MOTOR" onclick="window.location = 'motor.php';">
+             <div  class="btn btn-sık"><span>MOTOR</span></div>
           </label>
           <br>
           <label id="lab">

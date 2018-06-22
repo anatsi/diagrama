@@ -47,11 +47,16 @@
           $primera= substr($bastidor, 0, 4);
           $segunda = substr($bastidor, 6);
           $bastidorFinal = $primera .'XX'. $segunda;
+          $bastidorBuscar=substr($bastidorFinal, 10);
+        }elseif (strlen($_POST['bastidor'])==8) {
+          $bastidorFinal = substr($_POST['bastidor'], 0, 7);
+          $bastidorBuscar=$bastidorFinal;
         }else {
           $bastidorFinal = $_POST['bastidor'];
+          $bastidorBuscar=$bastidorFinal;
         }
 
-        $mismoBastidor= $aullido ->buscarBastidor($bastidorFinal);
+        $mismoBastidor= $aullido ->buscarBastidor($bastidorBuscar);
         if ($mismoBastidor == null || $mismoBastidor == false) {
           //guardamos la entrada.
           $nuevaEntrada = $aullido -> nuevaRadio($bastidorFinal, $_POST['aullido'], $fecha, $hora, $usuario['user']);

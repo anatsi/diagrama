@@ -31,7 +31,10 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
     <span class="derecha" onclick = "botonSalir();" style="visibility:hidden;"><a>SALIR</a></span>
     <br>
     <br>
-    <h3><?php echo $usuario['user']; ?></h3>
+    <h3><?php echo $usuario['user']; ?>
+      <br>
+      <?php echo $_POST['bastidor']; ?>
+    </h3>
   </header>
     <div class="two-columns">
       <?php
@@ -48,17 +51,17 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
       }
 
       $seleccionado = $motor->buscarBastidor($bastidorFinal);
-      $leer = $motor -> bastidorLeido($seleccionado['bastidor']);
       if ($seleccionado == NULL || $seleccionado == FALSE) {
-        echo "<h3>VEHICULO NO INCLUIDO EN OPERATIVA MOTORES.</h3>";
+        echo "<h3>FILA CHESTE LANZAMIENTO</h3>";
       }else {
-        
+        $leer = $motor -> bastidorLeido($seleccionado['bastidor']);
+        $resultado = str_replace ( ',' , '<br><br>' , $seleccionado['motor']);
+        echo "<h3>".$resultado."</h3>";
       }
       ?>
-      <h3>VEHICULO REGISTRADO CON EXITO</h3>
     </div>
     <div class="botones">
-      <button type="button" name="button" id="siguiente" onclick="window.location = 'bastidor.php'"><b>ACEPTAR</b></button>
+      <button type="button" name="button" id="siguiente" onclick="window.location = 'index.php'"><b>ACEPTAR</b></button>
     </div>
 </body>
 </html>
