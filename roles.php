@@ -88,7 +88,7 @@
             <input type="radio" name="PUERTA" value="PUERTA" onclick="window.location = 'puerta.php';">
              <div  class="btn btn-sık"><span>PUERTA</span></div>
           </label>
-          <label id="lab">
+          <label id="lab" style="display:none;">
             <input type="radio" name="MOTOR" value="MOTOR" onclick="window.location = 'motor.php';">
              <div  class="btn btn-sık"><span>MOTOR</span></div>
           </label>

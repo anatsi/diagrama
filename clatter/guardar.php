@@ -78,7 +78,7 @@
                   type: 'red',
                   buttons: {
                     OK: function () {
-                      window.location = 'bastidor.php';
+                      window.location = '../rolClatter.php';
                     },
                   },
                 });
@@ -101,7 +101,7 @@
                 type: 'red',
                 buttons: {
                   OK: function () {
-                    window.location = 'bastidor.php';
+                    window.location = '../rolClatter.php';
                   },
                 },
               });

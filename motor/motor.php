@@ -52,16 +52,19 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
 
       $seleccionado = $motor->buscarBastidor($bastidorFinal);
       if ($seleccionado == NULL || $seleccionado == FALSE) {
-        echo "<h3>FILA CHESTE LANZAMIENTO</h3>";
+        echo "<h3>NO CLATTER NOISE</h3>";
       }else {
-        $leer = $motor -> bastidorLeido($seleccionado['bastidor']);
-        $resultado = str_replace ( ',' , '<br><br>' , $seleccionado['motor']);
-        echo "<h3>".$resultado."</h3>";
+        if ($seleccionado['leido'] == 1) {
+          echo "<h3>VIN YA TRABAJADO</h3>";
+        }else {
+          $leer = $motor -> bastidorLeido($seleccionado['bastidor']);
+          echo "<h3>".$seleccionado['motor']."</h3>";
+        }
       }
       ?>
     </div>
     <div class="botones">
-      <button type="button" name="button" id="siguiente" onclick="window.location = 'index.php'"><b>ACEPTAR</b></button>
+      <button type="button" name="button" id="siguiente" onclick="window.location = '../rolClatter.php'"><b>ACEPTAR</b></button>
     </div>
 </body>
 </html>

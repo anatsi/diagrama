@@ -33,7 +33,7 @@
         //si se guarda bien entramos al rol de clatter
         ?>
           <script type="text/javascript">
-            window.location = './clatter/bastidor.php';
+            window.location = './rolClatter.php';
           </script>
         <?php
       }
@@ -47,7 +47,7 @@
           //si esta en el mismo rol, lo enviamos a la carpeta de este rol sin guardar nada.
           ?>
             <script type="text/javascript">
-              window.location = './clatter/bastidor.php';
+              window.location = './rolClatter.php';
             </script>
           <?php
         }else {
@@ -71,7 +71,7 @@
             }else {
               ?>
                 <script type="text/javascript">
-                  window.location = './clatter/bastidor.php';
+                  window.location = './rolClatter.php';
                 </script>
               <?php
             }
@@ -89,7 +89,7 @@
         }else {
           ?>
             <script type="text/javascript">
-              window.location = './clatter/bastidor.php';
+              window.location = './rolClatter.php';
             </script>
           <?php
         }
