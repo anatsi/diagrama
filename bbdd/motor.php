@@ -42,6 +42,19 @@ class Motor extends dbJockeys
     }
   }
 
+  //funcion encargada de insertar una nueva entradaa en la tabla de motor
+  function nuevoVIN($bastidor, $motor){
+    //realizamos la consuta y la guardamos en $sql
+    $sql="INSERT INTO motor(id, bastidor, motor, leido) VALUES(NULL, '".$bastidor."', '".$motor."', 1)";
+    //Realizamos la consulta utilizando la funcion creada en db.php
+    $resultado=$this->realizarConsulta($sql);
+    if($resultado!=false){
+      return true;
+    }else{
+      return null;
+    }
+  }
+
 
 }
 

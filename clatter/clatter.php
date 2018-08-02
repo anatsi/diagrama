@@ -54,15 +54,15 @@ if (isset($_SESSION['usuario'])) {
 
       <ul>
         <li>
-          <label for="destino" id="titulo">¿CLATTER NOISE?</label>
+          <label for="destino" id="titulo">¿ESTADO?</label>
           <div class="wrap">
             <label id="lab">
               <input type="radio" id="opcion1" name="arriba" value="OK" onclick="desbloquear();">
                <div  class="btn btn-sık"><span>OK</span></div>
             </label>
             <label id="lab">
-              <input  type="radio" id="opcion2" name="arriba" value="SOSPECHOSO" onclick="desbloquear();">
-             <div class="btn btn-sık"><span>SOSPECHOSO</span></div>
+              <input  type="radio" id="opcion2" name="arriba" value="NOK" onclick="desbloquear();">
+             <div class="btn btn-sık"><span>NOK</span></div>
            </label>
         </div>
       </li>

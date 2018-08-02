@@ -78,7 +78,7 @@
           </label>
           <label id="lab">
             <input type="radio" name="CLATTER" value="CLATTER" onclick="window.location = 'clatter.php';">
-             <div  class="btn btn-sık"><span>CLATTER</span></div>
+             <div  class="btn btn-sık"><span>B&H</span></div>
           </label>
           <label id="lab" style="display:none;">
             <input type="radio" name="REALLOCATION" value="REALLOCATION" onclick="window.location = 'reallocation.php';">
@@ -88,9 +88,9 @@
             <input type="radio" name="PUERTA" value="PUERTA" onclick="window.location = 'puerta.php';">
              <div  class="btn btn-sık"><span>PUERTA</span></div>
           </label>
-          <label id="lab" style="display:none;">
+          <label id="lab">
             <input type="radio" name="MOTOR" value="MOTOR" onclick="window.location = 'motor.php';">
-             <div  class="btn btn-sık"><span>MOTOR</span></div>
+             <div  class="btn btn-sık"><span>DRAWN DOWN</span></div>
           </label>
           <br>
           <label id="lab">

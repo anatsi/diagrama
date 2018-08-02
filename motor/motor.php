@@ -43,28 +43,53 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
         $primera= substr($bastidor, 0, 4);
         $segunda = substr($bastidor, 6);
         $bastidorFinal = $primera .'XX'. $segunda;
+        $bastidorGuardar = $bastidorFinal;
       }elseif (strlen($_POST['bastidor'])==8) {
         $bastidor = substr($_POST['bastidor'], 0, 7);
         $bastidorFinal = '%'.$bastidor;
+        $bastidorGuardar = $bastidor;
       }else {
         $bastidorFinal = '%'. $_POST['bastidor'];
+        $bastidorGuardar = $_POST['bastidor'];
       }
 
       $seleccionado = $motor->buscarBastidor($bastidorFinal);
       if ($seleccionado == NULL || $seleccionado == FALSE) {
-        echo "<h3>NO CLATTER NOISE</h3>";
+        echo "<h3>ATENCION,PREGUNTAR A DISPO (ST7/ST4) </h3>";
+        //guardos el bastidor en la bbdd.
+        $nuevoMotor = $motor -> nuevoVIN($bastidorGuardar, 'DISPO ST7/ST4');
+        //si no se guarda bien se informa para que se vuelva a leer.
+        if ($nuevoMotor == NULL || $nuevoMotor == false) {
+          ?>
+            <script type="text/javascript">
+              $.confirm({
+                title: 'ERROR',
+                content: 'Vuelva a leer el vehiculo.',
+                type: 'red',
+                buttons: {
+                  OK: function () {
+                    window.location = 'index.php';
+                  },
+                },
+              });
+            </script>
+          <?php
+        }
       }else {
         if ($seleccionado['leido'] == 1) {
-          echo "<h3>VIN YA TRABAJADO</h3>";
+          echo "<h3>VIN YA LEIDO</h3>";
+          echo "<br><h3>".$seleccionado['motor']."</h3>";
         }else {
+          //Cambia de '0' a '1' la columna 'leido'
           $leer = $motor -> bastidorLeido($seleccionado['bastidor']);
+          //Muestra contenido columna texto
           echo "<h3>".$seleccionado['motor']."</h3>";
         }
       }
       ?>
     </div>
     <div class="botones">
-      <button type="button" name="button" id="siguiente" onclick="window.location = '../rolClatter.php'"><b>ACEPTAR</b></button>
+      <button type="button" name="button" id="siguiente" onclick="window.location = 'index.php'"><b>ACEPTAR</b></button>
     </div>
 </body>
 </html>

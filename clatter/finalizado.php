@@ -35,7 +35,7 @@ $usuario = $empleado -> EmpleadoUser($_SESSION['usuario']);
       <h3>VEHICULO REGISTRADO CON EXITO</script></h3>
     </div>
     <div class="botones">
-      <button type="button" name="button" id="siguiente" onclick="window.location = '../rolClatter.php'"><b>ACEPTAR</b></button>
+      <button type="button" name="button" id="siguiente" onclick="window.location = 'bastidor.php'"><b>ACEPTAR</b></button>
     </div>
 </body>
 </html>
