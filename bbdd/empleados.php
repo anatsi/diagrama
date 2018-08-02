@@ -4,9 +4,9 @@
  */
 
  //Llamamos a la clase db, encargada de la conexion.
- require_once 'dbOperativa.php';
+ require_once 'dbEmpleados.php';
 
-class Empleados extends dbOperativa
+class Empleados extends dbEmpleados
 {
   //la funcion construct llama al construct de db, encargada de la conexión.
   function __construct()
